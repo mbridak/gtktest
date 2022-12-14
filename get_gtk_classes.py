@@ -24,7 +24,10 @@ with open("proplist.md", "w", encoding="utf-8") as f:
     for item in gtk_items:
         gtk_item = eval(f"Gtk.{item}")
         if isinstance(eval(f"Gtk.{item}"), gi.types.GObjectMeta):
-            thedoc = repr(gtk_item.__doc__)
+            if hasattr(gtk_item, "__gdoc__"):
+                thedoc = repr(gtk_item.__gdoc__)
+            else:
+                thedoc = repr(gtk_item.__doc__)
             thedoc = thedoc.replace("'", "")
             thedoc = thedoc.replace("\\n", "\r\n    ")
 

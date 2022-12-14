@@ -9,13 +9,19 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ATContext</summary>
 
-
-    :Constructors:
+Object GtkATContext
     
-    ::
+    Signals from GtkATContext:
+      state-change ()
     
-        ATContext(**properties)
-        create(accessible_role:Gtk.AccessibleRole, accessible:Gtk.Accessible, display:Gdk.Display) -> Gtk.ATContext or None
+    Properties from GtkATContext:
+      accessible-role -> GtkAccessibleRole: accessible-role
+      accessible -> GtkAccessible: accessible
+      display -> GdkDisplay: display
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -125,126 +131,546 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.AboutDialog</summary>
 
-
-    :Constructors:
+Object GtkAboutDialog
     
-    ::
+    Signals from GtkAboutDialog:
+      activate-link (gchararray) -> gboolean
     
-        AboutDialog(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkAboutDialog:
+      program-name -> gchararray: program-name
+      version -> gchararray: version
+      copyright -> gchararray: copyright
+      comments -> gchararray: comments
+      website -> gchararray: website
+      website-label -> gchararray: website-label
+      license -> gchararray: license
+      system-information -> gchararray: system-information
+      authors -> GStrv: authors
+      documenters -> GStrv: documenters
+      translator-credits -> gchararray: translator-credits
+      artists -> GStrv: artists
+      logo -> GdkPaintable: logo
+      logo-icon-name -> gchararray: logo-icon-name
+      wrap-license -> gboolean: wrap-license
+      license-type -> GtkLicense: license-type
+    
+    Signals from GtkWindow:
+      activate-focus ()
+      activate-default ()
+      keys-changed ()
+      enable-debugging (gboolean) -> gboolean
+      close-request () -> gboolean
+    
+    Properties from GtkWindow:
+      title -> gchararray: title
+      resizable -> gboolean: resizable
+      modal -> gboolean: modal
+      default-width -> gint: default-width
+      default-height -> gint: default-height
+      destroy-with-parent -> gboolean: destroy-with-parent
+      hide-on-close -> gboolean: hide-on-close
+      icon-name -> gchararray: icon-name
+      display -> GdkDisplay: display
+      decorated -> gboolean: decorated
+      deletable -> gboolean: deletable
+      transient-for -> GtkWindow: transient-for
+      application -> GtkApplication: application
+      default-widget -> GtkWidget: default-widget
+      focus-widget -> GtkWidget: focus-widget
+      child -> GtkWidget: child
+      titlebar -> GtkWidget: titlebar
+      handle-menubar-accel -> gboolean: handle-menubar-accel
+      is-active -> gboolean: is-active
+      startup-id -> gchararray: startup-id
+      mnemonics-visible -> gboolean: mnemonics-visible
+      focus-visible -> gboolean: focus-visible
+      maximized -> gboolean: maximized
+      fullscreened -> gboolean: fullscreened
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
 - add_credit_section
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
 - close
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
 - destroy
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate_default
 - do_activate_focus
 - do_close_request
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
 - do_enable_debugging
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
 - do_keys_changed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
 - fullscreen
 - fullscreen_on_monitor
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_application
 - get_artists
 - get_authors
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
 - get_comments
 - get_copyright
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
 - get_decorated
+- get_default_direction
 - get_default_icon_name
 - get_default_size
 - get_default_widget
 - get_deletable
 - get_destroy_with_parent
+- get_direction
+- get_display
 - get_documenters
+- get_first_child
 - get_focus
+- get_focus_child
+- get_focus_on_click
 - get_focus_visible
+- get_focusable
+- get_font_map
+- get_font_options
 - get_for_surface
+- get_frame_clock
 - get_group
+- get_halign
 - get_handle_menubar_accel
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_hide_on_close
 - get_icon_name
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
 - get_license
 - get_license_type
 - get_logo
 - get_logo_icon_name
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_mnemonics_visible
 - get_modal
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
 - get_program_name
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
 - get_renderer
+- get_request_mode
 - get_resizable
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
 - get_surface
 - get_surface_transform
 - get_system_information
+- get_template_child
 - get_title
 - get_titlebar
+- get_tooltip_markup
+- get_tooltip_text
 - get_toplevels
 - get_transient_for
 - get_translator_credits
+- get_valign
 - get_version
+- get_vexpand
+- get_vexpand_set
+- get_visible
 - get_website
 - get_website_label
+- get_width
 - get_wrap_license
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
 - has_group
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
 - is_active
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
 - is_fullscreen
 - is_maximized
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
 - list_toplevels
+- map
 - maximize
+- measure
 - minimize
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
 - present
 - present_with_time
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_application
 - set_artists
 - set_authors
 - set_auto_startup_notification
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
 - set_comments
 - set_copyright
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
 - set_decorated
+- set_default_direction
 - set_default_icon_name
 - set_default_size
 - set_default_widget
 - set_deletable
 - set_destroy_with_parent
+- set_direction
 - set_display
 - set_documenters
 - set_focus
+- set_focus_child
+- set_focus_on_click
 - set_focus_visible
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
 - set_handle_menubar_accel
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_hide_on_close
 - set_icon_name
 - set_interactive_debugging
+- set_layout_manager
+- set_layout_manager_type
 - set_license
 - set_license_type
 - set_logo
 - set_logo_icon_name
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_mnemonics_visible
 - set_modal
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
 - set_program_name
+- set_properties
+- set_property
+- set_receives_default
 - set_resizable
+- set_sensitive
+- set_size_request
 - set_startup_id
+- set_state_flags
 - set_system_information
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_title
 - set_titlebar
+- set_tooltip_markup
+- set_tooltip_text
 - set_transient_for
 - set_translator_credits
+- set_valign
 - set_version
+- set_vexpand
+- set_vexpand_set
+- set_visible
 - set_website
 - set_website_label
 - set_wrap_license
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
 - unfullscreen
+- unmap
 - unmaximize
 - unminimize
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Accessible</summary>
 
-
+Interface GtkAccessible
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -290,31 +716,400 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ActionBar</summary>
 
-
-    :Constructors:
+Object GtkActionBar
     
-    ::
+    Properties from GtkActionBar:
+      revealed -> gboolean: revealed
     
-        ActionBar(**properties)
-        new() -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_center_widget
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
 - get_revealed
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
 - pack_end
 - pack_start
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - remove
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
 - set_center_widget
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_revealed
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Actionable</summary>
 
-
+Interface GtkActionable
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -358,12 +1153,11 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ActivateAction</summary>
 
-
-    :Constructors:
+Object GtkActivateAction
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        ActivateAction(**properties)
     
 
 ---
@@ -475,13 +1269,23 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Adjustment</summary>
 
-
-    :Constructors:
+Object GtkAdjustment
     
-    ::
+    Signals from GtkAdjustment:
+      changed ()
+      value-changed ()
     
-        Adjustment(**properties)
-        new(value:float, lower:float, upper:float, step_increment:float, page_increment:float, page_size:float) -> Gtk.Adjustment
+    Properties from GtkAdjustment:
+      value -> gdouble: value
+      lower -> gdouble: lower
+      upper -> gdouble: upper
+      step-increment -> gdouble: step-increment
+      page-increment -> gdouble: page-increment
+      page-size -> gdouble: page-size
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -607,13 +1411,15 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.AlternativeTrigger</summary>
 
-
-    :Constructors:
+Object GtkAlternativeTrigger
     
-    ::
+    Properties from GtkAlternativeTrigger:
+      first -> GtkShortcutTrigger: first
+      second -> GtkShortcutTrigger: second
     
-        AlternativeTrigger(**properties)
-        new(first:Gtk.ShortcutTrigger, second:Gtk.ShortcutTrigger) -> Gtk.ShortcutTrigger
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -732,13 +1538,24 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.AnyFilter</summary>
 
-
-    :Constructors:
+Object GtkAnyFilter
     
-    ::
+    Signals from GListModel:
+      items-changed (guint, guint, guint)
     
-        AnyFilter(**properties)
-        new() -> Gtk.AnyFilter
+    Properties from GtkMultiFilter:
+      item-type -> GType: item-type
+      n-items -> guint: n-items
+    
+    Signals from GListModel:
+      items-changed (guint, guint, guint)
+    
+    Signals from GtkFilter:
+      changed (GtkFilterChange)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -864,7 +1681,12 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.AppChooser</summary>
 
-
+Interface GtkAppChooser
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -906,182 +1728,1379 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.AppChooserButton</summary>
 
-
-    :Constructors:
+Object GtkAppChooserButton
     
-    ::
+    Signals from GtkAppChooserButton:
+      changed ()
+      custom-item-activated (gchararray)
+      activate ()
     
-        AppChooserButton(**properties)
-        new(content_type:str) -> Gtk.Widget
+    Properties from GtkAppChooserButton:
+      show-dialog-item -> gboolean: show-dialog-item
+      show-default-item -> gboolean: show-default-item
+      heading -> gchararray: heading
+      modal -> gboolean: modal
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
 - append_custom_item
 - append_separator
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_app_info
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
 - get_content_type
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
 - get_heading
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_modal
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
 - get_show_default_item
 - get_show_dialog_item
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - refresh
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_active_custom_item
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
 - set_heading
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_modal
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
 - set_show_default_item
 - set_show_dialog_item
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.AppChooserDialog</summary>
 
-
-    :Constructors:
+Object GtkAppChooserDialog
     
-    ::
+    Properties from GtkAppChooserDialog:
+      gfile -> GFile: gfile
+      heading -> gchararray: heading
     
-        AppChooserDialog(**properties)
-        new(parent:Gtk.Window=None, flags:Gtk.DialogFlags, file:Gio.File) -> Gtk.Widget
-        new_for_content_type(parent:Gtk.Window=None, flags:Gtk.DialogFlags, content_type:str) -> Gtk.Widget
+    Signals from GtkDialog:
+      response (gint)
+      close ()
+    
+    Properties from GtkDialog:
+      use-header-bar -> gint: use-header-bar
+    
+    Signals from GtkWindow:
+      activate-focus ()
+      activate-default ()
+      keys-changed ()
+      enable-debugging (gboolean) -> gboolean
+      close-request () -> gboolean
+    
+    Properties from GtkWindow:
+      title -> gchararray: title
+      resizable -> gboolean: resizable
+      modal -> gboolean: modal
+      default-width -> gint: default-width
+      default-height -> gint: default-height
+      destroy-with-parent -> gboolean: destroy-with-parent
+      hide-on-close -> gboolean: hide-on-close
+      icon-name -> gchararray: icon-name
+      display -> GdkDisplay: display
+      decorated -> gboolean: decorated
+      deletable -> gboolean: deletable
+      transient-for -> GtkWindow: transient-for
+      application -> GtkApplication: application
+      default-widget -> GtkWidget: default-widget
+      focus-widget -> GtkWidget: focus-widget
+      child -> GtkWidget: child
+      titlebar -> GtkWidget: titlebar
+      handle-menubar-accel -> gboolean: handle-menubar-accel
+      is-active -> gboolean: is-active
+      startup-id -> gchararray: startup-id
+      mnemonics-visible -> gboolean: mnemonics-visible
+      focus-visible -> gboolean: focus-visible
+      maximized -> gboolean: maximized
+      fullscreened -> gboolean: fullscreened
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
 - add_action_widget
 - add_button
 - add_buttons
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
 - close
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
 - destroy
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate_default
 - do_activate_focus
 - do_close
 - do_close_request
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
 - do_enable_debugging
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
 - do_keys_changed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
 - do_response
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
 - fullscreen
 - fullscreen_on_monitor
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_app_info
 - get_application
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
 - get_content_area
 - get_content_type
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
 - get_decorated
+- get_default_direction
 - get_default_icon_name
 - get_default_size
 - get_default_widget
 - get_deletable
 - get_destroy_with_parent
+- get_direction
+- get_display
+- get_first_child
 - get_focus
+- get_focus_child
+- get_focus_on_click
 - get_focus_visible
+- get_focusable
+- get_font_map
+- get_font_options
 - get_for_surface
+- get_frame_clock
 - get_group
+- get_halign
 - get_handle_menubar_accel
+- get_has_tooltip
 - get_header_bar
 - get_heading
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_hide_on_close
 - get_icon_name
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_mnemonics_visible
 - get_modal
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
 - get_renderer
+- get_request_mode
 - get_resizable
 - get_response_for_widget
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
 - get_surface
 - get_surface_transform
+- get_template_child
 - get_title
 - get_titlebar
+- get_tooltip_markup
+- get_tooltip_text
 - get_toplevels
 - get_transient_for
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
 - get_widget
 - get_widget_for_response
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
 - has_group
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
 - is_active
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
 - is_fullscreen
 - is_maximized
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
 - list_toplevels
+- map
 - maximize
+- measure
 - minimize
+- mnemonic_activate
 - new
 - new_for_content_type
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
 - present
 - present_with_time
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - refresh
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
 - response
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_application
 - set_auto_startup_notification
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
 - set_decorated
+- set_default_direction
 - set_default_icon_name
 - set_default_response
 - set_default_size
 - set_default_widget
 - set_deletable
 - set_destroy_with_parent
+- set_direction
 - set_display
 - set_focus
+- set_focus_child
+- set_focus_on_click
 - set_focus_visible
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
 - set_handle_menubar_accel
+- set_has_tooltip
 - set_heading
+- set_hexpand
+- set_hexpand_set
 - set_hide_on_close
 - set_icon_name
 - set_interactive_debugging
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_mnemonics_visible
 - set_modal
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_resizable
 - set_response_sensitive
+- set_sensitive
+- set_size_request
 - set_startup_id
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_title
 - set_titlebar
+- set_tooltip_markup
+- set_tooltip_text
 - set_transient_for
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
 - unfullscreen
+- unmap
 - unmaximize
 - unminimize
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.AppChooserWidget</summary>
 
-
-    :Constructors:
+Object GtkAppChooserWidget
     
-    ::
+    Signals from GtkAppChooserWidget:
+      application-selected (GAppInfo)
+      application-activated (GAppInfo)
     
-        AppChooserWidget(**properties)
-        new(content_type:str) -> Gtk.Widget
+    Properties from GtkAppChooserWidget:
+      show-default -> gboolean: show-default
+      show-recommended -> gboolean: show-recommended
+      show-fallback -> gboolean: show-fallback
+      show-other -> gboolean: show-other
+      show-all -> gboolean: show-all
+      default-text -> gchararray: default-text
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_app_info
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
 - get_content_type
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
 - get_default_text
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
 - get_show_all
 - get_show_default
 - get_show_fallback
 - get_show_other
 - get_show_recommended
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - refresh
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
 - set_default_text
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
 - set_show_all
 - set_show_default
 - set_show_fallback
 - set_show_other
 - set_show_recommended
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Application</summary>
 
-
-    :Constructors:
+Object GtkApplication
     
-    ::
+    Signals from GtkApplication:
+      window-added (GtkWindow)
+      window-removed (GtkWindow)
+      query-end ()
     
-        Application(**properties)
-        new(application_id:str=None, flags:Gio.ApplicationFlags) -> Gtk.Application
+    Properties from GtkApplication:
+      register-session -> gboolean: register-session
+      screensaver-active -> gboolean: screensaver-active
+      menubar -> GMenuModel: menubar
+      active-window -> GtkWindow: active-window
+    
+    Signals from GActionGroup:
+      action-added (gchararray)
+      action-removed (gchararray)
+      action-enabled-changed (gchararray, gboolean)
+      action-state-changed (gchararray, GVariant)
+    
+    Signals from GApplication:
+      activate ()
+      startup ()
+      shutdown ()
+      open (gpointer, gint, gchararray)
+      command-line (GApplicationCommandLine) -> gint
+      handle-local-options (GVariantDict) -> gint
+      name-lost () -> gboolean
+    
+    Properties from GApplication:
+      application-id -> gchararray: Application identifier
+        The unique identifier for the application
+      flags -> GApplicationFlags: Application flags
+        Flags specifying the behaviour of the application
+      resource-base-path -> gchararray: Resource base path
+        The base resource path for the application
+      is-registered -> gboolean: Is registered
+        If g_application_register() has been called
+      is-remote -> gboolean: Is remote
+        If this application instance is remote
+      inactivity-timeout -> guint: Inactivity timeout
+        Time (ms) to stay alive after becoming idle
+      action-group -> GActionGroup: Action group
+        The group of actions that the application exports
+      is-busy -> gboolean: Is busy
+        If this application is currently marked busy
+    
+    Signals from GActionGroup:
+      action-added (gchararray)
+      action-removed (gchararray)
+      action-enabled-changed (gchararray, gboolean)
+      action-state-changed (gchararray, GVariant)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -1277,255 +3296,1436 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ApplicationWindow</summary>
 
-
-    :Constructors:
+Object GtkApplicationWindow
     
-    ::
+    Properties from GtkApplicationWindow:
+      show-menubar -> gboolean: show-menubar
     
-        ApplicationWindow(**properties)
-        new(application:Gtk.Application) -> Gtk.Widget
+    Signals from GActionGroup:
+      action-added (gchararray)
+      action-removed (gchararray)
+      action-enabled-changed (gchararray, gboolean)
+      action-state-changed (gchararray, GVariant)
+    
+    Signals from GtkWindow:
+      activate-focus ()
+      activate-default ()
+      keys-changed ()
+      enable-debugging (gboolean) -> gboolean
+      close-request () -> gboolean
+    
+    Properties from GtkWindow:
+      title -> gchararray: title
+      resizable -> gboolean: resizable
+      modal -> gboolean: modal
+      default-width -> gint: default-width
+      default-height -> gint: default-height
+      destroy-with-parent -> gboolean: destroy-with-parent
+      hide-on-close -> gboolean: hide-on-close
+      icon-name -> gchararray: icon-name
+      display -> GdkDisplay: display
+      decorated -> gboolean: decorated
+      deletable -> gboolean: deletable
+      transient-for -> GtkWindow: transient-for
+      application -> GtkApplication: application
+      default-widget -> GtkWidget: default-widget
+      focus-widget -> GtkWidget: focus-widget
+      child -> GtkWidget: child
+      titlebar -> GtkWidget: titlebar
+      handle-menubar-accel -> gboolean: handle-menubar-accel
+      is-active -> gboolean: is-active
+      startup-id -> gchararray: startup-id
+      mnemonics-visible -> gboolean: mnemonics-visible
+      focus-visible -> gboolean: focus-visible
+      maximized -> gboolean: maximized
+      fullscreened -> gboolean: fullscreened
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
 - action_added
 - action_enabled_changed
 - action_removed
+- action_set_enabled
 - action_state_changed
+- activate
+- activate_action
+- activate_default
 - add_action
 - add_action_entries
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
 - change_action_state
+- child_focus
 - close
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
 - destroy
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate_default
 - do_activate_focus
 - do_close_request
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
 - do_enable_debugging
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
 - do_keys_changed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
 - fullscreen
 - fullscreen_on_monitor
+- g_type_instance
+- get_accessible_role
 - get_action_enabled
 - get_action_parameter_type
 - get_action_state
 - get_action_state_hint
 - get_action_state_type
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_application
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
 - get_decorated
+- get_default_direction
 - get_default_icon_name
 - get_default_size
 - get_default_widget
 - get_deletable
 - get_destroy_with_parent
+- get_direction
+- get_display
+- get_first_child
 - get_focus
+- get_focus_child
+- get_focus_on_click
 - get_focus_visible
+- get_focusable
+- get_font_map
+- get_font_options
 - get_for_surface
+- get_frame_clock
 - get_group
+- get_halign
 - get_handle_menubar_accel
+- get_has_tooltip
+- get_height
 - get_help_overlay
+- get_hexpand
+- get_hexpand_set
 - get_hide_on_close
 - get_icon_name
 - get_id
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_mnemonics_visible
 - get_modal
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
 - get_renderer
+- get_request_mode
 - get_resizable
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
 - get_show_menubar
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
 - get_surface
 - get_surface_transform
+- get_template_child
 - get_title
 - get_titlebar
+- get_tooltip_markup
+- get_tooltip_text
 - get_toplevels
 - get_transient_for
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
 - has_action
+- has_css_class
+- has_default
+- has_focus
 - has_group
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
 - is_active
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
 - is_fullscreen
 - is_maximized
+- is_sensitive
+- is_visible
+- keynav_failed
 - list_actions
+- list_mnemonic_labels
+- list_properties
 - list_toplevels
 - lookup_action
+- map
 - maximize
+- measure
 - minimize
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
 - present
 - present_with_time
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - remove_action
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_application
 - set_auto_startup_notification
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
 - set_decorated
+- set_default_direction
 - set_default_icon_name
 - set_default_size
 - set_default_widget
 - set_deletable
 - set_destroy_with_parent
+- set_direction
 - set_display
 - set_focus
+- set_focus_child
+- set_focus_on_click
 - set_focus_visible
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
 - set_handle_menubar_accel
+- set_has_tooltip
 - set_help_overlay
+- set_hexpand
+- set_hexpand_set
 - set_hide_on_close
 - set_icon_name
 - set_interactive_debugging
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_mnemonics_visible
 - set_modal
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_resizable
+- set_sensitive
 - set_show_menubar
+- set_size_request
 - set_startup_id
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_title
 - set_titlebar
+- set_tooltip_markup
+- set_tooltip_text
 - set_transient_for
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
 - unfullscreen
+- unmap
 - unmaximize
 - unminimize
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.AspectFrame</summary>
 
-
-    :Constructors:
+Object GtkAspectFrame
     
-    ::
+    Properties from GtkAspectFrame:
+      xalign -> gfloat: xalign
+      yalign -> gfloat: yalign
+      ratio -> gfloat: ratio
+      obey-child -> gboolean: obey-child
+      child -> GtkWidget: child
     
-        AspectFrame(**properties)
-        new(xalign:float, yalign:float, ratio:float, obey_child:bool) -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
 - get_obey_child
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
 - get_ratio
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
 - get_xalign
 - get_yalign
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
 - set_obey_child
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
 - set_ratio
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
 - set_xalign
 - set_yalign
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Assistant</summary>
 
-
-    :Constructors:
+Object GtkAssistant
     
-    ::
+    Signals from GtkAssistant:
+      close ()
+      cancel ()
+      prepare (GtkWidget)
+      apply ()
+      escape ()
     
-        Assistant(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkAssistant:
+      use-header-bar -> gint: use-header-bar
+      pages -> GListModel: pages
+    
+    Signals from GtkWindow:
+      activate-focus ()
+      activate-default ()
+      keys-changed ()
+      enable-debugging (gboolean) -> gboolean
+      close-request () -> gboolean
+    
+    Properties from GtkWindow:
+      title -> gchararray: title
+      resizable -> gboolean: resizable
+      modal -> gboolean: modal
+      default-width -> gint: default-width
+      default-height -> gint: default-height
+      destroy-with-parent -> gboolean: destroy-with-parent
+      hide-on-close -> gboolean: hide-on-close
+      icon-name -> gchararray: icon-name
+      display -> GdkDisplay: display
+      decorated -> gboolean: decorated
+      deletable -> gboolean: deletable
+      transient-for -> GtkWindow: transient-for
+      application -> GtkApplication: application
+      default-widget -> GtkWidget: default-widget
+      focus-widget -> GtkWidget: focus-widget
+      child -> GtkWidget: child
+      titlebar -> GtkWidget: titlebar
+      handle-menubar-accel -> gboolean: handle-menubar-accel
+      is-active -> gboolean: is-active
+      startup-id -> gchararray: startup-id
+      mnemonics-visible -> gboolean: mnemonics-visible
+      focus-visible -> gboolean: focus-visible
+      maximized -> gboolean: maximized
+      fullscreened -> gboolean: fullscreened
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
 - add_action_widget
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
 - append_page
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
 - close
 - commit
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
 - destroy
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate_default
 - do_activate_focus
 - do_close_request
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
 - do_enable_debugging
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
 - do_keys_changed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
 - fullscreen
 - fullscreen_on_monitor
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_application
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
 - get_current_page
+- get_cursor
+- get_data
 - get_decorated
+- get_default_direction
 - get_default_icon_name
 - get_default_size
 - get_default_widget
 - get_deletable
 - get_destroy_with_parent
+- get_direction
+- get_display
+- get_first_child
 - get_focus
+- get_focus_child
+- get_focus_on_click
 - get_focus_visible
+- get_focusable
+- get_font_map
+- get_font_options
 - get_for_surface
+- get_frame_clock
 - get_group
+- get_halign
 - get_handle_menubar_accel
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_hide_on_close
 - get_icon_name
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_mnemonics_visible
 - get_modal
 - get_n_pages
+- get_name
+- get_native
+- get_next_sibling
 - get_nth_page
+- get_opacity
+- get_overflow
 - get_page
 - get_page_complete
 - get_page_title
 - get_page_type
 - get_pages
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
 - get_renderer
+- get_request_mode
 - get_resizable
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
 - get_surface
 - get_surface_transform
+- get_template_child
 - get_title
 - get_titlebar
+- get_tooltip_markup
+- get_tooltip_text
 - get_toplevels
 - get_transient_for
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
 - has_group
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
 - insert_page
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
 - is_active
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
 - is_fullscreen
 - is_maximized
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
 - list_toplevels
+- map
 - maximize
+- measure
 - minimize
+- mnemonic_activate
 - new
+- newv
 - next_page
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
 - prepend_page
 - present
 - present_with_time
 - previous_page
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - remove_action_widget
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
 - remove_page
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_application
 - set_auto_startup_notification
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
 - set_current_page
+- set_cursor
+- set_cursor_from_name
+- set_data
 - set_decorated
+- set_default_direction
 - set_default_icon_name
 - set_default_size
 - set_default_widget
 - set_deletable
 - set_destroy_with_parent
+- set_direction
 - set_display
 - set_focus
+- set_focus_child
+- set_focus_on_click
 - set_focus_visible
+- set_focusable
+- set_font_map
+- set_font_options
 - set_forward_page_func
+- set_halign
 - set_handle_menubar_accel
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_hide_on_close
 - set_icon_name
 - set_interactive_debugging
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_mnemonics_visible
 - set_modal
+- set_name
+- set_opacity
+- set_overflow
 - set_page_complete
 - set_page_title
 - set_page_type
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_resizable
+- set_sensitive
+- set_size_request
 - set_startup_id
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_title
 - set_titlebar
+- set_tooltip_markup
+- set_tooltip_text
 - set_transient_for
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
 - unfullscreen
+- unmap
 - unmaximize
 - unminimize
+- unparent
+- unrealize
+- unref
+- unset_state_flags
 - update_buttons_state
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.AssistantPage</summary>
 
-
-    :Constructors:
+Object GtkAssistantPage
     
-    ::
+    Properties from GtkAssistantPage:
+      child -> GtkWidget: child
+      page-type -> GtkAssistantPageType: page-type
+      title -> gchararray: title
+      complete -> gboolean: complete
     
-        AssistantPage(**properties)
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -1633,13 +4833,11 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.BinLayout</summary>
 
-
-    :Constructors:
+Object GtkBinLayout
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        BinLayout(**properties)
-        new() -> Gtk.LayoutManager
     
 
 ---
@@ -1760,13 +4958,22 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.BookmarkList</summary>
 
-
-    :Constructors:
+Object GtkBookmarkList
     
-    ::
+    Properties from GtkBookmarkList:
+      filename -> gchararray: filename
+      attributes -> gchararray: attributes
+      io-priority -> gint: io-priority
+      item-type -> GType: item-type
+      loading -> gboolean: loading
+      n-items -> guint: n-items
     
-        BookmarkList(**properties)
-        new(filename:str=None, attributes:str=None) -> Gtk.BookmarkList
+    Signals from GListModel:
+      items-changed (guint, guint, guint)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -1889,13 +5096,18 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.BoolFilter</summary>
 
-
-    :Constructors:
+Object GtkBoolFilter
     
-    ::
+    Properties from GtkBoolFilter:
+      expression -> GtkExpression: expression
+      invert -> gboolean: invert
     
-        BoolFilter(**properties)
-        new(expression:Gtk.Expression=None) -> Gtk.BoolFilter
+    Signals from GtkFilter:
+      changed (GtkFilterChange)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -2013,43 +5225,412 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Box</summary>
 
-
-    :Constructors:
+Object GtkBox
     
-    ::
+    Properties from GtkBox:
+      spacing -> gint: spacing
+      homogeneous -> gboolean: homogeneous
+      baseline-position -> GtkBaselinePosition: baseline-position
     
-        Box(**properties)
-        new(orientation:Gtk.Orientation, spacing:int) -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
 - append
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_baseline_position
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_homogeneous
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
 - get_orientation
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
 - get_spacing
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
 - insert_child_after
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
 - prepend
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - remove
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
 - reorder_child_after
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_baseline_position
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_homogeneous
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
 - set_orientation
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
 - set_spacing
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.BoxLayout</summary>
 
-
-    :Constructors:
+Object GtkBoxLayout
     
-    ::
+    Properties from GtkBoxLayout:
+      homogeneous -> gboolean: homogeneous
+      spacing -> gint: spacing
+      baseline-position -> GtkBaselinePosition: baseline-position
     
-        BoxLayout(**properties)
-        new(orientation:Gtk.Orientation) -> Gtk.LayoutManager
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -2179,7 +5760,12 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Buildable</summary>
 
-
+Interface GtkBuildable
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -2219,16 +5805,16 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Builder</summary>
 
-
-    :Constructors:
+Object GtkBuilder
     
-    ::
+    Properties from GtkBuilder:
+      current-object -> GObject: current-object
+      scope -> GtkBuilderScope: scope
+      translation-domain -> gchararray: translation-domain
     
-        Builder(**properties)
-        new() -> Gtk.Builder
-        new_from_file(filename:str) -> Gtk.Builder
-        new_from_resource(resource_path:str) -> Gtk.Builder
-        new_from_string(string:str, length:int) -> Gtk.Builder
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -2361,13 +5947,11 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.BuilderCScope</summary>
 
-
-    :Constructors:
+Object GtkBuilderCScope
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        BuilderCScope(**properties)
-        new() -> Gtk.BuilderCScope
     
 
 ---
@@ -2478,14 +6062,16 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.BuilderListItemFactory</summary>
 
-
-    :Constructors:
+Object GtkBuilderListItemFactory
     
-    ::
+    Properties from GtkBuilderListItemFactory:
+      bytes -> GBytes: bytes
+      resource -> gchararray: resource
+      scope -> GtkBuilderScope: scope
     
-        BuilderListItemFactory(**properties)
-        new_from_bytes(scope:Gtk.BuilderScope=None, bytes:GLib.Bytes) -> Gtk.ListItemFactory
-        new_from_resource(scope:Gtk.BuilderScope=None, resource_path:str) -> Gtk.ListItemFactory
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -2597,7 +6183,12 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.BuilderScope</summary>
 
-
+Interface GtkBuilderScope
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -2636,41 +6227,410 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Button</summary>
 
-
-    :Constructors:
+Object GtkButton
     
-    ::
+    Signals from GtkButton:
+      activate ()
+      clicked ()
     
-        Button(**properties)
-        new() -> Gtk.Widget
-        new_from_icon_name(icon_name:str=None) -> Gtk.Widget
-        new_with_label(label:str) -> Gtk.Widget
-        new_with_mnemonic(label:str) -> Gtk.Widget
+    Properties from GtkButton:
+      label -> gchararray: label
+      has-frame -> gboolean: has-frame
+      use-underline -> gboolean: use-underline
+      icon-name -> gchararray: icon-name
+      child -> GtkWidget: child
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate
 - do_clicked
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
 - get_action_name
 - get_action_target_value
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
 - get_has_frame
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_icon_name
 - get_label
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
 - get_use_underline
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_from_icon_name
 - new_with_label
 - new_with_mnemonic
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
 - set_action_name
 - set_action_target_value
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
 - set_detailed_action_name
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
 - set_has_frame
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_icon_name
 - set_label
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
 - set_use_underline
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
@@ -2729,42 +6689,416 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Calendar</summary>
 
-
-    :Constructors:
+Object GtkCalendar
     
-    ::
+    Signals from GtkCalendar:
+      day-selected ()
+      prev-month ()
+      next-month ()
+      prev-year ()
+      next-year ()
     
-        Calendar(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkCalendar:
+      year -> gint: year
+      month -> gint: month
+      day -> gint: day
+      show-heading -> gboolean: show-heading
+      show-day-names -> gboolean: show-day-names
+      show-week-numbers -> gboolean: show-week-numbers
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
 - clear_marks
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
 - get_date
 - get_day_is_marked
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
 - get_show_day_names
 - get_show_heading
 - get_show_week_numbers
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
 - mark_day
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
 - select_day
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
 - set_show_day_names
 - set_show_heading
 - set_show_week_numbers
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
 - unmark_day
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.CallbackAction</summary>
 
-
-    :Constructors:
+Object GtkCallbackAction
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        CallbackAction(**properties)
-        new(callback:Gtk.ShortcutFunc=None) -> Gtk.CallbackAction
     
 
 ---
@@ -2876,12 +7210,22 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.CellArea</summary>
 
-
-    :Constructors:
+Object GtkCellArea
     
-    ::
+    Signals from GtkCellArea:
+      apply-attributes (GtkTreeModel, GtkTreeIter, gboolean, gboolean)
+      add-editable (GtkCellRenderer, GtkCellEditable, GdkRectangle, gchararray)
+      remove-editable (GtkCellRenderer, GtkCellEditable)
+      focus-changed (GtkCellRenderer, gchararray)
     
-        CellArea(**properties)
+    Properties from GtkCellArea:
+      focus-cell -> GtkCellRenderer: focus-cell
+      edited-cell -> GtkCellRenderer: edited-cell
+      edit-widget -> GtkCellEditable: edit-widget
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -3061,13 +7405,25 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.CellAreaBox</summary>
 
-
-    :Constructors:
+Object GtkCellAreaBox
     
-    ::
+    Properties from GtkCellAreaBox:
+      spacing -> gint: spacing
     
-        CellAreaBox(**properties)
-        new() -> Gtk.CellArea
+    Signals from GtkCellArea:
+      apply-attributes (GtkTreeModel, GtkTreeIter, gboolean, gboolean)
+      add-editable (GtkCellRenderer, GtkCellEditable, GdkRectangle, gchararray)
+      remove-editable (GtkCellRenderer, GtkCellEditable)
+      focus-changed (GtkCellRenderer, gchararray)
+    
+    Properties from GtkCellArea:
+      focus-cell -> GtkCellRenderer: focus-cell
+      edited-cell -> GtkCellRenderer: edited-cell
+      edit-widget -> GtkCellEditable: edit-widget
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -3252,12 +7608,18 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.CellAreaContext</summary>
 
-
-    :Constructors:
+Object GtkCellAreaContext
     
-    ::
+    Properties from GtkCellAreaContext:
+      area -> GtkCellArea: area
+      minimum-width -> gint: minimum-width
+      natural-width -> gint: natural-width
+      minimum-height -> gint: minimum-height
+      natural-height -> gint: natural-height
     
-        CellAreaContext(**properties)
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -3379,7 +7741,12 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.CellEditable</summary>
 
-
+Interface GtkCellEditable
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -3421,7 +7788,12 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.CellLayout</summary>
 
-
+Interface GtkCellLayout
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -3469,12 +7841,32 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.CellRenderer</summary>
 
-
-    :Constructors:
+Object GtkCellRenderer
     
-    ::
+    Signals from GtkCellRenderer:
+      editing-canceled ()
+      editing-started (GtkCellEditable, gchararray)
     
-        CellRenderer(**properties)
+    Properties from GtkCellRenderer:
+      mode -> GtkCellRendererMode: mode
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      xalign -> gfloat: xalign
+      yalign -> gfloat: yalign
+      xpad -> guint: xpad
+      ypad -> guint: ypad
+      width -> gint: width
+      height -> gint: height
+      is-expander -> gboolean: is-expander
+      is-expanded -> gboolean: is-expanded
+      cell-background -> gchararray: cell-background
+      cell-background-rgba -> GdkRGBA: cell-background-rgba
+      cell-background-set -> gboolean: cell-background-set
+      editing -> gboolean: editing
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -3621,13 +8013,93 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.CellRendererAccel</summary>
 
-
-    :Constructors:
+Object GtkCellRendererAccel
     
-    ::
+    Signals from GtkCellRendererAccel:
+      accel-edited (gchararray, guint, GdkModifierType, guint)
+      accel-cleared (gchararray)
     
-        CellRendererAccel(**properties)
-        new() -> Gtk.CellRenderer
+    Properties from GtkCellRendererAccel:
+      accel-key -> guint: accel-key
+      accel-mods -> GdkModifierType: accel-mods
+      keycode -> guint: keycode
+      accel-mode -> GtkCellRendererAccelMode: accel-mode
+    
+    Signals from GtkCellRendererText:
+      edited (gchararray, gchararray)
+    
+    Properties from GtkCellRendererText:
+      text -> gchararray: text
+      markup -> gchararray: markup
+      attributes -> PangoAttrList: attributes
+      single-paragraph-mode -> gboolean: single-paragraph-mode
+      width-chars -> gint: width-chars
+      max-width-chars -> gint: max-width-chars
+      wrap-width -> gint: wrap-width
+      alignment -> PangoAlignment: alignment
+      placeholder-text -> gchararray: placeholder-text
+      background -> gchararray: background
+      foreground -> gchararray: foreground
+      background-rgba -> GdkRGBA: background-rgba
+      foreground-rgba -> GdkRGBA: foreground-rgba
+      font -> gchararray: font
+      font-desc -> PangoFontDescription: font-desc
+      family -> gchararray: family
+      style -> PangoStyle: style
+      variant -> PangoVariant: variant
+      weight -> gint: weight
+      stretch -> PangoStretch: stretch
+      size -> gint: size
+      size-points -> gdouble: size-points
+      scale -> gdouble: scale
+      editable -> gboolean: editable
+      strikethrough -> gboolean: strikethrough
+      underline -> PangoUnderline: underline
+      rise -> gint: rise
+      language -> gchararray: language
+      ellipsize -> PangoEllipsizeMode: ellipsize
+      wrap-mode -> PangoWrapMode: wrap-mode
+      background-set -> gboolean: background-set
+      foreground-set -> gboolean: foreground-set
+      family-set -> gboolean: family-set
+      style-set -> gboolean: style-set
+      variant-set -> gboolean: variant-set
+      weight-set -> gboolean: weight-set
+      stretch-set -> gboolean: stretch-set
+      size-set -> gboolean: size-set
+      scale-set -> gboolean: scale-set
+      editable-set -> gboolean: editable-set
+      strikethrough-set -> gboolean: strikethrough-set
+      underline-set -> gboolean: underline-set
+      rise-set -> gboolean: rise-set
+      language-set -> gboolean: language-set
+      ellipsize-set -> gboolean: ellipsize-set
+      align-set -> gboolean: align-set
+    
+    Signals from GtkCellRenderer:
+      editing-canceled ()
+      editing-started (GtkCellEditable, gchararray)
+    
+    Properties from GtkCellRenderer:
+      mode -> GtkCellRendererMode: mode
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      xalign -> gfloat: xalign
+      yalign -> gfloat: yalign
+      xpad -> guint: xpad
+      ypad -> guint: ypad
+      width -> gint: width
+      height -> gint: height
+      is-expander -> gboolean: is-expander
+      is-expanded -> gboolean: is-expanded
+      cell-background -> gchararray: cell-background
+      cell-background-rgba -> GdkRGBA: cell-background-rgba
+      cell-background-set -> gboolean: cell-background-set
+      editing -> gboolean: editing
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -3778,13 +8250,91 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.CellRendererCombo</summary>
 
-
-    :Constructors:
+Object GtkCellRendererCombo
     
-    ::
+    Signals from GtkCellRendererCombo:
+      changed (gchararray, GtkTreeIter)
     
-        CellRendererCombo(**properties)
-        new() -> Gtk.CellRenderer
+    Properties from GtkCellRendererCombo:
+      model -> GtkTreeModel: model
+      text-column -> gint: text-column
+      has-entry -> gboolean: has-entry
+    
+    Signals from GtkCellRendererText:
+      edited (gchararray, gchararray)
+    
+    Properties from GtkCellRendererText:
+      text -> gchararray: text
+      markup -> gchararray: markup
+      attributes -> PangoAttrList: attributes
+      single-paragraph-mode -> gboolean: single-paragraph-mode
+      width-chars -> gint: width-chars
+      max-width-chars -> gint: max-width-chars
+      wrap-width -> gint: wrap-width
+      alignment -> PangoAlignment: alignment
+      placeholder-text -> gchararray: placeholder-text
+      background -> gchararray: background
+      foreground -> gchararray: foreground
+      background-rgba -> GdkRGBA: background-rgba
+      foreground-rgba -> GdkRGBA: foreground-rgba
+      font -> gchararray: font
+      font-desc -> PangoFontDescription: font-desc
+      family -> gchararray: family
+      style -> PangoStyle: style
+      variant -> PangoVariant: variant
+      weight -> gint: weight
+      stretch -> PangoStretch: stretch
+      size -> gint: size
+      size-points -> gdouble: size-points
+      scale -> gdouble: scale
+      editable -> gboolean: editable
+      strikethrough -> gboolean: strikethrough
+      underline -> PangoUnderline: underline
+      rise -> gint: rise
+      language -> gchararray: language
+      ellipsize -> PangoEllipsizeMode: ellipsize
+      wrap-mode -> PangoWrapMode: wrap-mode
+      background-set -> gboolean: background-set
+      foreground-set -> gboolean: foreground-set
+      family-set -> gboolean: family-set
+      style-set -> gboolean: style-set
+      variant-set -> gboolean: variant-set
+      weight-set -> gboolean: weight-set
+      stretch-set -> gboolean: stretch-set
+      size-set -> gboolean: size-set
+      scale-set -> gboolean: scale-set
+      editable-set -> gboolean: editable-set
+      strikethrough-set -> gboolean: strikethrough-set
+      underline-set -> gboolean: underline-set
+      rise-set -> gboolean: rise-set
+      language-set -> gboolean: language-set
+      ellipsize-set -> gboolean: ellipsize-set
+      align-set -> gboolean: align-set
+    
+    Signals from GtkCellRenderer:
+      editing-canceled ()
+      editing-started (GtkCellEditable, gchararray)
+    
+    Properties from GtkCellRenderer:
+      mode -> GtkCellRendererMode: mode
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      xalign -> gfloat: xalign
+      yalign -> gfloat: yalign
+      xpad -> guint: xpad
+      ypad -> guint: ypad
+      width -> gint: width
+      height -> gint: height
+      is-expander -> gboolean: is-expander
+      is-expanded -> gboolean: is-expanded
+      cell-background -> gchararray: cell-background
+      cell-background-rgba -> GdkRGBA: cell-background-rgba
+      cell-background-set -> gboolean: cell-background-set
+      editing -> gboolean: editing
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -3935,13 +8485,41 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.CellRendererPixbuf</summary>
 
-
-    :Constructors:
+Object GtkCellRendererPixbuf
     
-    ::
+    Properties from GtkCellRendererPixbuf:
+      pixbuf -> GdkPixbuf: pixbuf
+      pixbuf-expander-open -> GdkPixbuf: pixbuf-expander-open
+      pixbuf-expander-closed -> GdkPixbuf: pixbuf-expander-closed
+      texture -> GdkTexture: texture
+      icon-size -> GtkIconSize: icon-size
+      icon-name -> gchararray: icon-name
+      gicon -> GIcon: gicon
     
-        CellRendererPixbuf(**properties)
-        new() -> Gtk.CellRenderer
+    Signals from GtkCellRenderer:
+      editing-canceled ()
+      editing-started (GtkCellEditable, gchararray)
+    
+    Properties from GtkCellRenderer:
+      mode -> GtkCellRendererMode: mode
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      xalign -> gfloat: xalign
+      yalign -> gfloat: yalign
+      xpad -> guint: xpad
+      ypad -> guint: ypad
+      width -> gint: width
+      height -> gint: height
+      is-expander -> gboolean: is-expander
+      is-expanded -> gboolean: is-expanded
+      cell-background -> gchararray: cell-background
+      cell-background-rgba -> GdkRGBA: cell-background-rgba
+      cell-background-set -> gboolean: cell-background-set
+      editing -> gboolean: editing
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -4089,13 +8667,40 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.CellRendererProgress</summary>
 
-
-    :Constructors:
+Object GtkCellRendererProgress
     
-    ::
+    Properties from GtkCellRendererProgress:
+      value -> gint: value
+      text -> gchararray: text
+      pulse -> gint: pulse
+      text-xalign -> gfloat: text-xalign
+      text-yalign -> gfloat: text-yalign
+      inverted -> gboolean: inverted
     
-        CellRendererProgress(**properties)
-        new() -> Gtk.CellRenderer
+    Signals from GtkCellRenderer:
+      editing-canceled ()
+      editing-started (GtkCellEditable, gchararray)
+    
+    Properties from GtkCellRenderer:
+      mode -> GtkCellRendererMode: mode
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      xalign -> gfloat: xalign
+      yalign -> gfloat: yalign
+      xpad -> guint: xpad
+      ypad -> guint: ypad
+      width -> gint: width
+      height -> gint: height
+      is-expander -> gboolean: is-expander
+      is-expanded -> gboolean: is-expanded
+      cell-background -> gchararray: cell-background
+      cell-background-rgba -> GdkRGBA: cell-background-rgba
+      cell-background-set -> gboolean: cell-background-set
+      editing -> gboolean: editing
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -4246,13 +8851,88 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.CellRendererSpin</summary>
 
-
-    :Constructors:
+Object GtkCellRendererSpin
     
-    ::
+    Properties from GtkCellRendererSpin:
+      adjustment -> GtkAdjustment: adjustment
+      climb-rate -> gdouble: climb-rate
+      digits -> guint: digits
     
-        CellRendererSpin(**properties)
-        new() -> Gtk.CellRenderer
+    Signals from GtkCellRendererText:
+      edited (gchararray, gchararray)
+    
+    Properties from GtkCellRendererText:
+      text -> gchararray: text
+      markup -> gchararray: markup
+      attributes -> PangoAttrList: attributes
+      single-paragraph-mode -> gboolean: single-paragraph-mode
+      width-chars -> gint: width-chars
+      max-width-chars -> gint: max-width-chars
+      wrap-width -> gint: wrap-width
+      alignment -> PangoAlignment: alignment
+      placeholder-text -> gchararray: placeholder-text
+      background -> gchararray: background
+      foreground -> gchararray: foreground
+      background-rgba -> GdkRGBA: background-rgba
+      foreground-rgba -> GdkRGBA: foreground-rgba
+      font -> gchararray: font
+      font-desc -> PangoFontDescription: font-desc
+      family -> gchararray: family
+      style -> PangoStyle: style
+      variant -> PangoVariant: variant
+      weight -> gint: weight
+      stretch -> PangoStretch: stretch
+      size -> gint: size
+      size-points -> gdouble: size-points
+      scale -> gdouble: scale
+      editable -> gboolean: editable
+      strikethrough -> gboolean: strikethrough
+      underline -> PangoUnderline: underline
+      rise -> gint: rise
+      language -> gchararray: language
+      ellipsize -> PangoEllipsizeMode: ellipsize
+      wrap-mode -> PangoWrapMode: wrap-mode
+      background-set -> gboolean: background-set
+      foreground-set -> gboolean: foreground-set
+      family-set -> gboolean: family-set
+      style-set -> gboolean: style-set
+      variant-set -> gboolean: variant-set
+      weight-set -> gboolean: weight-set
+      stretch-set -> gboolean: stretch-set
+      size-set -> gboolean: size-set
+      scale-set -> gboolean: scale-set
+      editable-set -> gboolean: editable-set
+      strikethrough-set -> gboolean: strikethrough-set
+      underline-set -> gboolean: underline-set
+      rise-set -> gboolean: rise-set
+      language-set -> gboolean: language-set
+      ellipsize-set -> gboolean: ellipsize-set
+      align-set -> gboolean: align-set
+    
+    Signals from GtkCellRenderer:
+      editing-canceled ()
+      editing-started (GtkCellEditable, gchararray)
+    
+    Properties from GtkCellRenderer:
+      mode -> GtkCellRendererMode: mode
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      xalign -> gfloat: xalign
+      yalign -> gfloat: yalign
+      xpad -> guint: xpad
+      ypad -> guint: ypad
+      width -> gint: width
+      height -> gint: height
+      is-expander -> gboolean: is-expander
+      is-expanded -> gboolean: is-expanded
+      cell-background -> gchararray: cell-background
+      cell-background-rgba -> GdkRGBA: cell-background-rgba
+      cell-background-set -> gboolean: cell-background-set
+      editing -> gboolean: editing
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -4403,13 +9083,37 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.CellRendererSpinner</summary>
 
-
-    :Constructors:
+Object GtkCellRendererSpinner
     
-    ::
+    Properties from GtkCellRendererSpinner:
+      active -> gboolean: active
+      pulse -> guint: pulse
+      size -> GtkIconSize: size
     
-        CellRendererSpinner(**properties)
-        new() -> Gtk.CellRenderer
+    Signals from GtkCellRenderer:
+      editing-canceled ()
+      editing-started (GtkCellEditable, gchararray)
+    
+    Properties from GtkCellRenderer:
+      mode -> GtkCellRendererMode: mode
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      xalign -> gfloat: xalign
+      yalign -> gfloat: yalign
+      xpad -> guint: xpad
+      ypad -> guint: ypad
+      width -> gint: width
+      height -> gint: height
+      is-expander -> gboolean: is-expander
+      is-expanded -> gboolean: is-expanded
+      cell-background -> gchararray: cell-background
+      cell-background-rgba -> GdkRGBA: cell-background-rgba
+      cell-background-set -> gboolean: cell-background-set
+      editing -> gboolean: editing
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -4557,13 +9261,83 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.CellRendererText</summary>
 
-
-    :Constructors:
+Object GtkCellRendererText
     
-    ::
+    Signals from GtkCellRendererText:
+      edited (gchararray, gchararray)
     
-        CellRendererText(**properties)
-        new() -> Gtk.CellRenderer
+    Properties from GtkCellRendererText:
+      text -> gchararray: text
+      markup -> gchararray: markup
+      attributes -> PangoAttrList: attributes
+      single-paragraph-mode -> gboolean: single-paragraph-mode
+      width-chars -> gint: width-chars
+      max-width-chars -> gint: max-width-chars
+      wrap-width -> gint: wrap-width
+      alignment -> PangoAlignment: alignment
+      placeholder-text -> gchararray: placeholder-text
+      background -> gchararray: background
+      foreground -> gchararray: foreground
+      background-rgba -> GdkRGBA: background-rgba
+      foreground-rgba -> GdkRGBA: foreground-rgba
+      font -> gchararray: font
+      font-desc -> PangoFontDescription: font-desc
+      family -> gchararray: family
+      style -> PangoStyle: style
+      variant -> PangoVariant: variant
+      weight -> gint: weight
+      stretch -> PangoStretch: stretch
+      size -> gint: size
+      size-points -> gdouble: size-points
+      scale -> gdouble: scale
+      editable -> gboolean: editable
+      strikethrough -> gboolean: strikethrough
+      underline -> PangoUnderline: underline
+      rise -> gint: rise
+      language -> gchararray: language
+      ellipsize -> PangoEllipsizeMode: ellipsize
+      wrap-mode -> PangoWrapMode: wrap-mode
+      background-set -> gboolean: background-set
+      foreground-set -> gboolean: foreground-set
+      family-set -> gboolean: family-set
+      style-set -> gboolean: style-set
+      variant-set -> gboolean: variant-set
+      weight-set -> gboolean: weight-set
+      stretch-set -> gboolean: stretch-set
+      size-set -> gboolean: size-set
+      scale-set -> gboolean: scale-set
+      editable-set -> gboolean: editable-set
+      strikethrough-set -> gboolean: strikethrough-set
+      underline-set -> gboolean: underline-set
+      rise-set -> gboolean: rise-set
+      language-set -> gboolean: language-set
+      ellipsize-set -> gboolean: ellipsize-set
+      align-set -> gboolean: align-set
+    
+    Signals from GtkCellRenderer:
+      editing-canceled ()
+      editing-started (GtkCellEditable, gchararray)
+    
+    Properties from GtkCellRenderer:
+      mode -> GtkCellRendererMode: mode
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      xalign -> gfloat: xalign
+      yalign -> gfloat: yalign
+      xpad -> guint: xpad
+      ypad -> guint: ypad
+      width -> gint: width
+      height -> gint: height
+      is-expander -> gboolean: is-expander
+      is-expanded -> gboolean: is-expanded
+      cell-background -> gchararray: cell-background
+      cell-background-rgba -> GdkRGBA: cell-background-rgba
+      cell-background-set -> gboolean: cell-background-set
+      editing -> gboolean: editing
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -4714,13 +9488,41 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.CellRendererToggle</summary>
 
-
-    :Constructors:
+Object GtkCellRendererToggle
     
-    ::
+    Signals from GtkCellRendererToggle:
+      toggled (gchararray)
     
-        CellRendererToggle(**properties)
-        new() -> Gtk.CellRenderer
+    Properties from GtkCellRendererToggle:
+      activatable -> gboolean: activatable
+      active -> gboolean: active
+      radio -> gboolean: radio
+      inconsistent -> gboolean: inconsistent
+    
+    Signals from GtkCellRenderer:
+      editing-canceled ()
+      editing-started (GtkCellEditable, gchararray)
+    
+    Properties from GtkCellRenderer:
+      mode -> GtkCellRendererMode: mode
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      xalign -> gfloat: xalign
+      yalign -> gfloat: yalign
+      xpad -> guint: xpad
+      ypad -> guint: ypad
+      width -> gint: width
+      height -> gint: height
+      is-expander -> gboolean: is-expander
+      is-expanded -> gboolean: is-expanded
+      cell-background -> gchararray: cell-background
+      cell-background-rgba -> GdkRGBA: cell-background-rgba
+      cell-background-set -> gboolean: cell-background-set
+      editing -> gboolean: editing
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -4874,84 +9676,810 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.CellView</summary>
 
-
-    :Constructors:
+Object GtkCellView
     
-    ::
+    Properties from GtkCellView:
+      model -> GtkTreeModel: model
+      cell-area -> GtkCellArea: cell-area
+      cell-area-context -> GtkCellAreaContext: cell-area-context
+      draw-sensitive -> gboolean: draw-sensitive
+      fit-model -> gboolean: fit-model
     
-        CellView(**properties)
-        new() -> Gtk.Widget
-        new_with_context(area:Gtk.CellArea, context:Gtk.CellAreaContext) -> Gtk.Widget
-        new_with_markup(markup:str) -> Gtk.Widget
-        new_with_text(text:str) -> Gtk.Widget
-        new_with_texture(texture:Gdk.Texture) -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
 - add_attribute
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
 - clear
 - clear_attributes
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_area
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_cells
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
 - get_displayed_row
 - get_draw_sensitive
+- get_first_child
 - get_fit_model
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_model
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
 - get_orientation
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_with_context
 - new_with_markup
 - new_with_text
 - new_with_texture
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
 - pack_end
 - pack_start
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
 - reorder
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
 - set_cell_data_func
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_displayed_row
 - set_draw_sensitive
 - set_fit_model
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_model
+- set_name
+- set_opacity
 - set_orientation
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.CenterBox</summary>
 
-
-    :Constructors:
+Object GtkCenterBox
     
-    ::
+    Properties from GtkCenterBox:
+      baseline-position -> GtkBaselinePosition: baseline-position
     
-        CenterBox(**properties)
-        new() -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_baseline_position
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_center_widget
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
 - get_end_widget
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
 - get_orientation
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
 - get_start_widget
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_baseline_position
+- set_can_focus
+- set_can_target
 - set_center_widget
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_end_widget
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
 - set_orientation
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
 - set_start_widget
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.CenterLayout</summary>
 
-
-    :Constructors:
+Object GtkCenterLayout
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        CenterLayout(**properties)
-        new() -> Gtk.LayoutManager
     
 
 ---
@@ -5082,40 +10610,411 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.CheckButton</summary>
 
-
-    :Constructors:
+Object GtkCheckButton
     
-    ::
+    Signals from GtkCheckButton:
+      activate ()
+      toggled ()
     
-        CheckButton(**properties)
-        new() -> Gtk.Widget
-        new_with_label(label:str=None) -> Gtk.Widget
-        new_with_mnemonic(label:str=None) -> Gtk.Widget
+    Properties from GtkCheckButton:
+      active -> gboolean: active
+      group -> GtkCheckButton: group
+      label -> gchararray: label
+      inconsistent -> gboolean: inconsistent
+      use-underline -> gboolean: use-underline
+      child -> GtkWidget: child
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
 - do_toggled
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
 - get_action_name
 - get_action_target_value
+- get_activate_signal
 - get_active
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_inconsistent
 - get_label
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
 - get_use_underline
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_with_label
 - new_with_mnemonic
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
 - set_action_name
 - set_action_target_value
+- set_activate_signal
+- set_activate_signal_from_name
 - set_active
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
 - set_detailed_action_name
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
 - set_group
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_inconsistent
 - set_label
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
 - set_use_underline
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
@@ -5174,35 +11073,412 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ColorButton</summary>
 
-
-    :Constructors:
+Object GtkColorButton
     
-    ::
+    Signals from GtkColorButton:
+      activate ()
+      color-set ()
     
-        ColorButton(**properties)
-        new() -> Gtk.Widget
-        new_with_rgba(rgba:Gdk.RGBA) -> Gtk.Widget
+    Properties from GtkColorButton:
+      title -> gchararray: title
+      show-editor -> gboolean: show-editor
+      modal -> gboolean: modal
+    
+    Signals from GtkColorChooser:
+      color-activated (GdkRGBA)
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
 - add_palette
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_modal
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
 - get_rgba
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
 - get_title
+- get_tooltip_markup
+- get_tooltip_text
 - get_use_alpha
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_with_rgba
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_modal
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_rgba
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_title
+- set_tooltip_markup
+- set_tooltip_text
 - set_use_alpha
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.ColorChooser</summary>
 
-
+Interface GtkColorChooser
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -5246,182 +11522,1339 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ColorChooserDialog</summary>
 
-
-    :Constructors:
+Object GtkColorChooserDialog
     
-    ::
+    Properties from GtkColorChooserDialog:
+      show-editor -> gboolean: show-editor
     
-        ColorChooserDialog(**properties)
-        new(title:str=None, parent:Gtk.Window=None) -> Gtk.Widget
+    Signals from GtkColorChooser:
+      color-activated (GdkRGBA)
+    
+    Signals from GtkDialog:
+      response (gint)
+      close ()
+    
+    Properties from GtkDialog:
+      use-header-bar -> gint: use-header-bar
+    
+    Signals from GtkWindow:
+      activate-focus ()
+      activate-default ()
+      keys-changed ()
+      enable-debugging (gboolean) -> gboolean
+      close-request () -> gboolean
+    
+    Properties from GtkWindow:
+      title -> gchararray: title
+      resizable -> gboolean: resizable
+      modal -> gboolean: modal
+      default-width -> gint: default-width
+      default-height -> gint: default-height
+      destroy-with-parent -> gboolean: destroy-with-parent
+      hide-on-close -> gboolean: hide-on-close
+      icon-name -> gchararray: icon-name
+      display -> GdkDisplay: display
+      decorated -> gboolean: decorated
+      deletable -> gboolean: deletable
+      transient-for -> GtkWindow: transient-for
+      application -> GtkApplication: application
+      default-widget -> GtkWidget: default-widget
+      focus-widget -> GtkWidget: focus-widget
+      child -> GtkWidget: child
+      titlebar -> GtkWidget: titlebar
+      handle-menubar-accel -> gboolean: handle-menubar-accel
+      is-active -> gboolean: is-active
+      startup-id -> gchararray: startup-id
+      mnemonics-visible -> gboolean: mnemonics-visible
+      focus-visible -> gboolean: focus-visible
+      maximized -> gboolean: maximized
+      fullscreened -> gboolean: fullscreened
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
 - add_action_widget
 - add_button
 - add_buttons
+- add_controller
+- add_css_class
+- add_mnemonic_label
 - add_palette
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
 - close
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
 - destroy
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate_default
 - do_activate_focus
 - do_close
 - do_close_request
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
 - do_enable_debugging
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
 - do_keys_changed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
 - do_response
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
 - fullscreen
 - fullscreen_on_monitor
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_application
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
 - get_content_area
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
 - get_decorated
+- get_default_direction
 - get_default_icon_name
 - get_default_size
 - get_default_widget
 - get_deletable
 - get_destroy_with_parent
+- get_direction
+- get_display
+- get_first_child
 - get_focus
+- get_focus_child
+- get_focus_on_click
 - get_focus_visible
+- get_focusable
+- get_font_map
+- get_font_options
 - get_for_surface
+- get_frame_clock
 - get_group
+- get_halign
 - get_handle_menubar_accel
+- get_has_tooltip
 - get_header_bar
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_hide_on_close
 - get_icon_name
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_mnemonics_visible
 - get_modal
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
 - get_renderer
+- get_request_mode
 - get_resizable
 - get_response_for_widget
 - get_rgba
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
 - get_surface
 - get_surface_transform
+- get_template_child
 - get_title
 - get_titlebar
+- get_tooltip_markup
+- get_tooltip_text
 - get_toplevels
 - get_transient_for
 - get_use_alpha
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
 - get_widget_for_response
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
 - has_group
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
 - is_active
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
 - is_fullscreen
 - is_maximized
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
 - list_toplevels
+- map
 - maximize
+- measure
 - minimize
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
 - present
 - present_with_time
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
 - response
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_application
 - set_auto_startup_notification
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
 - set_decorated
+- set_default_direction
 - set_default_icon_name
 - set_default_response
 - set_default_size
 - set_default_widget
 - set_deletable
 - set_destroy_with_parent
+- set_direction
 - set_display
 - set_focus
+- set_focus_child
+- set_focus_on_click
 - set_focus_visible
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
 - set_handle_menubar_accel
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_hide_on_close
 - set_icon_name
 - set_interactive_debugging
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_mnemonics_visible
 - set_modal
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_resizable
 - set_response_sensitive
 - set_rgba
+- set_sensitive
+- set_size_request
 - set_startup_id
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_title
 - set_titlebar
+- set_tooltip_markup
+- set_tooltip_text
 - set_transient_for
 - set_use_alpha
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
 - unfullscreen
+- unmap
 - unmaximize
 - unminimize
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.ColorChooserWidget</summary>
 
-
-    :Constructors:
+Object GtkColorChooserWidget
     
-    ::
+    Properties from GtkColorChooserWidget:
+      show-editor -> gboolean: show-editor
     
-        ColorChooserWidget(**properties)
-        new() -> Gtk.Widget
+    Signals from GtkColorChooser:
+      color-activated (GdkRGBA)
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
 - add_palette
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
 - get_rgba
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
 - get_use_alpha
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_rgba
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
 - set_use_alpha
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.ColumnView</summary>
 
-
-    :Constructors:
+Object GtkColumnView
     
-    ::
+    Signals from GtkColumnView:
+      activate (guint)
     
-        ColumnView(**properties)
-        new(model:Gtk.SelectionModel=None) -> Gtk.Widget
+    Properties from GtkColumnView:
+      columns -> GListModel: columns
+      model -> GtkSelectionModel: model
+      show-row-separators -> gboolean: show-row-separators
+      show-column-separators -> gboolean: show-column-separators
+      sorter -> GtkSorter: sorter
+      single-click-activate -> gboolean: single-click-activate
+      reorderable -> gboolean: reorderable
+      enable-rubberband -> gboolean: enable-rubberband
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
 - append_column
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_border
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
 - get_columns
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
 - get_enable_rubberband
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
 - get_hadjustment
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_hscroll_policy
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_model
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
 - get_reorderable
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
 - get_show_column_separators
 - get_show_row_separators
 - get_single_click_activate
+- get_size
+- get_size_request
 - get_sorter
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
 - get_vadjustment
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
 - get_vscroll_policy
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
 - insert_column
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - remove_column
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_enable_rubberband
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
 - set_hadjustment
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_hscroll_policy
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_model
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_reorderable
+- set_sensitive
 - set_show_column_separators
 - set_show_row_separators
 - set_single_click_activate
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
 - set_vadjustment
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
 - set_vscroll_policy
+- should_layout
+- show
+- size_allocate
+- snapshot_child
 - sort_by_column
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.ColumnViewColumn</summary>
 
-
-    :Constructors:
+Object GtkColumnViewColumn
     
-    ::
+    Properties from GtkColumnViewColumn:
+      column-view -> GtkColumnView: column-view
+      factory -> GtkListItemFactory: factory
+      title -> gchararray: title
+      sorter -> GtkSorter: sorter
+      visible -> gboolean: visible
+      header-menu -> GMenuModel: header-menu
+      resizable -> gboolean: resizable
+      expand -> gboolean: expand
+      fixed-width -> gint: fixed-width
     
-        ColumnViewColumn(**properties)
-        new(title:str=None, factory:Gtk.ListItemFactory=None) -> Gtk.ColumnViewColumn
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -5546,130 +12979,902 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ComboBox</summary>
 
-
-    :Constructors:
+Object GtkComboBox
     
-    ::
+    Signals from GtkComboBox:
+      changed ()
+      activate ()
+      move-active (GtkScrollType)
+      popup ()
+      popdown () -> gboolean
+      format-entry-text (gchararray) -> gchararray
     
-        ComboBox(**properties)
-        new() -> Gtk.Widget
-        new_with_entry() -> Gtk.Widget
-        new_with_model(model:Gtk.TreeModel) -> Gtk.Widget
-        new_with_model_and_entry(model:Gtk.TreeModel) -> Gtk.Widget
+    Properties from GtkComboBox:
+      model -> GtkTreeModel: model
+      active -> gint: active
+      has-frame -> gboolean: has-frame
+      popup-shown -> gboolean: popup-shown
+      button-sensitivity -> GtkSensitivityType: button-sensitivity
+      has-entry -> gboolean: has-entry
+      entry-text-column -> gint: entry-text-column
+      popup-fixed-width -> gboolean: popup-fixed-width
+      id-column -> gint: id-column
+      active-id -> gchararray: active-id
+      child -> GtkWidget: child
+    
+    Signals from GtkCellEditable:
+      editing-done ()
+      remove-widget ()
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
 - add_attribute
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
 - clear
 - clear_attributes
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate
 - do_changed
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
 - do_format_entry_text
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
 - editing_done
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
 - get_active
 - get_active_id
 - get_active_iter
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_area
+- get_buildable_id
 - get_button_sensitivity
+- get_can_focus
+- get_can_target
 - get_cells
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
 - get_entry_text_column
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
 - get_has_entry
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_id_column
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_model
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
 - get_popup_fixed_width
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_with_entry
 - new_with_model
 - new_with_model_and_entry
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
 - pack_end
 - pack_start
+- parent_instance
+- pick
 - popdown
 - popup
 - popup_for_device
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
 - remove_widget
 - reorder
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_active
 - set_active_id
 - set_active_iter
 - set_button_sensitivity
+- set_can_focus
+- set_can_target
 - set_cell_data_func
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_entry_text_column
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_id_column
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_model
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
 - set_popup_fixed_width
+- set_properties
+- set_property
+- set_receives_default
 - set_row_separator_func
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
 - start_editing
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.ComboBoxText</summary>
 
-
-    :Constructors:
+Object GtkComboBoxText
     
-    ::
+    Signals from GtkCellEditable:
+      editing-done ()
+      remove-widget ()
     
-        ComboBoxText(**properties)
-        new() -> Gtk.Widget
-        new_with_entry() -> Gtk.Widget
+    Signals from GtkComboBox:
+      changed ()
+      activate ()
+      move-active (GtkScrollType)
+      popup ()
+      popdown () -> gboolean
+      format-entry-text (gchararray) -> gchararray
+    
+    Properties from GtkComboBox:
+      model -> GtkTreeModel: model
+      active -> gint: active
+      has-frame -> gboolean: has-frame
+      popup-shown -> gboolean: popup-shown
+      button-sensitivity -> GtkSensitivityType: button-sensitivity
+      has-entry -> gboolean: has-entry
+      entry-text-column -> gint: entry-text-column
+      popup-fixed-width -> gboolean: popup-fixed-width
+      id-column -> gint: id-column
+      active-id -> gchararray: active-id
+      child -> GtkWidget: child
+    
+    Signals from GtkCellEditable:
+      editing-done ()
+      remove-widget ()
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
 - add_attribute
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
 - append
 - append_text
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
 - clear
 - clear_attributes
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate
 - do_changed
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
 - do_format_entry_text
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
 - editing_done
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
 - get_active
 - get_active_id
 - get_active_iter
 - get_active_text
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_area
+- get_buildable_id
 - get_button_sensitivity
+- get_can_focus
+- get_can_target
 - get_cells
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
 - get_entry_text_column
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
 - get_has_entry
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_id_column
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_model
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
 - get_popup_fixed_width
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
 - insert
+- insert_action_group
+- insert_after
+- insert_before
 - insert_text
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_with_entry
 - new_with_model
 - new_with_model_and_entry
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
 - pack_end
 - pack_start
+- parent_instance
+- pick
 - popdown
 - popup
 - popup_for_device
 - prepend
 - prepend_text
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - remove
 - remove_all
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
 - remove_widget
 - reorder
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_active
 - set_active_id
 - set_active_iter
 - set_button_sensitivity
+- set_can_focus
+- set_can_target
 - set_cell_data_func
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_entry_text_column
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_id_column
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_model
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
 - set_popup_fixed_width
+- set_properties
+- set_property
+- set_receives_default
 - set_row_separator_func
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
 - start_editing
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
@@ -5729,14 +13934,21 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Constraint</summary>
 
-
-    :Constructors:
+Object GtkConstraint
     
-    ::
+    Properties from GtkConstraint:
+      target -> GtkConstraintTarget: target
+      target-attribute -> GtkConstraintAttribute: target-attribute
+      relation -> GtkConstraintRelation: relation
+      source -> GtkConstraintTarget: source
+      source-attribute -> GtkConstraintAttribute: source-attribute
+      multiplier -> gdouble: multiplier
+      constant -> gdouble: constant
+      strength -> gint: strength
     
-        Constraint(**properties)
-        new(target:Gtk.ConstraintTarget=None, target_attribute:Gtk.ConstraintAttribute, relation:Gtk.ConstraintRelation, source:Gtk.ConstraintTarget=None, source_attribute:Gtk.ConstraintAttribute, multiplier:float, constant:float, strength:int) -> Gtk.Constraint
-        new_constant(target:Gtk.ConstraintTarget=None, target_attribute:Gtk.ConstraintAttribute, relation:Gtk.ConstraintRelation, constant:float, strength:int) -> Gtk.Constraint
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -5856,13 +14068,21 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ConstraintGuide</summary>
 
-
-    :Constructors:
+Object GtkConstraintGuide
     
-    ::
+    Properties from GtkConstraintGuide:
+      min-width -> gint: min-width
+      min-height -> gint: min-height
+      nat-width -> gint: nat-width
+      nat-height -> gint: nat-height
+      max-width -> gint: max-width
+      max-height -> gint: max-height
+      strength -> GtkConstraintStrength: strength
+      name -> gchararray: name
     
-        ConstraintGuide(**properties)
-        new() -> Gtk.ConstraintGuide
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -5981,13 +14201,11 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ConstraintLayout</summary>
 
-
-    :Constructors:
+Object GtkConstraintLayout
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        ConstraintLayout(**properties)
-        new() -> Gtk.LayoutManager
     
 
 ---
@@ -6118,12 +14336,15 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ConstraintLayoutChild</summary>
 
-
-    :Constructors:
+Object GtkConstraintLayoutChild
     
-    ::
+    Properties from GtkLayoutChild:
+      layout-manager -> GtkLayoutManager: layout-manager
+      child-widget -> GtkWidget: child-widget
     
-        ConstraintLayoutChild(**properties)
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -6233,7 +14454,12 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ConstraintTarget</summary>
 
-
+Interface GtkConstraintTarget
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -6272,13 +14498,17 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.CssProvider</summary>
 
-
-    :Constructors:
+Object GtkCssProvider
     
-    ::
+    Signals from GtkCssProvider:
+      parsing-error (GtkCssSection, GError)
     
-        CssProvider(**properties)
-        new() -> Gtk.CssProvider
+    Signals from GtkStyleProvider:
+      gtk-private-changed ()
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -6394,13 +14624,14 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.CustomFilter</summary>
 
-
-    :Constructors:
+Object GtkCustomFilter
     
-    ::
+    Signals from GtkFilter:
+      changed (GtkFilterChange)
     
-        CustomFilter(**properties)
-        new(match_func:Gtk.CustomFilterFunc=None, user_data=None) -> Gtk.CustomFilter
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -6515,13 +14746,11 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.CustomLayout</summary>
 
-
-    :Constructors:
+Object GtkCustomLayout
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        CustomLayout(**properties)
-        new(request_mode:Gtk.CustomRequestModeFunc=None, measure:Gtk.CustomMeasureFunc, allocate:Gtk.CustomAllocateFunc) -> Gtk.LayoutManager
     
 
 ---
@@ -6642,13 +14871,14 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.CustomSorter</summary>
 
-
-    :Constructors:
+Object GtkCustomSorter
     
-    ::
+    Signals from GtkSorter:
+      changed (GtkSorterChange)
     
-        CustomSorter(**properties)
-        new(sort_func:GLib.CompareDataFunc=None, user_data=None) -> Gtk.CustomSorter
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -6763,111 +14993,523 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Dialog</summary>
 
-
-    :Constructors:
+Object GtkDialog
     
-    ::
+    Signals from GtkDialog:
+      response (gint)
+      close ()
     
-        Dialog(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkDialog:
+      use-header-bar -> gint: use-header-bar
+    
+    Signals from GtkWindow:
+      activate-focus ()
+      activate-default ()
+      keys-changed ()
+      enable-debugging (gboolean) -> gboolean
+      close-request () -> gboolean
+    
+    Properties from GtkWindow:
+      title -> gchararray: title
+      resizable -> gboolean: resizable
+      modal -> gboolean: modal
+      default-width -> gint: default-width
+      default-height -> gint: default-height
+      destroy-with-parent -> gboolean: destroy-with-parent
+      hide-on-close -> gboolean: hide-on-close
+      icon-name -> gchararray: icon-name
+      display -> GdkDisplay: display
+      decorated -> gboolean: decorated
+      deletable -> gboolean: deletable
+      transient-for -> GtkWindow: transient-for
+      application -> GtkApplication: application
+      default-widget -> GtkWidget: default-widget
+      focus-widget -> GtkWidget: focus-widget
+      child -> GtkWidget: child
+      titlebar -> GtkWidget: titlebar
+      handle-menubar-accel -> gboolean: handle-menubar-accel
+      is-active -> gboolean: is-active
+      startup-id -> gchararray: startup-id
+      mnemonics-visible -> gboolean: mnemonics-visible
+      focus-visible -> gboolean: focus-visible
+      maximized -> gboolean: maximized
+      fullscreened -> gboolean: fullscreened
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
 - add_action_widget
 - add_button
 - add_buttons
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
 - close
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
 - destroy
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate_default
 - do_activate_focus
 - do_close
 - do_close_request
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
 - do_enable_debugging
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
 - do_keys_changed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
 - do_response
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
 - fullscreen
 - fullscreen_on_monitor
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_application
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
 - get_content_area
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
 - get_decorated
+- get_default_direction
 - get_default_icon_name
 - get_default_size
 - get_default_widget
 - get_deletable
 - get_destroy_with_parent
+- get_direction
+- get_display
+- get_first_child
 - get_focus
+- get_focus_child
+- get_focus_on_click
 - get_focus_visible
+- get_focusable
+- get_font_map
+- get_font_options
 - get_for_surface
+- get_frame_clock
 - get_group
+- get_halign
 - get_handle_menubar_accel
+- get_has_tooltip
 - get_header_bar
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_hide_on_close
 - get_icon_name
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_mnemonics_visible
 - get_modal
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
 - get_renderer
+- get_request_mode
 - get_resizable
 - get_response_for_widget
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
 - get_surface
 - get_surface_transform
+- get_template_child
 - get_title
 - get_titlebar
+- get_tooltip_markup
+- get_tooltip_text
 - get_toplevels
 - get_transient_for
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
 - get_widget_for_response
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
 - has_group
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
 - is_active
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
 - is_fullscreen
 - is_maximized
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
 - list_toplevels
+- map
 - maximize
+- measure
 - minimize
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
 - present
 - present_with_time
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
 - response
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_application
 - set_auto_startup_notification
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
 - set_decorated
+- set_default_direction
 - set_default_icon_name
 - set_default_response
 - set_default_size
 - set_default_widget
 - set_deletable
 - set_destroy_with_parent
+- set_direction
 - set_display
 - set_focus
+- set_focus_child
+- set_focus_on_click
 - set_focus_visible
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
 - set_handle_menubar_accel
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_hide_on_close
 - set_icon_name
 - set_interactive_debugging
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_mnemonics_visible
 - set_modal
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_resizable
 - set_response_sensitive
+- set_sensitive
+- set_size_request
 - set_startup_id
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_title
 - set_titlebar
+- set_tooltip_markup
+- set_tooltip_text
 - set_transient_for
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
 - unfullscreen
+- unmap
 - unmaximize
 - unminimize
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.DirectoryList</summary>
 
-
-    :Constructors:
+Object GtkDirectoryList
     
-    ::
+    Properties from GtkDirectoryList:
+      attributes -> gchararray: attributes
+      error -> GError: error
+      file -> GFile: file
+      io-priority -> gint: io-priority
+      item-type -> GType: item-type
+      loading -> gboolean: loading
+      monitored -> gboolean: monitored
+      n-items -> guint: n-items
     
-        DirectoryList(**properties)
-        new(attributes:str=None, file:Gio.File=None) -> Gtk.DirectoryList
+    Signals from GListModel:
+      items-changed (guint, guint, guint)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -6994,12 +15636,65 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.DragIcon</summary>
 
-
-    :Constructors:
+Object GtkDragIcon
     
-    ::
+    Properties from GtkDragIcon:
+      child -> GtkWidget: child
     
-        DragIcon(**properties)
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -7332,13 +16027,42 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.DragSource</summary>
 
-
-    :Constructors:
+Object GtkDragSource
     
-    ::
+    Signals from GtkDragSource:
+      prepare (gdouble, gdouble) -> GdkContentProvider
+      drag-begin (GdkDrag)
+      drag-end (GdkDrag, gboolean)
+      drag-cancel (GdkDrag, GdkDragCancelReason) -> gboolean
     
-        DragSource(**properties)
-        new() -> Gtk.DragSource
+    Properties from GtkDragSource:
+      content -> GdkContentProvider: content
+      actions -> GdkDragAction: actions
+    
+    Properties from GtkGestureSingle:
+      touch-only -> gboolean: touch-only
+      exclusive -> gboolean: exclusive
+      button -> guint: button
+    
+    Signals from GtkGesture:
+      update (GdkEventSequence)
+      cancel (GdkEventSequence)
+      begin (GdkEventSequence)
+      end (GdkEventSequence)
+      sequence-state-changed (GdkEventSequence, GtkEventSequenceState)
+    
+    Properties from GtkGesture:
+      n-points -> guint: n-points
+    
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -7491,37 +16215,419 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.DrawingArea</summary>
 
-
-    :Constructors:
+Object GtkDrawingArea
     
-    ::
+    Signals from GtkDrawingArea:
+      resize (gint, gint)
     
-        DrawingArea(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkDrawingArea:
+      content-width -> gint: content-width
+      content-height -> gint: content-height
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
 - do_resize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
 - get_content_height
 - get_content_width
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
 - set_content_height
 - set_content_width
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_draw_func
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 - widget
 
 </details>
 
 <details><summary>Gtk.DropControllerMotion</summary>
 
-
-    :Constructors:
+Object GtkDropControllerMotion
     
-    ::
+    Signals from GtkDropControllerMotion:
+      enter (gdouble, gdouble)
+      leave ()
+      motion (gdouble, gdouble)
     
-        DropControllerMotion(**properties)
-        new() -> Gtk.EventController
+    Properties from GtkDropControllerMotion:
+      contains-pointer -> gboolean: contains-pointer
+      drop -> GdkDrop: drop
+      is-pointer -> gboolean: is-pointer
+    
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -7645,47 +16751,439 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.DropDown</summary>
 
-
-    :Constructors:
+Object GtkDropDown
     
-    ::
+    Signals from GtkDropDown:
+      activate ()
     
-        DropDown(**properties)
-        new(model:Gio.ListModel=None, expression:Gtk.Expression=None) -> Gtk.Widget
-        new_from_strings(strings:list) -> Gtk.Widget
+    Properties from GtkDropDown:
+      factory -> GtkListItemFactory: factory
+      list-factory -> GtkListItemFactory: list-factory
+      model -> GListModel: model
+      selected -> guint: selected
+      selected-item -> GObject: selected-item
+      enable-search -> gboolean: enable-search
+      expression -> GtkExpression: expression
+      show-arrow -> gboolean: show-arrow
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
 - get_enable_search
 - get_expression
 - get_factory
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
 - get_list_factory
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_model
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
 - get_selected
 - get_selected_item
+- get_sensitive
+- get_settings
 - get_show_arrow
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_from_strings
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_enable_search
 - set_expression
 - set_factory
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
 - set_list_factory
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_model
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_selected
+- set_sensitive
 - set_show_arrow
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.DropTarget</summary>
 
-
-    :Constructors:
+Object GtkDropTarget
     
-    ::
+    Signals from GtkDropTarget:
+      drop (GValue, gdouble, gdouble) -> gboolean
+      enter (gdouble, gdouble) -> GdkDragAction
+      leave ()
+      motion (gdouble, gdouble) -> GdkDragAction
+      accept (GdkDrop) -> gboolean
     
-        DropTarget(**properties)
-        new(type:GType, actions:Gdk.DragAction) -> Gtk.DropTarget
+    Properties from GtkDropTarget:
+      actions -> GdkDragAction: actions
+      current-drop -> GdkDrop: current-drop
+      drop -> GdkDrop: drop
+      formats -> GdkContentFormats: formats
+      preload -> gboolean: preload
+      value -> GValue: value
+    
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -7817,13 +17315,28 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.DropTargetAsync</summary>
 
-
-    :Constructors:
+Object GtkDropTargetAsync
     
-    ::
+    Signals from GtkDropTargetAsync:
+      drop (GdkDrop, gdouble, gdouble) -> gboolean
+      accept (GdkDrop) -> gboolean
+      drag-enter (GdkDrop, gdouble, gdouble) -> GdkDragAction
+      drag-motion (GdkDrop, gdouble, gdouble) -> GdkDragAction
+      drag-leave (GdkDrop)
     
-        DropTargetAsync(**properties)
-        new(formats:Gdk.ContentFormats=None, actions:Gdk.DragAction) -> Gtk.DropTargetAsync
+    Properties from GtkDropTargetAsync:
+      actions -> GdkDragAction: actions
+      formats -> GdkContentFormats: formats
+    
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -7949,7 +17462,12 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Editable</summary>
 
-
+Interface GtkEditable
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -8014,126 +17532,1114 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.EditableLabel</summary>
 
-
-    :Constructors:
+Object GtkEditableLabel
     
-    ::
+    Properties from GtkEditableLabel:
+      editing -> gboolean: editing
     
-        EditableLabel(**properties)
-        new(str:str) -> Gtk.Widget
+    Signals from GtkEditable:
+      changed ()
+      insert-text (gchararray, gint, gpointer)
+      delete-text (gint, gint)
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
 - delegate_get_property
 - delegate_set_property
 - delete_selection
 - delete_text
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
 - finish_delegate
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
 - get_alignment
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_chars
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
 - get_delegate
+- get_direction
+- get_display
 - get_editable
 - get_editing
 - get_enable_undo
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_max_width_chars
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
 - get_position
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
 - get_selection_bounds
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
 - get_text
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
 - get_width_chars
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
 - init_delegate
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
 - insert_text
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
 - select_region
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_alignment
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_editable
 - set_enable_undo
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_max_width_chars
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
 - set_position
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_text
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
 - set_width_chars
+- should_layout
+- show
+- size_allocate
+- snapshot_child
 - start_editing
+- steal_data
+- steal_qdata
 - stop_editing
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.EmojiChooser</summary>
 
-
-    :Constructors:
+Object GtkEmojiChooser
     
-    ::
+    Signals from GtkEmojiChooser:
+      emoji-picked (gchararray)
     
-        EmojiChooser(**properties)
-        new() -> Gtk.Widget
+    Signals from GtkPopover:
+      closed ()
+      activate-default ()
+    
+    Properties from GtkPopover:
+      pointing-to -> GdkRectangle: pointing-to
+      position -> GtkPositionType: position
+      autohide -> gboolean: autohide
+      default-widget -> GtkWidget: default-widget
+      has-arrow -> gboolean: has-arrow
+      mnemonics-visible -> gboolean: mnemonics-visible
+      child -> GtkWidget: child
+      cascade-popdown -> gboolean: cascade-popdown
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate_default
 - do_closed
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_autohide
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_cascade_popdown
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
 - get_for_surface
+- get_frame_clock
+- get_halign
 - get_has_arrow
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_mnemonics_visible
+- get_name
+- get_native
+- get_next_sibling
 - get_offset
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
 - get_pointing_to
 - get_position
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
 - get_renderer
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
 - get_surface
 - get_surface_transform
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
 - parent
+- parent_instance
+- pick
 - popdown
 - popup
 - present
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_autohide
+- set_can_focus
+- set_can_target
 - set_cascade_popdown
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
 - set_default_widget
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
 - set_has_arrow
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_mnemonics_visible
+- set_name
 - set_offset
+- set_opacity
+- set_overflow
+- set_parent
 - set_pointing_to
 - set_position
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Entry</summary>
 
-
-    :Constructors:
+Object GtkEntry
     
-    ::
+    Signals from GtkEntry:
+      activate ()
+      icon-press (GtkEntryIconPosition)
+      icon-release (GtkEntryIconPosition)
     
-        Entry(**properties)
-        new() -> Gtk.Widget
-        new_with_buffer(buffer:Gtk.EntryBuffer) -> Gtk.Widget
+    Properties from GtkEntry:
+      buffer -> GtkEntryBuffer: buffer
+      max-length -> gint: max-length
+      visibility -> gboolean: visibility
+      has-frame -> gboolean: has-frame
+      invisible-char -> guint: invisible-char
+      activates-default -> gboolean: activates-default
+      scroll-offset -> gint: scroll-offset
+      truncate-multiline -> gboolean: truncate-multiline
+      overwrite-mode -> gboolean: overwrite-mode
+      text-length -> guint: text-length
+      invisible-char-set -> gboolean: invisible-char-set
+      progress-fraction -> gdouble: progress-fraction
+      progress-pulse-step -> gdouble: progress-pulse-step
+      primary-icon-paintable -> GdkPaintable: primary-icon-paintable
+      secondary-icon-paintable -> GdkPaintable: secondary-icon-paintable
+      primary-icon-name -> gchararray: primary-icon-name
+      secondary-icon-name -> gchararray: secondary-icon-name
+      primary-icon-gicon -> GIcon: primary-icon-gicon
+      secondary-icon-gicon -> GIcon: secondary-icon-gicon
+      primary-icon-storage-type -> GtkImageType: primary-icon-storage-type
+      secondary-icon-storage-type -> GtkImageType: secondary-icon-storage-type
+      primary-icon-activatable -> gboolean: primary-icon-activatable
+      secondary-icon-activatable -> gboolean: secondary-icon-activatable
+      primary-icon-sensitive -> gboolean: primary-icon-sensitive
+      secondary-icon-sensitive -> gboolean: secondary-icon-sensitive
+      primary-icon-tooltip-text -> gchararray: primary-icon-tooltip-text
+      secondary-icon-tooltip-text -> gchararray: secondary-icon-tooltip-text
+      primary-icon-tooltip-markup -> gchararray: primary-icon-tooltip-markup
+      secondary-icon-tooltip-markup -> gchararray: secondary-icon-tooltip-markup
+      im-module -> gchararray: im-module
+      placeholder-text -> gchararray: placeholder-text
+      completion -> GtkEntryCompletion: completion
+      input-purpose -> GtkInputPurpose: input-purpose
+      input-hints -> GtkInputHints: input-hints
+      attributes -> PangoAttrList: attributes
+      tabs -> PangoTabArray: tabs
+      extra-menu -> GMenuModel: extra-menu
+      show-emoji-icon -> gboolean: show-emoji-icon
+      enable-emoji-completion -> gboolean: enable-emoji-completion
+    
+    Signals from GtkEditable:
+      changed ()
+      insert-text (gchararray, gint, gpointer)
+      delete-text (gint, gint)
+    
+    Signals from GtkCellEditable:
+      editing-done ()
+      remove-widget ()
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
 - delegate_get_property
 - delegate_set_property
 - delete_selection
 - delete_text
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
 - editing_done
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
 - finish_delegate
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
 - get_activates_default
 - get_alignment
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_attributes
 - get_buffer
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_chars
+- get_child_visible
+- get_clipboard
 - get_completion
+- get_css_classes
+- get_css_name
 - get_current_icon_drag_source
+- get_cursor
+- get_data
+- get_default_direction
 - get_delegate
+- get_direction
+- get_display
 - get_editable
 - get_enable_undo
 - get_extra_menu
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
 - get_has_frame
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_icon_activatable
 - get_icon_area
 - get_icon_at_pos
@@ -8147,37 +18653,165 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 - get_input_hints
 - get_input_purpose
 - get_invisible_char
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_max_length
 - get_max_width_chars
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
 - get_overwrite_mode
+- get_pango_context
+- get_parent
 - get_placeholder_text
 - get_position
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
 - get_progress_fraction
 - get_progress_pulse_step
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
 - get_selection_bounds
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
 - get_tabs
+- get_template_child
 - get_text
 - get_text_length
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
 - get_visibility
+- get_visible
+- get_width
 - get_width_chars
+- getv
+- grab_focus
 - grab_focus_without_selecting
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
 - init_delegate
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
 - insert_text
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_with_buffer
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
 - progress_pulse
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
 - remove_widget
+- replace_data
+- replace_qdata
 - reset_im_context
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
 - select_region
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_activates_default
 - set_alignment
 - set_attributes
 - set_buffer
+- set_can_focus
+- set_can_target
+- set_child_visible
 - set_completion
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_editable
 - set_enable_undo
 - set_extra_menu
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
 - set_has_frame
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_icon_activatable
 - set_icon_drag_source
 - set_icon_from_gicon
@@ -8189,31 +18823,84 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 - set_input_hints
 - set_input_purpose
 - set_invisible_char
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_max_length
 - set_max_width_chars
+- set_name
+- set_opacity
+- set_overflow
 - set_overwrite_mode
+- set_parent
 - set_placeholder_text
 - set_position
 - set_progress_fraction
 - set_progress_pulse_step
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
 - set_tabs
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_text
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
 - set_visibility
+- set_visible
 - set_width_chars
+- should_layout
+- show
+- size_allocate
+- snapshot_child
 - start_editing
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
 - unset_invisible_char
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.EntryBuffer</summary>
 
-
-    :Constructors:
+Object GtkEntryBuffer
     
-    ::
+    Signals from GtkEntryBuffer:
+      inserted-text (guint, gchararray, guint)
+      deleted-text (guint, guint)
     
-        EntryBuffer(**properties)
-        new(initial_chars:str=None, n_initial_chars:int) -> Gtk.EntryBuffer
+    Properties from GtkEntryBuffer:
+      text -> gchararray: text
+      length -> guint: length
+      max-length -> gint: max-length
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -8338,14 +19025,28 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.EntryCompletion</summary>
 
-
-    :Constructors:
+Object GtkEntryCompletion
     
-    ::
+    Signals from GtkEntryCompletion:
+      insert-prefix (gchararray) -> gboolean
+      match-selected (GtkTreeModel, GtkTreeIter) -> gboolean
+      cursor-on-match (GtkTreeModel, GtkTreeIter) -> gboolean
+      no-matches ()
     
-        EntryCompletion(**properties)
-        new() -> Gtk.EntryCompletion
-        new_with_area(area:Gtk.CellArea) -> Gtk.EntryCompletion
+    Properties from GtkEntryCompletion:
+      model -> GtkTreeModel: model
+      minimum-key-length -> gint: minimum-key-length
+      text-column -> gint: text-column
+      inline-completion -> gboolean: inline-completion
+      popup-completion -> gboolean: popup-completion
+      popup-set-width -> gboolean: popup-set-width
+      popup-single-match -> gboolean: popup-single-match
+      inline-selection -> gboolean: inline-selection
+      cell-area -> GtkCellArea: cell-area
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -8487,12 +19188,17 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.EventController</summary>
 
-
-    :Constructors:
+Object GtkEventController
     
-    ::
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
     
-        EventController(**properties)
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -8612,13 +19318,25 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.EventControllerFocus</summary>
 
-
-    :Constructors:
+Object GtkEventControllerFocus
     
-    ::
+    Signals from GtkEventControllerFocus:
+      enter ()
+      leave ()
     
-        EventControllerFocus(**properties)
-        new() -> Gtk.EventController
+    Properties from GtkEventControllerFocus:
+      is-focus -> gboolean: is-focus
+      contains-focus -> gboolean: contains-focus
+    
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -8741,13 +19459,23 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.EventControllerKey</summary>
 
-
-    :Constructors:
+Object GtkEventControllerKey
     
-    ::
+    Signals from GtkEventControllerKey:
+      modifiers (GdkModifierType) -> gboolean
+      key-pressed (guint, guint, GdkModifierType) -> gboolean
+      key-released (guint, guint, GdkModifierType)
+      im-update ()
     
-        EventControllerKey(**properties)
-        new() -> Gtk.EventController
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -8872,13 +19600,20 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.EventControllerLegacy</summary>
 
-
-    :Constructors:
+Object GtkEventControllerLegacy
     
-    ::
+    Signals from GtkEventControllerLegacy:
+      event (GdkEvent) -> gboolean
     
-        EventControllerLegacy(**properties)
-        new() -> Gtk.EventController
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -8999,13 +19734,26 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.EventControllerMotion</summary>
 
-
-    :Constructors:
+Object GtkEventControllerMotion
     
-    ::
+    Signals from GtkEventControllerMotion:
+      enter (gdouble, gdouble)
+      leave ()
+      motion (gdouble, gdouble)
     
-        EventControllerMotion(**properties)
-        new() -> Gtk.EventController
+    Properties from GtkEventControllerMotion:
+      is-pointer -> gboolean: is-pointer
+      contains-pointer -> gboolean: contains-pointer
+    
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -9128,13 +19876,26 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.EventControllerScroll</summary>
 
-
-    :Constructors:
+Object GtkEventControllerScroll
     
-    ::
+    Signals from GtkEventControllerScroll:
+      scroll-begin ()
+      scroll (gdouble, gdouble) -> gboolean
+      scroll-end ()
+      decelerate (gdouble, gdouble)
     
-        EventControllerScroll(**properties)
-        new(flags:Gtk.EventControllerScrollFlags) -> Gtk.EventController
+    Properties from GtkEventControllerScroll:
+      flags -> GtkEventControllerScrollFlags: flags
+    
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -9258,13 +20019,24 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.EveryFilter</summary>
 
-
-    :Constructors:
+Object GtkEveryFilter
     
-    ::
+    Signals from GListModel:
+      items-changed (guint, guint, guint)
     
-        EveryFilter(**properties)
-        new() -> Gtk.EveryFilter
+    Properties from GtkMultiFilter:
+      item-type -> GType: item-type
+      n-items -> guint: n-items
+    
+    Signals from GListModel:
+      items-changed (guint, guint, guint)
+    
+    Signals from GtkFilter:
+      changed (GtkFilterChange)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -9390,34 +20162,406 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Expander</summary>
 
-
-    :Constructors:
+Object GtkExpander
     
-    ::
+    Signals from GtkExpander:
+      activate ()
     
-        Expander(**properties)
-        new(label:str=None) -> Gtk.Widget
-        new_with_mnemonic(label:str=None) -> Gtk.Widget
+    Properties from GtkExpander:
+      expanded -> gboolean: expanded
+      label -> gchararray: label
+      use-underline -> gboolean: use-underline
+      use-markup -> gboolean: use-markup
+      label-widget -> GtkWidget: label-widget
+      resize-toplevel -> gboolean: resize-toplevel
+      child -> GtkWidget: child
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
 - get_expanded
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_label
 - get_label_widget
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
 - get_resize_toplevel
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
 - get_use_markup
 - get_use_underline
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_with_mnemonic
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_expanded
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_label
 - set_label_widget
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_resize_toplevel
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
 - set_use_markup
 - set_use_underline
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
@@ -9474,7 +20618,12 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.FileChooser</summary>
 
-
+Interface GtkFileChooser
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -9538,12 +20687,102 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.FileChooserDialog</summary>
 
-
-    :Constructors:
+Object GtkFileChooserDialog
     
-    ::
+    Signals from GtkDialog:
+      response (gint)
+      close ()
     
-        FileChooserDialog(**properties)
+    Properties from GtkDialog:
+      use-header-bar -> gint: use-header-bar
+    
+    Signals from GtkWindow:
+      activate-focus ()
+      activate-default ()
+      keys-changed ()
+      enable-debugging (gboolean) -> gboolean
+      close-request () -> gboolean
+    
+    Properties from GtkWindow:
+      title -> gchararray: title
+      resizable -> gboolean: resizable
+      modal -> gboolean: modal
+      default-width -> gint: default-width
+      default-height -> gint: default-height
+      destroy-with-parent -> gboolean: destroy-with-parent
+      hide-on-close -> gboolean: hide-on-close
+      icon-name -> gchararray: icon-name
+      display -> GdkDisplay: display
+      decorated -> gboolean: decorated
+      deletable -> gboolean: deletable
+      transient-for -> GtkWindow: transient-for
+      application -> GtkApplication: application
+      default-widget -> GtkWidget: default-widget
+      focus-widget -> GtkWidget: focus-widget
+      child -> GtkWidget: child
+      titlebar -> GtkWidget: titlebar
+      handle-menubar-accel -> gboolean: handle-menubar-accel
+      is-active -> gboolean: is-active
+      startup-id -> gchararray: startup-id
+      mnemonics-visible -> gboolean: mnemonics-visible
+      focus-visible -> gboolean: focus-visible
+      maximized -> gboolean: maximized
+      fullscreened -> gboolean: fullscreened
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -9972,13 +21211,24 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.FileChooserNative</summary>
 
-
-    :Constructors:
+Object GtkFileChooserNative
     
-    ::
+    Properties from GtkFileChooserNative:
+      accept-label -> gchararray: accept-label
+      cancel-label -> gchararray: cancel-label
     
-        FileChooserNative(**properties)
-        new(title:str=None, parent:Gtk.Window=None, action:Gtk.FileChooserAction, accept_label:str=None, cancel_label:str=None) -> Gtk.FileChooserNative
+    Signals from GtkNativeDialog:
+      response (gint)
+    
+    Properties from GtkNativeDialog:
+      title -> gchararray: title
+      visible -> gboolean: visible
+      modal -> gboolean: modal
+      transient-for -> GtkWindow: transient-for
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -10130,56 +21380,438 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.FileChooserWidget</summary>
 
-
-    :Constructors:
+Object GtkFileChooserWidget
     
-    ::
+    Signals from GtkFileChooserWidget:
+      location-popup (gchararray)
+      location-popup-on-paste ()
+      location-toggle-popup ()
+      up-folder ()
+      down-folder ()
+      home-folder ()
+      desktop-folder ()
+      quick-bookmark (gint)
+      show-hidden ()
+      search-shortcut ()
+      recent-shortcut ()
+      places-shortcut ()
     
-        FileChooserWidget(**properties)
-        new(action:Gtk.FileChooserAction) -> Gtk.Widget
+    Properties from GtkFileChooserWidget:
+      search-mode -> gboolean: search-mode
+      subtitle -> gchararray: subtitle
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
 - add_choice
+- add_controller
+- add_css_class
 - add_filter
+- add_mnemonic_label
+- add_shortcut
 - add_shortcut_folder
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
 - get_action
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
 - get_choice
+- get_clipboard
 - get_create_folders
+- get_css_classes
+- get_css_name
 - get_current_folder
 - get_current_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
 - get_file
 - get_files
 - get_filter
 - get_filters
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
 - get_select_multiple
+- get_sensitive
+- get_settings
 - get_shortcut_folders
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - remove_choice
+- remove_controller
+- remove_css_class
 - remove_filter
+- remove_mnemonic_label
 - remove_shortcut_folder
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
 - set_action
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
 - set_choice
 - set_create_folders
+- set_css_classes
+- set_css_name
 - set_current_folder
 - set_current_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_file
 - set_filter
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_select_multiple
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.FileFilter</summary>
 
-
-    :Constructors:
+Object GtkFileFilter
     
-    ::
+    Properties from GtkFileFilter:
+      name -> gchararray: name
     
-        FileFilter(**properties)
-        new() -> Gtk.FileFilter
-        new_from_gvariant(variant:GLib.Variant) -> Gtk.FileFilter
+    Signals from GtkFilter:
+      changed (GtkFilterChange)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -10304,12 +21936,14 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Filter</summary>
 
-
-    :Constructors:
+Object GtkFilter
     
-    ::
+    Signals from GtkFilter:
+      changed (GtkFilterChange)
     
-        Filter(**properties)
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -10422,13 +22056,22 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.FilterListModel</summary>
 
-
-    :Constructors:
+Object GtkFilterListModel
     
-    ::
+    Properties from GtkFilterListModel:
+      filter -> GtkFilter: filter
+      incremental -> gboolean: incremental
+      item-type -> GType: item-type
+      model -> GListModel: model
+      n-items -> guint: n-items
+      pending -> guint: pending
     
-        FilterListModel(**properties)
-        new(model:Gio.ListModel=None, filter:Gtk.Filter=None) -> Gtk.FilterListModel
+    Signals from GListModel:
+      items-changed (guint, guint, guint)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -10552,36 +22195,395 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Fixed</summary>
 
-
-    :Constructors:
+Object GtkFixed
     
-    ::
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
     
-        Fixed(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child_position
 - get_child_transform
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - move
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
 - put
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - remove
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
 - set_child_transform
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.FixedLayout</summary>
 
-
-    :Constructors:
+Object GtkFixedLayout
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        FixedLayout(**properties)
-        new() -> Gtk.LayoutManager
     
 
 ---
@@ -10702,12 +22704,18 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.FixedLayoutChild</summary>
 
-
-    :Constructors:
+Object GtkFixedLayoutChild
     
-    ::
+    Properties from GtkFixedLayoutChild:
+      transform -> GskTransform: transform
     
-        FixedLayoutChild(**properties)
+    Properties from GtkLayoutChild:
+      layout-manager -> GtkLayoutManager: layout-manager
+      child-widget -> GtkWidget: child-widget
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -10819,13 +22827,19 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.FlattenListModel</summary>
 
-
-    :Constructors:
+Object GtkFlattenListModel
     
-    ::
+    Properties from GtkFlattenListModel:
+      item-type -> GType: item-type
+      model -> GListModel: model
+      n-items -> guint: n-items
     
-        FlattenListModel(**properties)
-        new(model:Gio.ListModel=None) -> Gtk.FlattenListModel
+    Signals from GListModel:
+      items-changed (guint, guint, guint)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -10945,126 +22959,1251 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.FlowBox</summary>
 
-
-    :Constructors:
+Object GtkFlowBox
     
-    ::
+    Signals from GtkFlowBox:
+      child-activated (GtkFlowBoxChild)
+      selected-children-changed ()
+      activate-cursor-child ()
+      toggle-cursor-child ()
+      move-cursor (GtkMovementStep, gint, gboolean, gboolean) -> gboolean
+      select-all ()
+      unselect-all ()
     
-        FlowBox(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkFlowBox:
+      homogeneous -> gboolean: homogeneous
+      column-spacing -> guint: column-spacing
+      row-spacing -> guint: row-spacing
+      min-children-per-line -> guint: min-children-per-line
+      max-children-per-line -> guint: max-children-per-line
+      selection-mode -> GtkSelectionMode: selection-mode
+      activate-on-single-click -> gboolean: activate-on-single-click
+      accept-unpaired-release -> gboolean: accept-unpaired-release
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
 - append
 - bind_model
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
 - get_activate_on_single_click
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child_at_index
 - get_child_at_pos
+- get_child_visible
+- get_clipboard
 - get_column_spacing
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_homogeneous
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_max_children_per_line
 - get_min_children_per_line
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
 - get_orientation
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
 - get_row_spacing
+- get_scale_factor
 - get_selected_children
 - get_selection_mode
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
 - insert
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
 - invalidate_filter
 - invalidate_sort
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
 - prepend
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - remove
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
 - select_all
 - select_child
 - selected_foreach
+- set_accessible_role
 - set_activate_on_single_click
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
 - set_column_spacing
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_filter_func
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
 - set_hadjustment
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_homogeneous
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_max_children_per_line
 - set_min_children_per_line
+- set_name
+- set_opacity
 - set_orientation
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_row_spacing
 - set_selection_mode
+- set_sensitive
+- set_size_request
 - set_sort_func
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
 - set_vadjustment
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
 - unselect_all
 - unselect_child
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.FlowBoxChild</summary>
 
-
-    :Constructors:
+Object GtkFlowBoxChild
     
-    ::
+    Signals from GtkFlowBoxChild:
+      activate ()
     
-        FlowBoxChild(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkFlowBoxChild:
+      child -> GtkWidget: child
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
 - changed
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_index
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
 - is_selected
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.FontButton</summary>
 
-
-    :Constructors:
+Object GtkFontButton
     
-    ::
+    Signals from GtkFontButton:
+      activate ()
+      font-set ()
     
-        FontButton(**properties)
-        new() -> Gtk.Widget
-        new_with_font(fontname:str) -> Gtk.Widget
+    Properties from GtkFontButton:
+      title -> gchararray: title
+      modal -> gboolean: modal
+      use-font -> gboolean: use-font
+      use-size -> gboolean: use-size
+    
+    Signals from GtkFontChooser:
+      font-activated (gchararray)
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
 - get_font
 - get_font_desc
 - get_font_face
 - get_font_family
 - get_font_features
+- get_font_map
+- get_font_options
 - get_font_size
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_language
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
 - get_level
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_modal
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
 - get_preview_text
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
 - get_show_preview_entry
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
 - get_title
+- get_tooltip_markup
+- get_tooltip_text
 - get_use_font
 - get_use_size
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_with_font
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_filter_func
+- set_focus_child
+- set_focus_on_click
+- set_focusable
 - set_font
 - set_font_desc
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_language
+- set_layout_manager
+- set_layout_manager_type
 - set_level
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_modal
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
 - set_preview_text
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
 - set_show_preview_entry
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_title
+- set_tooltip_markup
+- set_tooltip_text
 - set_use_font
 - set_use_size
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.FontChooser</summary>
 
-
+Interface GtkFontChooser
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -11122,222 +24261,1748 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.FontChooserDialog</summary>
 
-
-    :Constructors:
+Object GtkFontChooserDialog
     
-    ::
+    Signals from GtkFontChooser:
+      font-activated (gchararray)
     
-        FontChooserDialog(**properties)
-        new(title:str=None, parent:Gtk.Window=None) -> Gtk.Widget
+    Signals from GtkDialog:
+      response (gint)
+      close ()
+    
+    Properties from GtkDialog:
+      use-header-bar -> gint: use-header-bar
+    
+    Signals from GtkWindow:
+      activate-focus ()
+      activate-default ()
+      keys-changed ()
+      enable-debugging (gboolean) -> gboolean
+      close-request () -> gboolean
+    
+    Properties from GtkWindow:
+      title -> gchararray: title
+      resizable -> gboolean: resizable
+      modal -> gboolean: modal
+      default-width -> gint: default-width
+      default-height -> gint: default-height
+      destroy-with-parent -> gboolean: destroy-with-parent
+      hide-on-close -> gboolean: hide-on-close
+      icon-name -> gchararray: icon-name
+      display -> GdkDisplay: display
+      decorated -> gboolean: decorated
+      deletable -> gboolean: deletable
+      transient-for -> GtkWindow: transient-for
+      application -> GtkApplication: application
+      default-widget -> GtkWidget: default-widget
+      focus-widget -> GtkWidget: focus-widget
+      child -> GtkWidget: child
+      titlebar -> GtkWidget: titlebar
+      handle-menubar-accel -> gboolean: handle-menubar-accel
+      is-active -> gboolean: is-active
+      startup-id -> gchararray: startup-id
+      mnemonics-visible -> gboolean: mnemonics-visible
+      focus-visible -> gboolean: focus-visible
+      maximized -> gboolean: maximized
+      fullscreened -> gboolean: fullscreened
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
 - add_action_widget
 - add_button
 - add_buttons
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
 - close
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
 - destroy
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate_default
 - do_activate_focus
 - do_close
 - do_close_request
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
 - do_enable_debugging
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
 - do_keys_changed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
 - do_response
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
 - fullscreen
 - fullscreen_on_monitor
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_application
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
 - get_content_area
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
 - get_decorated
+- get_default_direction
 - get_default_icon_name
 - get_default_size
 - get_default_widget
 - get_deletable
 - get_destroy_with_parent
+- get_direction
+- get_display
+- get_first_child
 - get_focus
+- get_focus_child
+- get_focus_on_click
 - get_focus_visible
+- get_focusable
 - get_font
 - get_font_desc
 - get_font_face
 - get_font_family
 - get_font_features
+- get_font_map
+- get_font_options
 - get_font_size
 - get_for_surface
+- get_frame_clock
 - get_group
+- get_halign
 - get_handle_menubar_accel
+- get_has_tooltip
 - get_header_bar
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_hide_on_close
 - get_icon_name
 - get_language
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
 - get_level
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_mnemonics_visible
 - get_modal
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
 - get_preview_text
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
 - get_renderer
+- get_request_mode
 - get_resizable
 - get_response_for_widget
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
 - get_show_preview_entry
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
 - get_surface
 - get_surface_transform
+- get_template_child
 - get_title
 - get_titlebar
+- get_tooltip_markup
+- get_tooltip_text
 - get_toplevels
 - get_transient_for
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
 - get_widget_for_response
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
 - has_group
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
 - is_active
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
 - is_fullscreen
 - is_maximized
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
 - list_toplevels
+- map
 - maximize
+- measure
 - minimize
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
 - present
 - present_with_time
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
 - response
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_application
 - set_auto_startup_notification
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
 - set_decorated
+- set_default_direction
 - set_default_icon_name
 - set_default_response
 - set_default_size
 - set_default_widget
 - set_deletable
 - set_destroy_with_parent
+- set_direction
 - set_display
 - set_filter_func
 - set_focus
+- set_focus_child
+- set_focus_on_click
 - set_focus_visible
+- set_focusable
 - set_font
 - set_font_desc
+- set_font_map
+- set_font_options
+- set_halign
 - set_handle_menubar_accel
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_hide_on_close
 - set_icon_name
 - set_interactive_debugging
 - set_language
+- set_layout_manager
+- set_layout_manager_type
 - set_level
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_mnemonics_visible
 - set_modal
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
 - set_preview_text
+- set_properties
+- set_property
+- set_receives_default
 - set_resizable
 - set_response_sensitive
+- set_sensitive
 - set_show_preview_entry
+- set_size_request
 - set_startup_id
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_title
 - set_titlebar
+- set_tooltip_markup
+- set_tooltip_text
 - set_transient_for
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
 - unfullscreen
+- unmap
 - unmaximize
 - unminimize
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.FontChooserWidget</summary>
 
-
-    :Constructors:
+Object GtkFontChooserWidget
     
-    ::
+    Properties from GtkFontChooserWidget:
+      tweak-action -> GAction: tweak-action
     
-        FontChooserWidget(**properties)
-        new() -> Gtk.Widget
+    Signals from GtkFontChooser:
+      font-activated (gchararray)
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
 - get_font
 - get_font_desc
 - get_font_face
 - get_font_family
 - get_font_features
+- get_font_map
+- get_font_options
 - get_font_size
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_language
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
 - get_level
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
 - get_preview_text
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
 - get_show_preview_entry
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_filter_func
+- set_focus_child
+- set_focus_on_click
+- set_focusable
 - set_font
 - set_font_desc
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_language
+- set_layout_manager
+- set_layout_manager_type
 - set_level
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
 - set_preview_text
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
 - set_show_preview_entry
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Frame</summary>
 
-
-    :Constructors:
+Object GtkFrame
     
-    ::
+    Properties from GtkFrame:
+      label -> gchararray: label
+      label-xalign -> gfloat: label-xalign
+      label-widget -> GtkWidget: label-widget
+      child -> GtkWidget: child
     
-        Frame(**properties)
-        new(label:str=None) -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_compute_child_allocation
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_label
 - get_label_align
 - get_label_widget
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_label
 - set_label_align
 - set_label_widget
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.GLArea</summary>
 
-
-    :Constructors:
+Object GtkGLArea
     
-    ::
+    Signals from GtkGLArea:
+      render (GdkGLContext) -> gboolean
+      resize (gint, gint)
+      create-context () -> GdkGLContext
     
-        GLArea(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkGLArea:
+      context -> GdkGLContext: context
+      has-depth-buffer -> gboolean: has-depth-buffer
+      has-stencil-buffer -> gboolean: has-stencil-buffer
+      use-es -> gboolean: use-es
+      auto-render -> gboolean: auto-render
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
 - attach_buffers
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
 - do_render
 - do_resize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_auto_render
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
 - get_context
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
 - get_error
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
 - get_has_depth_buffer
 - get_has_stencil_buffer
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
 - get_required_version
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
 - get_use_es
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
 - make_current
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
 - queue_render
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_auto_render
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_error
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
 - set_has_depth_buffer
 - set_has_stencil_buffer
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_required_version
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
 - set_use_es
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Gesture</summary>
 
-
-    :Constructors:
+Object GtkGesture
     
-    ::
+    Signals from GtkGesture:
+      update (GdkEventSequence)
+      cancel (GdkEventSequence)
+      begin (GdkEventSequence)
+      end (GdkEventSequence)
+      sequence-state-changed (GdkEventSequence, GtkEventSequenceState)
     
-        Gesture(**properties)
+    Properties from GtkGesture:
+      n-points -> guint: n-points
+    
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -11474,13 +26139,38 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.GestureClick</summary>
 
-
-    :Constructors:
+Object GtkGestureClick
     
-    ::
+    Signals from GtkGestureClick:
+      pressed (gint, gdouble, gdouble)
+      released (gint, gdouble, gdouble)
+      stopped ()
+      unpaired-release (gdouble, gdouble, guint, GdkEventSequence)
     
-        GestureClick(**properties)
-        new() -> Gtk.Gesture
+    Properties from GtkGestureSingle:
+      touch-only -> gboolean: touch-only
+      exclusive -> gboolean: exclusive
+      button -> guint: button
+    
+    Signals from GtkGesture:
+      update (GdkEventSequence)
+      cancel (GdkEventSequence)
+      begin (GdkEventSequence)
+      end (GdkEventSequence)
+      sequence-state-changed (GdkEventSequence, GtkEventSequenceState)
+    
+    Properties from GtkGesture:
+      n-points -> guint: n-points
+    
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -11626,13 +26316,37 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.GestureDrag</summary>
 
-
-    :Constructors:
+Object GtkGestureDrag
     
-    ::
+    Signals from GtkGestureDrag:
+      drag-begin (gdouble, gdouble)
+      drag-end (gdouble, gdouble)
+      drag-update (gdouble, gdouble)
     
-        GestureDrag(**properties)
-        new() -> Gtk.Gesture
+    Properties from GtkGestureSingle:
+      touch-only -> gboolean: touch-only
+      exclusive -> gboolean: exclusive
+      button -> guint: button
+    
+    Signals from GtkGesture:
+      update (GdkEventSequence)
+      cancel (GdkEventSequence)
+      begin (GdkEventSequence)
+      end (GdkEventSequence)
+      sequence-state-changed (GdkEventSequence, GtkEventSequenceState)
+    
+    Properties from GtkGesture:
+      n-points -> guint: n-points
+    
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -11780,13 +26494,39 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.GestureLongPress</summary>
 
-
-    :Constructors:
+Object GtkGestureLongPress
     
-    ::
+    Signals from GtkGestureLongPress:
+      cancelled ()
+      pressed (gdouble, gdouble)
     
-        GestureLongPress(**properties)
-        new() -> Gtk.Gesture
+    Properties from GtkGestureLongPress:
+      delay-factor -> gdouble: delay-factor
+    
+    Properties from GtkGestureSingle:
+      touch-only -> gboolean: touch-only
+      exclusive -> gboolean: exclusive
+      button -> guint: button
+    
+    Signals from GtkGesture:
+      update (GdkEventSequence)
+      cancel (GdkEventSequence)
+      begin (GdkEventSequence)
+      end (GdkEventSequence)
+      sequence-state-changed (GdkEventSequence, GtkEventSequenceState)
+    
+    Properties from GtkGesture:
+      n-points -> guint: n-points
+    
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -11934,13 +26674,43 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.GesturePan</summary>
 
-
-    :Constructors:
+Object GtkGesturePan
     
-    ::
+    Signals from GtkGesturePan:
+      pan (GtkPanDirection, gdouble)
     
-        GesturePan(**properties)
-        new(orientation:Gtk.Orientation) -> Gtk.Gesture
+    Properties from GtkGesturePan:
+      orientation -> GtkOrientation: orientation
+    
+    Signals from GtkGestureDrag:
+      drag-begin (gdouble, gdouble)
+      drag-end (gdouble, gdouble)
+      drag-update (gdouble, gdouble)
+    
+    Properties from GtkGestureSingle:
+      touch-only -> gboolean: touch-only
+      exclusive -> gboolean: exclusive
+      button -> guint: button
+    
+    Signals from GtkGesture:
+      update (GdkEventSequence)
+      cancel (GdkEventSequence)
+      begin (GdkEventSequence)
+      end (GdkEventSequence)
+      sequence-state-changed (GdkEventSequence, GtkEventSequenceState)
+    
+    Properties from GtkGesture:
+      n-points -> guint: n-points
+    
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -12090,13 +26860,30 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.GestureRotate</summary>
 
-
-    :Constructors:
+Object GtkGestureRotate
     
-    ::
+    Signals from GtkGestureRotate:
+      angle-changed (gdouble, gdouble)
     
-        GestureRotate(**properties)
-        new() -> Gtk.Gesture
+    Signals from GtkGesture:
+      update (GdkEventSequence)
+      cancel (GdkEventSequence)
+      begin (GdkEventSequence)
+      end (GdkEventSequence)
+      sequence-state-changed (GdkEventSequence, GtkEventSequenceState)
+    
+    Properties from GtkGesture:
+      n-points -> guint: n-points
+    
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -12235,12 +27022,32 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.GestureSingle</summary>
 
-
-    :Constructors:
+Object GtkGestureSingle
     
-    ::
+    Properties from GtkGestureSingle:
+      touch-only -> gboolean: touch-only
+      exclusive -> gboolean: exclusive
+      button -> guint: button
     
-        GestureSingle(**properties)
+    Signals from GtkGesture:
+      update (GdkEventSequence)
+      cancel (GdkEventSequence)
+      begin (GdkEventSequence)
+      end (GdkEventSequence)
+      sequence-state-changed (GdkEventSequence, GtkEventSequenceState)
+    
+    Properties from GtkGesture:
+      n-points -> guint: n-points
+    
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -12385,13 +27192,38 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.GestureStylus</summary>
 
-
-    :Constructors:
+Object GtkGestureStylus
     
-    ::
+    Signals from GtkGestureStylus:
+      motion (gdouble, gdouble)
+      proximity (gdouble, gdouble)
+      down (gdouble, gdouble)
+      up (gdouble, gdouble)
     
-        GestureStylus(**properties)
-        new() -> Gtk.Gesture
+    Properties from GtkGestureSingle:
+      touch-only -> gboolean: touch-only
+      exclusive -> gboolean: exclusive
+      button -> guint: button
+    
+    Signals from GtkGesture:
+      update (GdkEventSequence)
+      cancel (GdkEventSequence)
+      begin (GdkEventSequence)
+      end (GdkEventSequence)
+      sequence-state-changed (GdkEventSequence, GtkEventSequenceState)
+    
+    Properties from GtkGesture:
+      n-points -> guint: n-points
+    
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -12541,13 +27373,35 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.GestureSwipe</summary>
 
-
-    :Constructors:
+Object GtkGestureSwipe
     
-    ::
+    Signals from GtkGestureSwipe:
+      swipe (gdouble, gdouble)
     
-        GestureSwipe(**properties)
-        new() -> Gtk.Gesture
+    Properties from GtkGestureSingle:
+      touch-only -> gboolean: touch-only
+      exclusive -> gboolean: exclusive
+      button -> guint: button
+    
+    Signals from GtkGesture:
+      update (GdkEventSequence)
+      cancel (GdkEventSequence)
+      begin (GdkEventSequence)
+      end (GdkEventSequence)
+      sequence-state-changed (GdkEventSequence, GtkEventSequenceState)
+    
+    Properties from GtkGesture:
+      n-points -> guint: n-points
+    
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -12694,13 +27548,30 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.GestureZoom</summary>
 
-
-    :Constructors:
+Object GtkGestureZoom
     
-    ::
+    Signals from GtkGestureZoom:
+      scale-changed (gdouble)
     
-        GestureZoom(**properties)
-        new() -> Gtk.Gesture
+    Signals from GtkGesture:
+      update (GdkEventSequence)
+      cancel (GdkEventSequence)
+      begin (GdkEventSequence)
+      end (GdkEventSequence)
+      sequence-state-changed (GdkEventSequence, GtkEventSequenceState)
+    
+    Properties from GtkGesture:
+      n-points -> guint: n-points
+    
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -12839,54 +27710,427 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Grid</summary>
 
-
-    :Constructors:
+Object GtkGrid
     
-    ::
+    Properties from GtkGrid:
+      row-spacing -> gint: row-spacing
+      column-spacing -> gint: column-spacing
+      row-homogeneous -> gboolean: row-homogeneous
+      column-homogeneous -> gboolean: column-homogeneous
+      baseline-row -> gint: baseline-row
     
-        Grid(**properties)
-        new() -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
 - attach
 - attach_next_to
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_baseline_row
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child_at
+- get_child_visible
+- get_clipboard
 - get_column_homogeneous
 - get_column_spacing
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
 - get_orientation
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
 - get_row_baseline_position
 - get_row_homogeneous
 - get_row_spacing
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
 - insert_column
 - insert_next_to
 - insert_row
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
 - query_child
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - remove
 - remove_column
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
 - remove_row
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_baseline_row
+- set_can_focus
+- set_can_target
+- set_child_visible
 - set_column_homogeneous
 - set_column_spacing
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
 - set_orientation
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_row_baseline_position
 - set_row_homogeneous
 - set_row_spacing
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.GridLayout</summary>
 
-
-    :Constructors:
+Object GtkGridLayout
     
-    ::
+    Properties from GtkGridLayout:
+      row-spacing -> gint: row-spacing
+      column-spacing -> gint: column-spacing
+      row-homogeneous -> gboolean: row-homogeneous
+      column-homogeneous -> gboolean: column-homogeneous
+      baseline-row -> gint: baseline-row
     
-        GridLayout(**properties)
-        new() -> Gtk.LayoutManager
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -13019,12 +28263,21 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.GridLayoutChild</summary>
 
-
-    :Constructors:
+Object GtkGridLayoutChild
     
-    ::
+    Properties from GtkGridLayoutChild:
+      column -> gint: column
+      row -> gint: row
+      column-span -> gint: column-span
+      row-span -> gint: row-span
     
-        GridLayoutChild(**properties)
+    Properties from GtkLayoutChild:
+      layout-manager -> GtkLayoutManager: layout-manager
+      child-widget -> GtkWidget: child-widget
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -13142,78 +28395,830 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.GridView</summary>
 
-
-    :Constructors:
+Object GtkGridView
     
-    ::
+    Signals from GtkGridView:
+      activate (guint)
     
-        GridView(**properties)
-        new(model:Gtk.SelectionModel=None, factory:Gtk.ListItemFactory=None) -> Gtk.Widget
+    Properties from GtkGridView:
+      factory -> GtkListItemFactory: factory
+      max-columns -> guint: max-columns
+      min-columns -> guint: min-columns
+      model -> GtkSelectionModel: model
+      single-click-activate -> gboolean: single-click-activate
+      enable-rubberband -> gboolean: enable-rubberband
+    
+    Properties from GtkListBase:
+      orientation -> GtkOrientation: orientation
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_border
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
 - get_enable_rubberband
 - get_factory
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
 - get_hadjustment
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_hscroll_policy
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_max_columns
 - get_min_columns
 - get_model
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
 - get_orientation
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
 - get_single_click_activate
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
 - get_vadjustment
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
 - get_vscroll_policy
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_enable_rubberband
 - set_factory
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
 - set_hadjustment
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_hscroll_policy
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_max_columns
 - set_min_columns
 - set_model
+- set_name
+- set_opacity
 - set_orientation
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
 - set_single_click_activate
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
 - set_vadjustment
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
 - set_vscroll_policy
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.HeaderBar</summary>
 
-
-    :Constructors:
+Object GtkHeaderBar
     
-    ::
+    Properties from GtkHeaderBar:
+      title-widget -> GtkWidget: title-widget
+      show-title-buttons -> gboolean: show-title-buttons
+      decoration-layout -> gchararray: decoration-layout
     
-        HeaderBar(**properties)
-        new() -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
 - get_decoration_layout
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
 - get_show_title_buttons
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
 - get_title_widget
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
 - pack_end
 - pack_start
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - remove
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
 - set_decoration_layout
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
 - set_show_title_buttons
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_title_widget
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.IMContext</summary>
 
-
-    :Constructors:
+Object GtkIMContext
     
-    ::
+    Signals from GtkIMContext:
+      preedit-start ()
+      preedit-end ()
+      preedit-changed ()
+      commit (gchararray)
+      retrieve-surrounding () -> gboolean
+      delete-surrounding (gint, gint) -> gboolean
     
-        IMContext(**properties)
+    Properties from GtkIMContext:
+      input-purpose -> GtkInputPurpose: input-purpose
+      input-hints -> GtkInputHints: input-hints
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -13353,13 +29358,23 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.IMContextSimple</summary>
 
-
-    :Constructors:
+Object GtkIMContextSimple
     
-    ::
+    Signals from GtkIMContext:
+      preedit-start ()
+      preedit-end ()
+      preedit-changed ()
+      commit (gchararray)
+      retrieve-surrounding () -> gboolean
+      delete-surrounding (gint, gint) -> gboolean
     
-        IMContextSimple(**properties)
-        new() -> Gtk.IMContext
+    Properties from GtkIMContext:
+      input-purpose -> GtkInputPurpose: input-purpose
+      input-hints -> GtkInputHints: input-hints
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -13503,13 +29518,23 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.IMMulticontext</summary>
 
-
-    :Constructors:
+Object GtkIMMulticontext
     
-    ::
+    Signals from GtkIMContext:
+      preedit-start ()
+      preedit-end ()
+      preedit-changed ()
+      commit (gchararray)
+      retrieve-surrounding () -> gboolean
+      delete-surrounding (gint, gint) -> gboolean
     
-        IMMulticontext(**properties)
-        new() -> Gtk.IMContext
+    Properties from GtkIMContext:
+      input-purpose -> GtkInputPurpose: input-purpose
+      input-hints -> GtkInputHints: input-hints
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -13654,13 +29679,20 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.IconPaintable</summary>
 
-
-    :Constructors:
+Object GtkIconPaintable
     
-    ::
+    Properties from GtkIconPaintable:
+      file -> GFile: file
+      icon-name -> gchararray: icon-name
+      is-symbolic -> gboolean: is-symbolic
     
-        IconPaintable(**properties)
-        new_for_file(file:Gio.File, size:int, scale:int) -> Gtk.IconPaintable
+    Signals from GdkPaintable:
+      invalidate-contents ()
+      invalidate-size ()
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -13783,13 +29815,21 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.IconTheme</summary>
 
-
-    :Constructors:
+Object GtkIconTheme
     
-    ::
+    Signals from GtkIconTheme:
+      changed ()
     
-        IconTheme(**properties)
-        new() -> Gtk.IconTheme
+    Properties from GtkIconTheme:
+      display -> GdkDisplay: display
+      icon-names -> GStrv: icon-names
+      search-path -> GStrv: search-path
+      resource-path -> GStrv: resource-path
+      theme-name -> gchararray: theme-name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -13913,35 +29953,249 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.IconView</summary>
 
-
-    :Constructors:
+Object GtkIconView
     
-    ::
+    Signals from GtkIconView:
+      move-cursor (GtkMovementStep, gint, gboolean, gboolean) -> gboolean
+      select-all ()
+      unselect-all ()
+      item-activated (GtkTreePath)
+      selection-changed ()
+      select-cursor-item ()
+      toggle-cursor-item ()
+      activate-cursor-item () -> gboolean
     
-        IconView(**properties)
-        new() -> Gtk.Widget
-        new_with_area(area:Gtk.CellArea) -> Gtk.Widget
-        new_with_model(model:Gtk.TreeModel) -> Gtk.Widget
+    Properties from GtkIconView:
+      pixbuf-column -> gint: pixbuf-column
+      text-column -> gint: text-column
+      markup-column -> gint: markup-column
+      selection-mode -> GtkSelectionMode: selection-mode
+      item-orientation -> GtkOrientation: item-orientation
+      model -> GtkTreeModel: model
+      columns -> gint: columns
+      item-width -> gint: item-width
+      spacing -> gint: spacing
+      row-spacing -> gint: row-spacing
+      column-spacing -> gint: column-spacing
+      margin -> gint: margin
+      reorderable -> gboolean: reorderable
+      tooltip-column -> gint: tooltip-column
+      item-padding -> gint: item-padding
+      cell-area -> GtkCellArea: cell-area
+      activate-on-single-click -> gboolean: activate-on-single-click
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
 - add_attribute
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
 - clear
 - clear_attributes
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
 - create_drag_icon
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
 - enable_model_drag_dest
 - enable_model_drag_source
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
 - get_activate_on_single_click
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_area
 - get_border
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_cell_rect
 - get_cells
+- get_child_visible
+- get_clipboard
 - get_column_spacing
 - get_columns
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
 - get_dest_item_at_pos
+- get_direction
+- get_display
 - get_drag_dest_item
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
 - get_hadjustment
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_hscroll_policy
 - get_item_at_pos
 - get_item_column
@@ -13949,91 +30203,534 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 - get_item_padding
 - get_item_row
 - get_item_width
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
 - get_margin
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_markup_column
 - get_model
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
 - get_path_at_pos
 - get_pixbuf_column
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
 - get_reorderable
+- get_request_mode
+- get_root
 - get_row_spacing
+- get_scale_factor
 - get_selected_items
 - get_selection_mode
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
 - get_spacing
+- get_state_flags
+- get_style_context
+- get_template_child
 - get_text_column
 - get_tooltip_column
 - get_tooltip_context
+- get_tooltip_markup
+- get_tooltip_text
 - get_vadjustment
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
 - get_visible_range
 - get_vscroll_policy
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
 - item_activated
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_with_area
 - new_with_model
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
 - pack_end
 - pack_start
+- parent_instance
 - path_is_selected
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
 - reorder
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
 - scroll_to_path
 - select_all
 - select_path
 - selected_foreach
+- set_accessible_role
 - set_activate_on_single_click
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
 - set_cell_data_func
+- set_child_visible
 - set_column_spacing
 - set_columns
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_drag_dest_item
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
 - set_hadjustment
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_hscroll_policy
 - set_item_orientation
 - set_item_padding
 - set_item_width
+- set_layout_manager
+- set_layout_manager_type
 - set_margin
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_markup_column
 - set_model
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
 - set_pixbuf_column
+- set_properties
+- set_property
+- set_receives_default
 - set_reorderable
 - set_row_spacing
 - set_selection_mode
+- set_sensitive
+- set_size_request
 - set_spacing
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_text_column
 - set_tooltip_cell
 - set_tooltip_column
 - set_tooltip_item
+- set_tooltip_markup
+- set_tooltip_text
 - set_vadjustment
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
 - set_vscroll_policy
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
 - unselect_all
 - unselect_path
 - unset_model_drag_dest
 - unset_model_drag_source
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Image</summary>
 
-
-    :Constructors:
+Object GtkImage
     
-    ::
+    Properties from GtkImage:
+      paintable -> GdkPaintable: paintable
+      file -> gchararray: file
+      icon-size -> GtkIconSize: icon-size
+      pixel-size -> gint: pixel-size
+      icon-name -> gchararray: icon-name
+      storage-type -> GtkImageType: storage-type
+      gicon -> GIcon: gicon
+      resource -> gchararray: resource
+      use-fallback -> gboolean: use-fallback
     
-        Image(**properties)
-        new() -> Gtk.Widget
-        new_from_file(filename:str) -> Gtk.Widget
-        new_from_gicon(icon:Gio.Icon) -> Gtk.Widget
-        new_from_icon_name(icon_name:str=None) -> Gtk.Widget
-        new_from_paintable(paintable:Gdk.Paintable=None) -> Gtk.Widget
-        new_from_pixbuf(pixbuf:GdkPixbuf.Pixbuf=None) -> Gtk.Widget
-        new_from_resource(resource_path:str) -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
 - clear
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
 - get_gicon
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_icon_name
 - get_icon_size
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
 - get_paintable
+- get_pango_context
+- get_parent
 - get_pixel_size
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
 - get_storage_type
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_from_file
 - new_from_gicon
@@ -14041,95 +30738,938 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 - new_from_paintable
 - new_from_pixbuf
 - new_from_resource
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
 - set_from_file
 - set_from_gicon
 - set_from_icon_name
 - set_from_paintable
 - set_from_pixbuf
 - set_from_resource
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_icon_size
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
 - set_pixel_size
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.InfoBar</summary>
 
-
-    :Constructors:
+Object GtkInfoBar
     
-    ::
+    Signals from GtkInfoBar:
+      response (gint)
+      close ()
     
-        InfoBar(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkInfoBar:
+      message-type -> GtkMessageType: message-type
+      show-close-button -> gboolean: show-close-button
+      revealed -> gboolean: revealed
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
 - add_action_widget
 - add_button
 - add_child
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_message_type
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
 - get_revealed
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
 - get_show_close_button
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - remove_action_widget
 - remove_child
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
 - response
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
 - set_default_response
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_message_type
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_response_sensitive
 - set_revealed
+- set_sensitive
 - set_show_close_button
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Inscription</summary>
 
-
-    :Constructors:
+Object GtkInscription
     
-    ::
+    Properties from GtkInscription:
+      attributes -> PangoAttrList: attributes
+      markup -> gchararray: markup
+      min-chars -> guint: min-chars
+      min-lines -> guint: min-lines
+      nat-chars -> guint: nat-chars
+      nat-lines -> guint: nat-lines
+      text -> gchararray: text
+      text-overflow -> GtkInscriptionOverflow: text-overflow
+      wrap-mode -> PangoWrapMode: wrap-mode
+      xalign -> gfloat: xalign
+      yalign -> gfloat: yalign
     
-        Inscription(**properties)
-        new(text:str=None) -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_attributes
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_min_chars
 - get_min_lines
+- get_name
 - get_nat_chars
 - get_nat_lines
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
 - get_text
 - get_text_overflow
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
 - get_wrap_mode
 - get_xalign
 - get_yalign
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_attributes
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_markup
 - set_min_chars
 - set_min_lines
+- set_name
 - set_nat_chars
 - set_nat_lines
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_text
 - set_text_overflow
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
 - set_wrap_mode
 - set_xalign
 - set_yalign
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.KeyvalTrigger</summary>
 
-
-    :Constructors:
+Object GtkKeyvalTrigger
     
-    ::
+    Properties from GtkKeyvalTrigger:
+      keyval -> guint: keyval
+      modifiers -> GdkModifierType: modifiers
     
-        KeyvalTrigger(**properties)
-        new(keyval:int, modifiers:Gdk.ModifierType) -> Gtk.ShortcutTrigger
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -14248,80 +31788,471 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Label</summary>
 
-
-    :Constructors:
+Object GtkLabel
     
-    ::
+    Signals from GtkLabel:
+      activate-link (gchararray) -> gboolean
+      move-cursor (GtkMovementStep, gint, gboolean)
+      copy-clipboard ()
+      activate-current-link ()
     
-        Label(**properties)
-        new(str:str=None) -> Gtk.Widget
-        new_with_mnemonic(str:str=None) -> Gtk.Widget
+    Properties from GtkLabel:
+      label -> gchararray: label
+      attributes -> PangoAttrList: attributes
+      use-markup -> gboolean: use-markup
+      use-underline -> gboolean: use-underline
+      justify -> GtkJustification: justify
+      wrap -> gboolean: wrap
+      wrap-mode -> PangoWrapMode: wrap-mode
+      natural-wrap-mode -> GtkNaturalWrapMode: natural-wrap-mode
+      selectable -> gboolean: selectable
+      mnemonic-keyval -> guint: mnemonic-keyval
+      mnemonic-widget -> GtkWidget: mnemonic-widget
+      ellipsize -> PangoEllipsizeMode: ellipsize
+      width-chars -> gint: width-chars
+      single-line-mode -> gboolean: single-line-mode
+      max-width-chars -> gint: max-width-chars
+      lines -> gint: lines
+      xalign -> gfloat: xalign
+      yalign -> gfloat: yalign
+      extra-menu -> GMenuModel: extra-menu
+      tabs -> PangoTabArray: tabs
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_attributes
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
 - get_current_uri
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
 - get_ellipsize
 - get_extra_menu
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_justify
 - get_label
+- get_last_child
 - get_layout
+- get_layout_manager
+- get_layout_manager_type
 - get_layout_offsets
 - get_lines
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_max_width_chars
 - get_mnemonic_keyval
 - get_mnemonic_widget
+- get_name
+- get_native
 - get_natural_wrap_mode
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
 - get_selectable
 - get_selection_bounds
+- get_sensitive
+- get_settings
 - get_single_line_mode
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
 - get_tabs
+- get_template_child
 - get_text
+- get_tooltip_markup
+- get_tooltip_text
 - get_use_markup
 - get_use_underline
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
 - get_width_chars
 - get_wrap
 - get_wrap_mode
 - get_xalign
 - get_yalign
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_with_mnemonic
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
 - select_region
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_attributes
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_ellipsize
 - set_extra_menu
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_justify
 - set_label
+- set_layout_manager
+- set_layout_manager_type
 - set_lines
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_markup
 - set_markup_with_mnemonic
 - set_max_width_chars
 - set_mnemonic_widget
+- set_name
 - set_natural_wrap_mode
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_selectable
+- set_sensitive
 - set_single_line_mode
+- set_size_request
+- set_state_flags
 - set_tabs
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_text
 - set_text_with_mnemonic
+- set_tooltip_markup
+- set_tooltip_text
 - set_use_markup
 - set_use_underline
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
 - set_width_chars
 - set_wrap
 - set_wrap_mode
 - set_xalign
 - set_yalign
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.LayoutChild</summary>
 
-
-    :Constructors:
+Object GtkLayoutChild
     
-    ::
+    Properties from GtkLayoutChild:
+      layout-manager -> GtkLayoutManager: layout-manager
+      child-widget -> GtkWidget: child-widget
     
-        LayoutChild(**properties)
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -14431,12 +32362,11 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.LayoutManager</summary>
 
-
-    :Constructors:
+Object GtkLayoutManager
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        LayoutManager(**properties)
     
 
 ---
@@ -14556,88 +32486,889 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.LevelBar</summary>
 
-
-    :Constructors:
+Object GtkLevelBar
     
-    ::
+    Signals from GtkLevelBar:
+      offset-changed (gchararray)
     
-        LevelBar(**properties)
-        new() -> Gtk.Widget
-        new_for_interval(min_value:float, max_value:float) -> Gtk.Widget
+    Properties from GtkLevelBar:
+      value -> gdouble: value
+      min-value -> gdouble: min-value
+      max-value -> gdouble: max-value
+      mode -> GtkLevelBarMode: mode
+      inverted -> gboolean: inverted
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
 - add_offset_value
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_inverted
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_max_value
 - get_min_value
 - get_mode
+- get_name
+- get_native
+- get_next_sibling
 - get_offset_value
+- get_opacity
 - get_orientation
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
 - get_value
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_for_interval
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
 - remove_offset_value
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_inverted
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_max_value
 - set_min_value
 - set_mode
+- set_name
+- set_opacity
 - set_orientation
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
 - set_value
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.LinkButton</summary>
 
-
-    :Constructors:
+Object GtkLinkButton
     
-    ::
+    Signals from GtkLinkButton:
+      activate-link () -> gboolean
     
-        LinkButton(**properties)
-        new(uri:str) -> Gtk.Widget
-        new_with_label(uri:str, label:str=None) -> Gtk.Widget
+    Properties from GtkLinkButton:
+      uri -> gchararray: uri
+      visited -> gboolean: visited
+    
+    Signals from GtkButton:
+      activate ()
+      clicked ()
+    
+    Properties from GtkButton:
+      label -> gchararray: label
+      has-frame -> gboolean: has-frame
+      use-underline -> gboolean: use-underline
+      icon-name -> gchararray: icon-name
+      child -> GtkWidget: child
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate
 - do_clicked
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
 - get_action_name
 - get_action_target_value
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
 - get_has_frame
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_icon_name
 - get_label
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
 - get_uri
 - get_use_underline
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
 - get_visited
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_from_icon_name
 - new_with_label
 - new_with_mnemonic
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
 - set_action_name
 - set_action_target_value
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
 - set_detailed_action_name
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
 - set_has_frame
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_icon_name
 - set_label
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
 - set_uri
 - set_use_underline
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
 - set_visited
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.ListBase</summary>
 
-
-    :Constructors:
+Object GtkListBase
     
-    ::
+    Properties from GtkListBase:
+      orientation -> GtkOrientation: orientation
     
-        ListBase(**properties)
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -14970,94 +33701,847 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ListBox</summary>
 
-
-    :Constructors:
+Object GtkListBox
     
-    ::
+    Signals from GtkListBox:
+      move-cursor (GtkMovementStep, gint, gboolean, gboolean)
+      select-all ()
+      unselect-all ()
+      row-selected (GtkListBoxRow)
+      selected-rows-changed ()
+      row-activated (GtkListBoxRow)
+      activate-cursor-row ()
+      toggle-cursor-row ()
     
-        ListBox(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkListBox:
+      selection-mode -> GtkSelectionMode: selection-mode
+      activate-on-single-click -> gboolean: activate-on-single-click
+      accept-unpaired-release -> gboolean: accept-unpaired-release
+      show-separators -> gboolean: show-separators
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
 - append
 - bind_model
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
 - drag_highlight_row
 - drag_unhighlight_row
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
 - get_activate_on_single_click
+- get_activate_signal
 - get_adjustment
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
 - get_row_at_index
 - get_row_at_y
+- get_scale_factor
 - get_selected_row
 - get_selected_rows
 - get_selection_mode
+- get_sensitive
+- get_settings
 - get_show_separators
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
 - insert
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
 - invalidate_filter
 - invalidate_headers
 - invalidate_sort
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
 - prepend
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - remove
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
 - select_all
 - select_row
 - selected_foreach
+- set_accessible_role
 - set_activate_on_single_click
+- set_activate_signal
+- set_activate_signal_from_name
 - set_adjustment
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_filter_func
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
 - set_header_func
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
 - set_placeholder
+- set_properties
+- set_property
+- set_receives_default
 - set_selection_mode
+- set_sensitive
 - set_show_separators
+- set_size_request
 - set_sort_func
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
 - unselect_all
 - unselect_row
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.ListBoxRow</summary>
 
-
-    :Constructors:
+Object GtkListBoxRow
     
-    ::
+    Signals from GtkListBoxRow:
+      activate ()
     
-        ListBoxRow(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkListBoxRow:
+      activatable -> gboolean: activatable
+      selectable -> gboolean: selectable
+      child -> GtkWidget: child
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
 - changed
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
 - get_action_name
 - get_action_target_value
 - get_activatable
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
 - get_header
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_index
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
 - get_selectable
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
 - is_selected
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
 - set_action_name
 - set_action_target_value
 - set_activatable
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
 - set_detailed_action_name
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
 - set_header
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_selectable
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.ListItem</summary>
 
-
-    :Constructors:
+Object GtkListItem
     
-    ::
+    Properties from GtkListItem:
+      activatable -> gboolean: activatable
+      child -> GtkWidget: child
+      item -> GObject: item
+      position -> guint: position
+      selectable -> gboolean: selectable
+      selected -> gboolean: selected
     
-        ListItem(**properties)
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -15173,12 +34657,11 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ListItemFactory</summary>
 
-
-    :Constructors:
+Object GtkListItemFactory
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        ListItemFactory(**properties)
     
 
 ---
@@ -15285,13 +34768,21 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ListStore</summary>
 
-
-    :Constructors:
+Object GtkListStore
     
-    ::
+    Signals from GtkTreeModel:
+      row-changed (GtkTreePath, GtkTreeIter)
+      row-inserted (GtkTreePath, GtkTreeIter)
+      row-has-child-toggled (GtkTreePath, GtkTreeIter)
+      row-deleted (GtkTreePath)
+      rows-reordered (GtkTreePath, GtkTreeIter, gpointer)
     
-        ListStore(**properties)
-        new(types:list) -> Gtk.ListStore
+    Signals from GtkTreeSortable:
+      sort-column-changed ()
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -15470,90 +34961,851 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ListView</summary>
 
-
-    :Constructors:
+Object GtkListView
     
-    ::
+    Signals from GtkListView:
+      activate (guint)
     
-        ListView(**properties)
-        new(model:Gtk.SelectionModel=None, factory:Gtk.ListItemFactory=None) -> Gtk.Widget
+    Properties from GtkListView:
+      factory -> GtkListItemFactory: factory
+      model -> GtkSelectionModel: model
+      show-separators -> gboolean: show-separators
+      single-click-activate -> gboolean: single-click-activate
+      enable-rubberband -> gboolean: enable-rubberband
+    
+    Properties from GtkListBase:
+      orientation -> GtkOrientation: orientation
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_border
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
 - get_enable_rubberband
 - get_factory
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
 - get_hadjustment
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_hscroll_policy
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_model
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
 - get_orientation
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
 - get_show_separators
 - get_single_click_activate
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
 - get_vadjustment
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
 - get_vscroll_policy
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_enable_rubberband
 - set_factory
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
 - set_hadjustment
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_hscroll_policy
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_model
+- set_name
+- set_opacity
 - set_orientation
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
 - set_show_separators
 - set_single_click_activate
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
 - set_vadjustment
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
 - set_vscroll_policy
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.LockButton</summary>
 
-
-    :Constructors:
+Object GtkLockButton
     
-    ::
+    Properties from GtkLockButton:
+      permission -> GPermission: permission
+      text-lock -> gchararray: text-lock
+      text-unlock -> gchararray: text-unlock
+      tooltip-lock -> gchararray: tooltip-lock
+      tooltip-unlock -> gchararray: tooltip-unlock
+      tooltip-not-authorized -> gchararray: tooltip-not-authorized
     
-        LockButton(**properties)
-        new(permission:Gio.Permission=None) -> Gtk.Widget
+    Signals from GtkButton:
+      activate ()
+      clicked ()
+    
+    Properties from GtkButton:
+      label -> gchararray: label
+      has-frame -> gboolean: has-frame
+      use-underline -> gboolean: use-underline
+      icon-name -> gchararray: icon-name
+      child -> GtkWidget: child
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate
 - do_clicked
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
 - get_action_name
 - get_action_target_value
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
 - get_has_frame
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_icon_name
 - get_label
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
 - get_permission
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
 - get_use_underline
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_from_icon_name
 - new_with_label
 - new_with_mnemonic
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
 - set_action_name
 - set_action_target_value
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
 - set_detailed_action_name
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
 - set_has_frame
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_icon_name
 - set_label
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
 - set_permission
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
 - set_use_underline
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.MapListModel</summary>
 
-
-    :Constructors:
+Object GtkMapListModel
     
-    ::
+    Properties from GtkMapListModel:
+      has-map -> gboolean: has-map
+      item-type -> GType: item-type
+      model -> GListModel: model
+      n-items -> guint: n-items
     
-        MapListModel(**properties)
-        new(model:Gio.ListModel=None, map_func:Gtk.MapListModelMapFunc=None, user_data=None) -> Gtk.MapListModel
+    Signals from GListModel:
+      items-changed (guint, guint, guint)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -15674,36 +35926,421 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.MediaControls</summary>
 
-
-    :Constructors:
+Object GtkMediaControls
     
-    ::
+    Properties from GtkMediaControls:
+      media-stream -> GtkMediaStream: media-stream
     
-        MediaControls(**properties)
-        new(stream:Gtk.MediaStream=None) -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_media_stream
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_media_stream
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.MediaFile</summary>
 
-
-    :Constructors:
+Object GtkMediaFile
     
-    ::
+    Properties from GtkMediaFile:
+      file -> GFile: file
+      input-stream -> GInputStream: input-stream
     
-        MediaFile(**properties)
-        new() -> Gtk.MediaFile
-        new_for_file(file:Gio.File) -> Gtk.MediaFile
-        new_for_filename(filename:str) -> Gtk.MediaFile
-        new_for_input_stream(stream:Gio.InputStream) -> Gtk.MediaFile
-        new_for_resource(resource_path:str) -> Gtk.MediaFile
+    Signals from GdkPaintable:
+      invalidate-contents ()
+      invalidate-size ()
+    
+    Properties from GtkMediaStream:
+      prepared -> gboolean: prepared
+      error -> GError: error
+      has-audio -> gboolean: has-audio
+      has-video -> gboolean: has-video
+      playing -> gboolean: playing
+      ended -> gboolean: ended
+      timestamp -> gint64: timestamp
+      duration -> gint64: duration
+      seekable -> gboolean: seekable
+      seeking -> gboolean: seeking
+      loop -> gboolean: loop
+      muted -> gboolean: muted
+      volume -> gdouble: volume
+    
+    Signals from GdkPaintable:
+      invalidate-contents ()
+      invalidate-size ()
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -15871,12 +36508,30 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.MediaStream</summary>
 
-
-    :Constructors:
+Object GtkMediaStream
     
-    ::
+    Properties from GtkMediaStream:
+      prepared -> gboolean: prepared
+      error -> GError: error
+      has-audio -> gboolean: has-audio
+      has-video -> gboolean: has-video
+      playing -> gboolean: playing
+      ended -> gboolean: ended
+      timestamp -> gint64: timestamp
+      duration -> gint64: duration
+      seekable -> gboolean: seekable
+      seeking -> gboolean: seeking
+      loop -> gboolean: loop
+      muted -> gboolean: muted
+      volume -> gdouble: volume
     
-        MediaStream(**properties)
+    Signals from GdkPaintable:
+      invalidate-contents ()
+      invalidate-size ()
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -16030,50 +36685,525 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.MenuButton</summary>
 
-
-    :Constructors:
+Object GtkMenuButton
     
-    ::
+    Signals from GtkMenuButton:
+      activate ()
     
-        MenuButton(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkMenuButton:
+      menu-model -> GMenuModel: menu-model
+      direction -> GtkArrowType: direction
+      popover -> GtkPopover: popover
+      icon-name -> gchararray: icon-name
+      always-show-arrow -> gboolean: always-show-arrow
+      label -> gchararray: label
+      use-underline -> gboolean: use-underline
+      has-frame -> gboolean: has-frame
+      primary -> gboolean: primary
+      child -> GtkWidget: child
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
 - get_always_show_arrow
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
 - get_has_frame
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_icon_name
 - get_label
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_menu_model
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
 - get_popover
+- get_preferred_size
+- get_prev_sibling
 - get_primary
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
 - get_use_underline
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
 - popdown
 - popup
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_always_show_arrow
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
 - set_create_popup_func
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
 - set_has_frame
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_icon_name
 - set_label
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_menu_model
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
 - set_popover
 - set_primary
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
 - set_use_underline
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.MessageDialog</summary>
 
-
-    :Constructors:
+Object GtkMessageDialog
     
-    ::
+    Properties from GtkMessageDialog:
+      message-type -> GtkMessageType: message-type
+      buttons -> GtkButtonsType: buttons
+      text -> gchararray: text
+      use-markup -> gboolean: use-markup
+      secondary-text -> gchararray: secondary-text
+      secondary-use-markup -> gboolean: secondary-use-markup
+      message-area -> GtkWidget: message-area
     
-        MessageDialog(**properties)
+    Signals from GtkDialog:
+      response (gint)
+      close ()
+    
+    Properties from GtkDialog:
+      use-header-bar -> gint: use-header-bar
+    
+    Signals from GtkWindow:
+      activate-focus ()
+      activate-default ()
+      keys-changed ()
+      enable-debugging (gboolean) -> gboolean
+      close-request () -> gboolean
+    
+    Properties from GtkWindow:
+      title -> gchararray: title
+      resizable -> gboolean: resizable
+      modal -> gboolean: modal
+      default-width -> gint: default-width
+      default-height -> gint: default-height
+      destroy-with-parent -> gboolean: destroy-with-parent
+      hide-on-close -> gboolean: hide-on-close
+      icon-name -> gchararray: icon-name
+      display -> GdkDisplay: display
+      decorated -> gboolean: decorated
+      deletable -> gboolean: deletable
+      transient-for -> GtkWindow: transient-for
+      application -> GtkApplication: application
+      default-widget -> GtkWidget: default-widget
+      focus-widget -> GtkWidget: focus-widget
+      child -> GtkWidget: child
+      titlebar -> GtkWidget: titlebar
+      handle-menubar-accel -> gboolean: handle-menubar-accel
+      is-active -> gboolean: is-active
+      startup-id -> gchararray: startup-id
+      mnemonics-visible -> gboolean: mnemonics-visible
+      focus-visible -> gboolean: focus-visible
+      maximized -> gboolean: maximized
+      fullscreened -> gboolean: fullscreened
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -16479,12 +37609,11 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.MnemonicAction</summary>
 
-
-    :Constructors:
+Object GtkMnemonicAction
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        MnemonicAction(**properties)
     
 
 ---
@@ -16596,13 +37725,14 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.MnemonicTrigger</summary>
 
-
-    :Constructors:
+Object GtkMnemonicTrigger
     
-    ::
+    Properties from GtkMnemonicTrigger:
+      keyval -> guint: keyval
     
-        MnemonicTrigger(**properties)
-        new(keyval:int) -> Gtk.MnemonicTrigger
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -16720,13 +37850,44 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.MountOperation</summary>
 
-
-    :Constructors:
+Object GtkMountOperation
     
-    ::
+    Properties from GtkMountOperation:
+      parent -> GtkWindow: parent
+      is-showing -> gboolean: is-showing
+      display -> GdkDisplay: display
     
-        MountOperation(**properties)
-        new(parent:Gtk.Window=None) -> Gio.MountOperation
+    Signals from GMountOperation:
+      ask-password (gchararray, gchararray, gchararray, GAskPasswordFlags)
+      ask-question (gchararray, GStrv)
+      reply (GMountOperationResult)
+      aborted ()
+      show-processes (gchararray, GArray, GStrv)
+      show-unmount-progress (gchararray, gint64, gint64)
+    
+    Properties from GMountOperation:
+      username -> gchararray: Username
+        The user name
+      password -> gchararray: Password
+        The password
+      anonymous -> gboolean: Anonymous
+        Whether to use an anonymous user
+      domain -> gchararray: Domain
+        The domain of the mount operation
+      password-save -> GPasswordSave: Password save
+        How passwords should be saved
+      choice -> gint: Choice
+        The users choice
+      is-tcrypt-hidden-volume -> gboolean: TCRYPT Hidden Volume
+        Whether to unlock a TCRYPT hidden volume. See https://www.veracrypt.fr/en/Hidden%20Volume.html.
+      is-tcrypt-system-volume -> gboolean: TCRYPT System Volume
+        Whether to unlock a TCRYPT system volume. Only supported for unlocking Windows system volumes. See https://www.veracrypt.fr/en/System%20Encryption.html.
+      pim -> guint: PIM
+        The VeraCrypt PIM value
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -16866,12 +38027,21 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.MultiFilter</summary>
 
-
-    :Constructors:
+Object GtkMultiFilter
     
-    ::
+    Properties from GtkMultiFilter:
+      item-type -> GType: item-type
+      n-items -> guint: n-items
     
-        MultiFilter(**properties)
+    Signals from GListModel:
+      items-changed (guint, guint, guint)
+    
+    Signals from GtkFilter:
+      changed (GtkFilterChange)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -16996,13 +38166,22 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.MultiSelection</summary>
 
-
-    :Constructors:
+Object GtkMultiSelection
     
-    ::
+    Properties from GtkMultiSelection:
+      item-type -> GType: item-type
+      model -> GListModel: model
+      n-items -> guint: n-items
     
-        MultiSelection(**properties)
-        new(model:Gio.ListModel=None) -> Gtk.MultiSelection
+    Signals from GListModel:
+      items-changed (guint, guint, guint)
+    
+    Signals from GtkSelectionModel:
+      selection-changed (guint, guint)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -17132,13 +38311,21 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.MultiSorter</summary>
 
-
-    :Constructors:
+Object GtkMultiSorter
     
-    ::
+    Properties from GtkMultiSorter:
+      item-type -> GType: item-type
+      n-items -> guint: n-items
     
-        MultiSorter(**properties)
-        new() -> Gtk.MultiSorter
+    Signals from GListModel:
+      items-changed (guint, guint, guint)
+    
+    Signals from GtkSorter:
+      changed (GtkSorterChange)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -17264,13 +38451,14 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.NamedAction</summary>
 
-
-    :Constructors:
+Object GtkNamedAction
     
-    ::
+    Properties from GtkNamedAction:
+      action-name -> gchararray: action-name
     
-        NamedAction(**properties)
-        new(name:str) -> Gtk.NamedAction
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -17383,7 +38571,12 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Native</summary>
 
-
+Interface GtkNative
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -17428,12 +38621,20 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.NativeDialog</summary>
 
-
-    :Constructors:
+Object GtkNativeDialog
     
-    ::
+    Signals from GtkNativeDialog:
+      response (gint)
     
-        NativeDialog(**properties)
+    Properties from GtkNativeDialog:
+      title -> gchararray: title
+      visible -> gboolean: visible
+      modal -> gboolean: modal
+      transient-for -> GtkWindow: transient-for
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -17554,12 +38755,11 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.NeverTrigger</summary>
 
-
-    :Constructors:
+Object GtkNeverTrigger
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        NeverTrigger(**properties)
     
 
 ---
@@ -17676,13 +38876,22 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.NoSelection</summary>
 
-
-    :Constructors:
+Object GtkNoSelection
     
-    ::
+    Properties from GtkNoSelection:
+      item-type -> GType: item-type
+      model -> GListModel: model
+      n-items -> guint: n-items
     
-        NoSelection(**properties)
-        new(model:Gio.ListModel=None) -> Gtk.NoSelection
+    Signals from GListModel:
+      items-changed (guint, guint, guint)
+    
+    Signals from GtkSelectionModel:
+      selection-changed (guint, guint)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -17812,73 +39021,467 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Notebook</summary>
 
-
-    :Constructors:
+Object GtkNotebook
     
-    ::
+    Signals from GtkNotebook:
+      switch-page (GtkWidget, guint)
+      focus-tab (GtkNotebookTab) -> gboolean
+      select-page (gboolean) -> gboolean
+      change-current-page (gint) -> gboolean
+      move-focus-out (GtkDirectionType)
+      reorder-tab (GtkDirectionType, gboolean) -> gboolean
+      page-reordered (GtkWidget, guint)
+      page-removed (GtkWidget, guint)
+      page-added (GtkWidget, guint)
+      create-window (GtkWidget) -> GtkNotebook
     
-        Notebook(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkNotebook:
+      tab-pos -> GtkPositionType: tab-pos
+      show-tabs -> gboolean: show-tabs
+      show-border -> gboolean: show-border
+      scrollable -> gboolean: scrollable
+      page -> gint: page
+      enable-popup -> gboolean: enable-popup
+      group-name -> gchararray: group-name
+      pages -> GListModel: pages
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
 - append_page
 - append_page_menu
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
 - detach_tab
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
 - get_action_widget
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
 - get_current_page
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
 - get_group_name
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_menu_label
 - get_menu_label_text
 - get_n_pages
+- get_name
+- get_native
+- get_next_sibling
 - get_nth_page
+- get_opacity
+- get_overflow
 - get_page
 - get_pages
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
 - get_scrollable
+- get_sensitive
+- get_settings
 - get_show_border
 - get_show_tabs
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
 - get_tab_detachable
 - get_tab_label
 - get_tab_label_text
 - get_tab_pos
 - get_tab_reorderable
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
 - insert_page
 - insert_page_menu
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
 - next_page
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
 - page_num
+- parent_instance
+- pick
 - popup_disable
 - popup_enable
 - prepend_page
 - prepend_page_menu
 - prev_page
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
 - remove_page
+- remove_tick_callback
 - reorder_child
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
 - set_action_widget
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
 - set_current_page
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
 - set_group_name
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_menu_label
 - set_menu_label_text
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_scrollable
+- set_sensitive
 - set_show_border
 - set_show_tabs
+- set_size_request
+- set_state_flags
 - set_tab_detachable
 - set_tab_label
 - set_tab_label_text
 - set_tab_pos
 - set_tab_reorderable
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.NotebookPage</summary>
 
-
-    :Constructors:
+Object GtkNotebookPage
     
-    ::
+    Properties from GtkNotebookPage:
+      tab-label -> gchararray: tab-label
+      menu-label -> gchararray: menu-label
+      position -> gint: position
+      tab-expand -> gboolean: tab-expand
+      tab-fill -> gboolean: tab-fill
+      reorderable -> gboolean: reorderable
+      detachable -> gboolean: detachable
+      child -> GtkWidget: child
+      tab -> GtkWidget: tab
+      menu -> GtkWidget: menu
     
-        NotebookPage(**properties)
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -17986,12 +39589,11 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.NothingAction</summary>
 
-
-    :Constructors:
+Object GtkNothingAction
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        NothingAction(**properties)
     
 
 ---
@@ -18103,13 +39705,18 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.NumericSorter</summary>
 
-
-    :Constructors:
+Object GtkNumericSorter
     
-    ::
+    Properties from GtkNumericSorter:
+      expression -> GtkExpression: expression
+      sort-order -> GtkSortType: sort-order
     
-        NumericSorter(**properties)
-        new(expression:Gtk.Expression=None) -> Gtk.NumericSorter
+    Signals from GtkSorter:
+      changed (GtkSorterChange)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -18281,7 +39888,12 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Orientable</summary>
 
-
+Interface GtkOrientable
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -18322,38 +39934,403 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Overlay</summary>
 
-
-    :Constructors:
+Object GtkOverlay
     
-    ::
+    Signals from GtkOverlay:
+      get-child-position (GtkWidget, GdkRectangle) -> gboolean
     
-        Overlay(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkOverlay:
+      child -> GtkWidget: child
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
 - add_overlay
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
 - get_clip_overlay
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_measure_overlay
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
 - remove_overlay
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
 - set_clip_overlay
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_measure_overlay
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.OverlayLayout</summary>
 
-
-    :Constructors:
+Object GtkOverlayLayout
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        OverlayLayout(**properties)
-        new() -> Gtk.LayoutManager
     
 
 ---
@@ -18474,12 +40451,19 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.OverlayLayoutChild</summary>
 
-
-    :Constructors:
+Object GtkOverlayLayoutChild
     
-    ::
+    Properties from GtkOverlayLayoutChild:
+      measure -> gboolean: measure
+      clip-overlay -> gboolean: clip-overlay
     
-        OverlayLayoutChild(**properties)
+    Properties from GtkLayoutChild:
+      layout-manager -> GtkLayoutManager: layout-manager
+      child-widget -> GtkWidget: child-widget
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -18593,13 +40577,21 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.PadController</summary>
 
-
-    :Constructors:
+Object GtkPadController
     
-    ::
+    Properties from GtkPadController:
+      action-group -> GActionGroup: action-group
+      pad -> GdkDevice: pad
     
-        PadController(**properties)
-        new(group:Gio.ActionGroup, pad:Gdk.Device=None) -> Gtk.PadController
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -18722,16 +40714,11 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.PageSetup</summary>
 
-
-    :Constructors:
+Object GtkPageSetup
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        PageSetup(**properties)
-        new() -> Gtk.PageSetup
-        new_from_file(file_name:str) -> Gtk.PageSetup
-        new_from_gvariant(variant:GLib.Variant) -> Gtk.PageSetup
-        new_from_key_file(key_file:GLib.KeyFile, group_name:str=None) -> Gtk.PageSetup
     
 
 ---
@@ -18865,138 +40852,921 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.PageSetupUnixDialog</summary>
 
-
-    :Constructors:
+Object GtkPageSetupUnixDialog
     
-    ::
+    Signals from GtkDialog:
+      response (gint)
+      close ()
     
-        PageSetupUnixDialog(**properties)
-        new(title:str=None, parent:Gtk.Window=None) -> Gtk.Widget
+    Properties from GtkDialog:
+      use-header-bar -> gint: use-header-bar
+    
+    Signals from GtkWindow:
+      activate-focus ()
+      activate-default ()
+      keys-changed ()
+      enable-debugging (gboolean) -> gboolean
+      close-request () -> gboolean
+    
+    Properties from GtkWindow:
+      title -> gchararray: title
+      resizable -> gboolean: resizable
+      modal -> gboolean: modal
+      default-width -> gint: default-width
+      default-height -> gint: default-height
+      destroy-with-parent -> gboolean: destroy-with-parent
+      hide-on-close -> gboolean: hide-on-close
+      icon-name -> gchararray: icon-name
+      display -> GdkDisplay: display
+      decorated -> gboolean: decorated
+      deletable -> gboolean: deletable
+      transient-for -> GtkWindow: transient-for
+      application -> GtkApplication: application
+      default-widget -> GtkWidget: default-widget
+      focus-widget -> GtkWidget: focus-widget
+      child -> GtkWidget: child
+      titlebar -> GtkWidget: titlebar
+      handle-menubar-accel -> gboolean: handle-menubar-accel
+      is-active -> gboolean: is-active
+      startup-id -> gchararray: startup-id
+      mnemonics-visible -> gboolean: mnemonics-visible
+      focus-visible -> gboolean: focus-visible
+      maximized -> gboolean: maximized
+      fullscreened -> gboolean: fullscreened
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
 - add_action_widget
 - add_button
 - add_buttons
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
 - close
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
 - destroy
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate_default
 - do_activate_focus
 - do_close
 - do_close_request
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
 - do_enable_debugging
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
 - do_keys_changed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
 - do_response
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
 - fullscreen
 - fullscreen_on_monitor
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_application
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
 - get_content_area
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
 - get_decorated
+- get_default_direction
 - get_default_icon_name
 - get_default_size
 - get_default_widget
 - get_deletable
 - get_destroy_with_parent
+- get_direction
+- get_display
+- get_first_child
 - get_focus
+- get_focus_child
+- get_focus_on_click
 - get_focus_visible
+- get_focusable
+- get_font_map
+- get_font_options
 - get_for_surface
+- get_frame_clock
 - get_group
+- get_halign
 - get_handle_menubar_accel
+- get_has_tooltip
 - get_header_bar
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_hide_on_close
 - get_icon_name
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_mnemonics_visible
 - get_modal
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
 - get_page_setup
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
 - get_print_settings
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
 - get_renderer
+- get_request_mode
 - get_resizable
 - get_response_for_widget
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
 - get_surface
 - get_surface_transform
+- get_template_child
 - get_title
 - get_titlebar
+- get_tooltip_markup
+- get_tooltip_text
 - get_toplevels
 - get_transient_for
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
 - get_widget_for_response
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
 - has_group
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
 - is_active
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
 - is_fullscreen
 - is_maximized
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
 - list_toplevels
+- map
 - maximize
+- measure
 - minimize
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
 - present
 - present_with_time
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
 - response
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_application
 - set_auto_startup_notification
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
 - set_decorated
+- set_default_direction
 - set_default_icon_name
 - set_default_response
 - set_default_size
 - set_default_widget
 - set_deletable
 - set_destroy_with_parent
+- set_direction
 - set_display
 - set_focus
+- set_focus_child
+- set_focus_on_click
 - set_focus_visible
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
 - set_handle_menubar_accel
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_hide_on_close
 - set_icon_name
 - set_interactive_debugging
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_mnemonics_visible
 - set_modal
+- set_name
+- set_opacity
+- set_overflow
 - set_page_setup
+- set_parent
 - set_print_settings
+- set_properties
+- set_property
+- set_receives_default
 - set_resizable
 - set_response_sensitive
+- set_sensitive
+- set_size_request
 - set_startup_id
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_title
 - set_titlebar
+- set_tooltip_markup
+- set_tooltip_text
 - set_transient_for
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
 - unfullscreen
+- unmap
 - unmaximize
 - unminimize
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Paned</summary>
 
-
-    :Constructors:
+Object GtkPaned
     
-    ::
+    Signals from GtkPaned:
+      cycle-child-focus (gboolean) -> gboolean
+      toggle-handle-focus () -> gboolean
+      move-handle (GtkScrollType) -> gboolean
+      cycle-handle-focus (gboolean) -> gboolean
+      accept-position () -> gboolean
+      cancel-position () -> gboolean
     
-        Paned(**properties)
-        new(orientation:Gtk.Orientation) -> Gtk.Widget
+    Properties from GtkPaned:
+      position -> gint: position
+      position-set -> gboolean: position-set
+      min-position -> gint: min-position
+      max-position -> gint: max-position
+      wide-handle -> gboolean: wide-handle
+      resize-start-child -> gboolean: resize-start-child
+      resize-end-child -> gboolean: resize-end-child
+      shrink-start-child -> gboolean: shrink-start-child
+      shrink-end-child -> gboolean: shrink-end-child
+      start-child -> GtkWidget: start-child
+      end-child -> GtkWidget: end-child
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
 - get_end_child
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
 - get_orientation
+- get_overflow
+- get_pango_context
+- get_parent
 - get_position
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
 - get_resize_end_child
 - get_resize_start_child
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
 - get_shrink_end_child
 - get_shrink_start_child
+- get_size
+- get_size_request
 - get_start_child
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
 - get_wide_handle
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_end_child
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
 - set_orientation
+- set_overflow
+- set_parent
 - set_position
+- set_properties
+- set_property
+- set_receives_default
 - set_resize_end_child
 - set_resize_start_child
+- set_sensitive
 - set_shrink_end_child
 - set_shrink_start_child
+- set_size_request
 - set_start_child
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
 - set_wide_handle
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
@@ -19073,59 +41843,441 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.PasswordEntry</summary>
 
-
-    :Constructors:
+Object GtkPasswordEntry
     
-    ::
+    Signals from GtkPasswordEntry:
+      activate ()
     
-        PasswordEntry(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkPasswordEntry:
+      placeholder-text -> gchararray: placeholder-text
+      activates-default -> gboolean: activates-default
+      show-peek-icon -> gboolean: show-peek-icon
+      extra-menu -> GMenuModel: extra-menu
+    
+    Signals from GtkEditable:
+      changed ()
+      insert-text (gchararray, gint, gpointer)
+      delete-text (gint, gint)
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
 - delegate_get_property
 - delegate_set_property
 - delete_selection
 - delete_text
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
 - finish_delegate
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
 - get_alignment
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_chars
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
 - get_delegate
+- get_direction
+- get_display
 - get_editable
 - get_enable_undo
 - get_extra_menu
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_max_width_chars
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
 - get_position
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
 - get_selection_bounds
+- get_sensitive
+- get_settings
 - get_show_peek_icon
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
 - get_text
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
 - get_width_chars
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
 - init_delegate
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
 - insert_text
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
 - select_region
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_alignment
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_editable
 - set_enable_undo
 - set_extra_menu
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_max_width_chars
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
 - set_position
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
 - set_show_peek_icon
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_text
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
 - set_width_chars
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.PasswordEntryBuffer</summary>
 
-
-    :Constructors:
+Object GtkPasswordEntryBuffer
     
-    ::
+    Signals from GtkEntryBuffer:
+      inserted-text (guint, gchararray, guint)
+      deleted-text (guint, guint)
     
-        PasswordEntryBuffer(**properties)
-        new() -> Gtk.EntryBuffer
+    Properties from GtkEntryBuffer:
+      text -> gchararray: text
+      length -> guint: length
+      max-length -> gint: max-length
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -19250,170 +42402,1650 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Picture</summary>
 
-
-    :Constructors:
+Object GtkPicture
     
-    ::
+    Properties from GtkPicture:
+      paintable -> GdkPaintable: paintable
+      file -> GFile: file
+      alternative-text -> gchararray: alternative-text
+      keep-aspect-ratio -> gboolean: keep-aspect-ratio
+      can-shrink -> gboolean: can-shrink
+      content-fit -> GtkContentFit: content-fit
     
-        Picture(**properties)
-        new() -> Gtk.Widget
-        new_for_file(file:Gio.File=None) -> Gtk.Widget
-        new_for_filename(filename:str=None) -> Gtk.Widget
-        new_for_paintable(paintable:Gdk.Paintable=None) -> Gtk.Widget
-        new_for_pixbuf(pixbuf:GdkPixbuf.Pixbuf=None) -> Gtk.Widget
-        new_for_resource(resource_path:str=None) -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
 - get_alternative_text
+- get_ancestor
+- get_buildable_id
+- get_can_focus
 - get_can_shrink
+- get_can_target
+- get_child_visible
+- get_clipboard
 - get_content_fit
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
 - get_file
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_keep_aspect_ratio
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
 - get_paintable
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_for_file
 - new_for_filename
 - new_for_paintable
 - new_for_pixbuf
 - new_for_resource
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_alternative_text
+- set_can_focus
 - set_can_shrink
+- set_can_target
+- set_child_visible
 - set_content_fit
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_file
 - set_filename
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_keep_aspect_ratio
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
 - set_paintable
+- set_parent
 - set_pixbuf
+- set_properties
+- set_property
+- set_receives_default
 - set_resource
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Popover</summary>
 
-
-    :Constructors:
+Object GtkPopover
     
-    ::
+    Signals from GtkPopover:
+      closed ()
+      activate-default ()
     
-        Popover(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkPopover:
+      pointing-to -> GdkRectangle: pointing-to
+      position -> GtkPositionType: position
+      autohide -> gboolean: autohide
+      default-widget -> GtkWidget: default-widget
+      has-arrow -> gboolean: has-arrow
+      mnemonics-visible -> gboolean: mnemonics-visible
+      child -> GtkWidget: child
+      cascade-popdown -> gboolean: cascade-popdown
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate_default
 - do_closed
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_autohide
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_cascade_popdown
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
 - get_for_surface
+- get_frame_clock
+- get_halign
 - get_has_arrow
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_mnemonics_visible
+- get_name
+- get_native
+- get_next_sibling
 - get_offset
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
 - get_pointing_to
 - get_position
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
 - get_renderer
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
 - get_surface
 - get_surface_transform
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
 - parent
+- parent_instance
+- pick
 - popdown
 - popup
 - present
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_autohide
+- set_can_focus
+- set_can_target
 - set_cascade_popdown
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
 - set_default_widget
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
 - set_has_arrow
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_mnemonics_visible
+- set_name
 - set_offset
+- set_opacity
+- set_overflow
+- set_parent
 - set_pointing_to
 - set_position
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.PopoverMenu</summary>
 
-
-    :Constructors:
+Object GtkPopoverMenu
     
-    ::
+    Properties from GtkPopoverMenu:
+      visible-submenu -> gchararray: visible-submenu
+      menu-model -> GMenuModel: menu-model
     
-        PopoverMenu(**properties)
-        new_from_model(model:Gio.MenuModel=None) -> Gtk.Widget
-        new_from_model_full(model:Gio.MenuModel, flags:Gtk.PopoverMenuFlags) -> Gtk.Widget
+    Signals from GtkPopover:
+      closed ()
+      activate-default ()
+    
+    Properties from GtkPopover:
+      pointing-to -> GdkRectangle: pointing-to
+      position -> GtkPositionType: position
+      autohide -> gboolean: autohide
+      default-widget -> GtkWidget: default-widget
+      has-arrow -> gboolean: has-arrow
+      mnemonics-visible -> gboolean: mnemonics-visible
+      child -> GtkWidget: child
+      cascade-popdown -> gboolean: cascade-popdown
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
 - add_child
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate_default
 - do_closed
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_autohide
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_cascade_popdown
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
 - get_for_surface
+- get_frame_clock
+- get_halign
 - get_has_arrow
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_menu_model
 - get_mnemonics_visible
+- get_name
+- get_native
+- get_next_sibling
 - get_offset
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
 - get_pointing_to
 - get_position
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
 - get_renderer
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
 - get_surface
 - get_surface_transform
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_from_model
 - new_from_model_full
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
 - parent
+- parent_instance
+- pick
 - popdown
 - popup
 - present
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - remove_child
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_autohide
+- set_can_focus
+- set_can_target
 - set_cascade_popdown
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
 - set_default_widget
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
 - set_has_arrow
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_menu_model
 - set_mnemonics_visible
+- set_name
 - set_offset
+- set_opacity
+- set_overflow
+- set_parent
 - set_pointing_to
 - set_position
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.PopoverMenuBar</summary>
 
-
-    :Constructors:
+Object GtkPopoverMenuBar
     
-    ::
+    Properties from GtkPopoverMenuBar:
+      menu-model -> GMenuModel: menu-model
     
-        PopoverMenuBar(**properties)
-        new_from_model(model:Gio.MenuModel=None) -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
 - add_child
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_menu_model
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new_from_model
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - remove_child
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_menu_model
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.PrintContext</summary>
 
-
-    :Constructors:
+Object GtkPrintContext
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        PrintContext(**properties)
     
 
 ---
@@ -19531,13 +44163,21 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.PrintJob</summary>
 
-
-    :Constructors:
+Object GtkPrintJob
     
-    ::
+    Signals from GtkPrintJob:
+      status-changed ()
     
-        PrintJob(**properties)
-        new(title:str, printer:Gtk.Printer, settings:Gtk.PrintSettings, page_setup:Gtk.PageSetup) -> Gtk.PrintJob
+    Properties from GtkPrintJob:
+      title -> gchararray: title
+      printer -> GtkPrinter: printer
+      page-setup -> GtkPageSetup: page-setup
+      settings -> GtkPrintSettings: settings
+      track-print-status -> gboolean: track-print-status
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -19675,13 +44315,48 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.PrintOperation</summary>
 
-
-    :Constructors:
+Object GtkPrintOperation
     
-    ::
+    Signals from GtkPrintOperation:
+      status-changed ()
+      done (GtkPrintOperationResult)
+      begin-print (GtkPrintContext)
+      paginate (GtkPrintContext) -> gboolean
+      request-page-setup (GtkPrintContext, gint, GtkPageSetup)
+      draw-page (GtkPrintContext, gint)
+      end-print (GtkPrintContext)
+      create-custom-widget () -> GObject
+      update-custom-widget (GtkWidget, GtkPageSetup, GtkPrintSettings)
+      custom-widget-apply (GtkWidget)
+      preview (GtkPrintOperationPreview, GtkPrintContext, GtkWindow) -> gboolean
     
-        PrintOperation(**properties)
-        new() -> Gtk.PrintOperation
+    Properties from GtkPrintOperation:
+      default-page-setup -> GtkPageSetup: default-page-setup
+      print-settings -> GtkPrintSettings: print-settings
+      job-name -> gchararray: job-name
+      n-pages -> gint: n-pages
+      current-page -> gint: current-page
+      use-full-page -> gboolean: use-full-page
+      track-print-status -> gboolean: track-print-status
+      unit -> GtkUnit: unit
+      show-progress -> gboolean: show-progress
+      allow-async -> gboolean: allow-async
+      export-filename -> gchararray: export-filename
+      status -> GtkPrintStatus: status
+      status-string -> gchararray: status-string
+      custom-tab-label -> gchararray: custom-tab-label
+      embed-page-setup -> gboolean: embed-page-setup
+      has-selection -> gboolean: has-selection
+      support-selection -> gboolean: support-selection
+      n-pages-to-print -> gint: n-pages-to-print
+    
+    Signals from GtkPrintOperationPreview:
+      ready (GtkPrintContext)
+      got-page-size (GtkPrintContext, GtkPageSetup)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -19834,7 +44509,12 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.PrintOperationPreview</summary>
 
-
+Interface GtkPrintOperationPreview
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -19876,16 +44556,11 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.PrintSettings</summary>
 
-
-    :Constructors:
+Object GtkPrintSettings
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        PrintSettings(**properties)
-        new() -> Gtk.PrintSettings
-        new_from_file(file_name:str) -> Gtk.PrintSettings
-        new_from_gvariant(variant:GLib.Variant) -> Gtk.PrintSettings
-        new_from_key_file(key_file:GLib.KeyFile, group_name:str=None) -> Gtk.PrintSettings
     
 
 ---
@@ -20068,127 +44743,552 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.PrintUnixDialog</summary>
 
-
-    :Constructors:
+Object GtkPrintUnixDialog
     
-    ::
+    Properties from GtkPrintUnixDialog:
+      page-setup -> GtkPageSetup: page-setup
+      current-page -> gint: current-page
+      print-settings -> GtkPrintSettings: print-settings
+      selected-printer -> GtkPrinter: selected-printer
+      manual-capabilities -> GtkPrintCapabilities: manual-capabilities
+      support-selection -> gboolean: support-selection
+      has-selection -> gboolean: has-selection
+      embed-page-setup -> gboolean: embed-page-setup
     
-        PrintUnixDialog(**properties)
-        new(title:str=None, parent:Gtk.Window=None) -> Gtk.Widget
+    Signals from GtkDialog:
+      response (gint)
+      close ()
+    
+    Properties from GtkDialog:
+      use-header-bar -> gint: use-header-bar
+    
+    Signals from GtkWindow:
+      activate-focus ()
+      activate-default ()
+      keys-changed ()
+      enable-debugging (gboolean) -> gboolean
+      close-request () -> gboolean
+    
+    Properties from GtkWindow:
+      title -> gchararray: title
+      resizable -> gboolean: resizable
+      modal -> gboolean: modal
+      default-width -> gint: default-width
+      default-height -> gint: default-height
+      destroy-with-parent -> gboolean: destroy-with-parent
+      hide-on-close -> gboolean: hide-on-close
+      icon-name -> gchararray: icon-name
+      display -> GdkDisplay: display
+      decorated -> gboolean: decorated
+      deletable -> gboolean: deletable
+      transient-for -> GtkWindow: transient-for
+      application -> GtkApplication: application
+      default-widget -> GtkWidget: default-widget
+      focus-widget -> GtkWidget: focus-widget
+      child -> GtkWidget: child
+      titlebar -> GtkWidget: titlebar
+      handle-menubar-accel -> gboolean: handle-menubar-accel
+      is-active -> gboolean: is-active
+      startup-id -> gchararray: startup-id
+      mnemonics-visible -> gboolean: mnemonics-visible
+      focus-visible -> gboolean: focus-visible
+      maximized -> gboolean: maximized
+      fullscreened -> gboolean: fullscreened
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
 - add_action_widget
 - add_button
 - add_buttons
+- add_controller
+- add_css_class
 - add_custom_tab
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
 - close
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
 - destroy
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate_default
 - do_activate_focus
 - do_close
 - do_close_request
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
 - do_enable_debugging
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
 - do_keys_changed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
 - do_response
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
 - fullscreen
 - fullscreen_on_monitor
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_application
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
 - get_content_area
+- get_css_classes
+- get_css_name
 - get_current_page
+- get_cursor
+- get_data
 - get_decorated
+- get_default_direction
 - get_default_icon_name
 - get_default_size
 - get_default_widget
 - get_deletable
 - get_destroy_with_parent
+- get_direction
+- get_display
 - get_embed_page_setup
+- get_first_child
 - get_focus
+- get_focus_child
+- get_focus_on_click
 - get_focus_visible
+- get_focusable
+- get_font_map
+- get_font_options
 - get_for_surface
+- get_frame_clock
 - get_group
+- get_halign
 - get_handle_menubar_accel
 - get_has_selection
+- get_has_tooltip
 - get_header_bar
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_hide_on_close
 - get_icon_name
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
 - get_manual_capabilities
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_mnemonics_visible
 - get_modal
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
 - get_page_setup
 - get_page_setup_set
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
 - get_renderer
+- get_request_mode
 - get_resizable
 - get_response_for_widget
+- get_root
+- get_scale_factor
 - get_selected_printer
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
 - get_support_selection
 - get_surface
 - get_surface_transform
+- get_template_child
 - get_title
 - get_titlebar
+- get_tooltip_markup
+- get_tooltip_text
 - get_toplevels
 - get_transient_for
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
 - get_widget_for_response
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
 - has_group
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
 - is_active
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
 - is_fullscreen
 - is_maximized
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
 - list_toplevels
+- map
 - maximize
+- measure
 - minimize
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
 - present
 - present_with_time
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
 - response
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_application
 - set_auto_startup_notification
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
 - set_current_page
+- set_cursor
+- set_cursor_from_name
+- set_data
 - set_decorated
+- set_default_direction
 - set_default_icon_name
 - set_default_response
 - set_default_size
 - set_default_widget
 - set_deletable
 - set_destroy_with_parent
+- set_direction
 - set_display
 - set_embed_page_setup
 - set_focus
+- set_focus_child
+- set_focus_on_click
 - set_focus_visible
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
 - set_handle_menubar_accel
 - set_has_selection
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_hide_on_close
 - set_icon_name
 - set_interactive_debugging
+- set_layout_manager
+- set_layout_manager_type
 - set_manual_capabilities
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_mnemonics_visible
 - set_modal
+- set_name
+- set_opacity
+- set_overflow
 - set_page_setup
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_resizable
 - set_response_sensitive
+- set_sensitive
 - set_settings
+- set_size_request
 - set_startup_id
+- set_state_flags
 - set_support_selection
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_title
 - set_titlebar
+- set_tooltip_markup
+- set_tooltip_text
 - set_transient_for
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
 - unfullscreen
+- unmap
 - unmaximize
 - unminimize
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Printer</summary>
 
-
-    :Constructors:
+Object GtkPrinter
     
-    ::
+    Signals from GtkPrinter:
+      details-acquired (gboolean)
     
-        Printer(**properties)
-        new(name:str, backend:Gtk.PrintBackend, virtual_:bool) -> Gtk.Printer
+    Properties from GtkPrinter:
+      name -> gchararray: name
+      backend -> GtkPrintBackend: backend
+      is-virtual -> gboolean: is-virtual
+      state-message -> gchararray: state-message
+      location -> gchararray: location
+      icon-name -> gchararray: icon-name
+      job-count -> gint: job-count
+      accepts-pdf -> gboolean: accepts-pdf
+      accepts-ps -> gboolean: accepts-ps
+      paused -> gboolean: paused
+      accepting-jobs -> gboolean: accepting-jobs
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -20318,33 +45418,402 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ProgressBar</summary>
 
-
-    :Constructors:
+Object GtkProgressBar
     
-    ::
+    Properties from GtkProgressBar:
+      fraction -> gdouble: fraction
+      pulse-step -> gdouble: pulse-step
+      inverted -> gboolean: inverted
+      text -> gchararray: text
+      show-text -> gboolean: show-text
+      ellipsize -> PangoEllipsizeMode: ellipsize
     
-        ProgressBar(**properties)
-        new() -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
 - get_ellipsize
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
 - get_fraction
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_inverted
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
 - get_orientation
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
 - get_pulse_step
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
 - get_show_text
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
 - get_text
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
 - pulse
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_ellipsize
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
 - set_fraction
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_inverted
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
 - set_orientation
+- set_overflow
+- set_parent
+- set_properties
+- set_property
 - set_pulse_step
+- set_receives_default
+- set_sensitive
 - set_show_text
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_text
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
@@ -20407,12 +45876,76 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Range</summary>
 
-
-    :Constructors:
+Object GtkRange
     
-    ::
+    Signals from GtkRange:
+      value-changed ()
+      adjust-bounds (gdouble)
+      move-slider (GtkScrollType)
+      change-value (GtkScrollType, gdouble) -> gboolean
     
-        Range(**properties)
+    Properties from GtkRange:
+      adjustment -> GtkAdjustment: adjustment
+      inverted -> gboolean: inverted
+      show-fill-level -> gboolean: show-fill-level
+      restrict-to-fill-level -> gboolean: restrict-to-fill-level
+      fill-level -> gdouble: fill-level
+      round-digits -> gint: round-digits
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -20763,13 +46296,18 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.RecentManager</summary>
 
-
-    :Constructors:
+Object GtkRecentManager
     
-    ::
+    Signals from GtkRecentManager:
+      changed ()
     
-        RecentManager(**properties)
-        new() -> Gtk.RecentManager
+    Properties from GtkRecentManager:
+      filename -> gchararray: filename
+      size -> gint: size
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -20889,33 +46427,406 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Revealer</summary>
 
-
-    :Constructors:
+Object GtkRevealer
     
-    ::
+    Properties from GtkRevealer:
+      transition-type -> GtkRevealerTransitionType: transition-type
+      transition-duration -> guint: transition-duration
+      reveal-child -> gboolean: reveal-child
+      child-revealed -> gboolean: child-revealed
+      child -> GtkWidget: child
     
-        Revealer(**properties)
-        new() -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
 - get_child_revealed
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
 - get_reveal_child
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
 - get_transition_duration
 - get_transition_type
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_reveal_child
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
 - set_transition_duration
 - set_transition_type
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Root</summary>
 
-
+Interface GtkRoot
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -20957,97 +46868,853 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Scale</summary>
 
-
-    :Constructors:
+Object GtkScale
     
-    ::
+    Properties from GtkScale:
+      digits -> gint: digits
+      draw-value -> gboolean: draw-value
+      has-origin -> gboolean: has-origin
+      value-pos -> GtkPositionType: value-pos
     
-        Scale(**properties)
-        new(orientation:Gtk.Orientation, adjustment:Gtk.Adjustment=None) -> Gtk.Widget
-        new_with_range(orientation:Gtk.Orientation, min:float, max:float, step:float) -> Gtk.Widget
+    Signals from GtkRange:
+      value-changed ()
+      adjust-bounds (gdouble)
+      move-slider (GtkScrollType)
+      change-value (GtkScrollType, gdouble) -> gboolean
+    
+    Properties from GtkRange:
+      adjustment -> GtkAdjustment: adjustment
+      inverted -> gboolean: inverted
+      show-fill-level -> gboolean: show-fill-level
+      restrict-to-fill-level -> gboolean: restrict-to-fill-level
+      fill-level -> gdouble: fill-level
+      round-digits -> gint: round-digits
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
 - add_mark
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
 - clear_marks
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_adjust_bounds
 - do_change_value
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
 - do_get_layout_offsets
 - do_get_range_border
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
 - do_move_slider
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
 - do_value_changed
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
 - get_adjustment
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
 - get_digits
+- get_direction
+- get_display
 - get_draw_value
 - get_fill_level
+- get_first_child
 - get_flippable
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
 - get_has_origin
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_inverted
+- get_last_child
 - get_layout
+- get_layout_manager
+- get_layout_manager_type
 - get_layout_offsets
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
 - get_orientation
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
 - get_range_rect
+- get_realized
+- get_receives_default
+- get_request_mode
 - get_restrict_to_fill_level
+- get_root
 - get_round_digits
+- get_scale_factor
+- get_sensitive
+- get_settings
 - get_show_fill_level
+- get_size
+- get_size_request
 - get_slider_range
 - get_slider_size_fixed
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
 - get_value
 - get_value_pos
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_with_range
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_adjustment
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
 - set_digits
+- set_direction
 - set_draw_value
 - set_fill_level
 - set_flippable
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
 - set_format_value_func
+- set_halign
 - set_has_origin
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_increments
 - set_inverted
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
 - set_orientation
+- set_overflow
+- set_parent
+- set_properties
+- set_property
 - set_range
+- set_receives_default
 - set_restrict_to_fill_level
 - set_round_digits
+- set_sensitive
 - set_show_fill_level
+- set_size_request
 - set_slider_size_fixed
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
 - set_value
 - set_value_pos
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.ScaleButton</summary>
 
-
-    :Constructors:
+Object GtkScaleButton
     
-    ::
+    Signals from GtkScaleButton:
+      value-changed (gdouble)
+      popup ()
+      popdown ()
     
-        ScaleButton(**properties)
-        new(min:float, max:float, step:float, icons:list=None) -> Gtk.Widget
+    Properties from GtkScaleButton:
+      value -> gdouble: value
+      adjustment -> GtkAdjustment: adjustment
+      icons -> GStrv: icons
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
 - do_value_changed
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
 - get_adjustment
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_minus_button
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
 - get_orientation
+- get_overflow
+- get_pango_context
+- get_parent
 - get_plus_button
 - get_popup
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
 - get_value
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_adjustment
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_icons
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
 - set_orientation
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
 - set_value
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Scrollable</summary>
 
-
+Interface GtkScrollable
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -21095,154 +47762,1654 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Scrollbar</summary>
 
-
-    :Constructors:
+Object GtkScrollbar
     
-    ::
+    Properties from GtkScrollbar:
+      adjustment -> GtkAdjustment: adjustment
     
-        Scrollbar(**properties)
-        new(orientation:Gtk.Orientation, adjustment:Gtk.Adjustment=None) -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
 - get_adjustment
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
 - get_orientation
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_adjustment
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
 - set_orientation
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.ScrolledWindow</summary>
 
-
-    :Constructors:
+Object GtkScrolledWindow
     
-    ::
+    Signals from GtkScrolledWindow:
+      move-focus-out (GtkDirectionType)
+      scroll-child (GtkScrollType, gboolean) -> gboolean
+      edge-overshot (GtkPositionType)
+      edge-reached (GtkPositionType)
     
-        ScrolledWindow(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkScrolledWindow:
+      hadjustment -> GtkAdjustment: hadjustment
+      vadjustment -> GtkAdjustment: vadjustment
+      hscrollbar-policy -> GtkPolicyType: hscrollbar-policy
+      vscrollbar-policy -> GtkPolicyType: vscrollbar-policy
+      window-placement -> GtkCornerType: window-placement
+      has-frame -> gboolean: has-frame
+      min-content-width -> gint: min-content-width
+      min-content-height -> gint: min-content-height
+      kinetic-scrolling -> gboolean: kinetic-scrolling
+      overlay-scrolling -> gboolean: overlay-scrolling
+      max-content-width -> gint: max-content-width
+      max-content-height -> gint: max-content-height
+      propagate-natural-width -> gboolean: propagate-natural-width
+      propagate-natural-height -> gboolean: propagate-natural-height
+      child -> GtkWidget: child
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
 - get_hadjustment
+- get_halign
 - get_has_frame
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_hscrollbar
 - get_kinetic_scrolling
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_max_content_height
 - get_max_content_width
 - get_min_content_height
 - get_min_content_width
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
 - get_overlay_scrolling
+- get_pango_context
+- get_parent
 - get_placement
 - get_policy
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
 - get_propagate_natural_height
 - get_propagate_natural_width
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
 - get_vadjustment
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
 - get_vscrollbar
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
 - set_hadjustment
+- set_halign
 - set_has_frame
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_kinetic_scrolling
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_max_content_height
 - set_max_content_width
 - set_min_content_height
 - set_min_content_width
+- set_name
+- set_opacity
+- set_overflow
 - set_overlay_scrolling
+- set_parent
 - set_placement
 - set_policy
 - set_propagate_natural_height
 - set_propagate_natural_width
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
 - set_vadjustment
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
 - unset_placement
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.SearchBar</summary>
 
-
-    :Constructors:
+Object GtkSearchBar
     
-    ::
+    Properties from GtkSearchBar:
+      search-mode-enabled -> gboolean: search-mode-enabled
+      show-close-button -> gboolean: show-close-button
+      child -> GtkWidget: child
+      key-capture-widget -> GtkWidget: key-capture-widget
     
-        SearchBar(**properties)
-        new() -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
 - connect_entry
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_key_capture_widget
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
 - get_search_mode
+- get_sensitive
+- get_settings
 - get_show_close_button
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_key_capture_widget
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_search_mode
+- set_sensitive
 - set_show_close_button
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.SearchEntry</summary>
 
-
-    :Constructors:
+Object GtkSearchEntry
     
-    ::
+    Signals from GtkSearchEntry:
+      activate ()
+      search-changed ()
+      next-match ()
+      previous-match ()
+      stop-search ()
+      search-started ()
     
-        SearchEntry(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkSearchEntry:
+      placeholder-text -> gchararray: placeholder-text
+      activates-default -> gboolean: activates-default
+      search-delay -> guint: search-delay
+    
+    Signals from GtkEditable:
+      changed ()
+      insert-text (gchararray, gint, gpointer)
+      delete-text (gint, gint)
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
 - delegate_get_property
 - delegate_set_property
 - delete_selection
 - delete_text
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
 - finish_delegate
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
 - get_alignment
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_chars
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
 - get_delegate
+- get_direction
+- get_display
 - get_editable
 - get_enable_undo
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_key_capture_widget
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_max_width_chars
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
 - get_position
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
 - get_search_delay
 - get_selection_bounds
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
 - get_text
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
 - get_width_chars
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
 - init_delegate
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
 - insert_text
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
 - select_region
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_alignment
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_editable
 - set_enable_undo
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_key_capture_widget
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_max_width_chars
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
 - set_position
+- set_properties
+- set_property
+- set_receives_default
 - set_search_delay
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_text
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
 - set_width_chars
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.SelectionFilterModel</summary>
 
-
-    :Constructors:
+Object GtkSelectionFilterModel
     
-    ::
+    Properties from GtkSelectionFilterModel:
+      item-type -> GType: item-type
+      model -> GtkSelectionModel: model
+      n-items -> guint: n-items
     
-        SelectionFilterModel(**properties)
-        new(model:Gtk.SelectionModel=None) -> Gtk.SelectionFilterModel
+    Signals from GListModel:
+      items-changed (guint, guint, guint)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -21361,7 +49528,12 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.SelectionModel</summary>
 
-
+Interface GtkSelectionModel
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -21411,31 +49583,446 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Separator</summary>
 
-
-    :Constructors:
+Object GtkSeparator
     
-    ::
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
     
-        Separator(**properties)
-        new(orientation:Gtk.Orientation) -> Gtk.Widget
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
 - get_orientation
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
 - set_orientation
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Settings</summary>
 
-
-    :Constructors:
+Object GtkSettings
     
-    ::
+    Properties from GtkSettings:
+      gtk-double-click-time -> gint: gtk-double-click-time
+      gtk-double-click-distance -> gint: gtk-double-click-distance
+      gtk-cursor-blink -> gboolean: gtk-cursor-blink
+      gtk-cursor-blink-time -> gint: gtk-cursor-blink-time
+      gtk-cursor-blink-timeout -> gint: gtk-cursor-blink-timeout
+      gtk-split-cursor -> gboolean: gtk-split-cursor
+      gtk-cursor-aspect-ratio -> gdouble: gtk-cursor-aspect-ratio
+      gtk-theme-name -> gchararray: gtk-theme-name
+      gtk-icon-theme-name -> gchararray: gtk-icon-theme-name
+      gtk-dnd-drag-threshold -> gint: gtk-dnd-drag-threshold
+      gtk-font-name -> gchararray: gtk-font-name
+      gtk-xft-antialias -> gint: gtk-xft-antialias
+      gtk-xft-hinting -> gint: gtk-xft-hinting
+      gtk-xft-hintstyle -> gchararray: gtk-xft-hintstyle
+      gtk-xft-rgba -> gchararray: gtk-xft-rgba
+      gtk-xft-dpi -> gint: gtk-xft-dpi
+      gtk-hint-font-metrics -> gboolean: gtk-hint-font-metrics
+      gtk-cursor-theme-name -> gchararray: gtk-cursor-theme-name
+      gtk-cursor-theme-size -> gint: gtk-cursor-theme-size
+      gtk-alternative-button-order -> gboolean: gtk-alternative-button-order
+      gtk-alternative-sort-arrows -> gboolean: gtk-alternative-sort-arrows
+      gtk-enable-animations -> gboolean: gtk-enable-animations
+      gtk-error-bell -> gboolean: gtk-error-bell
+      gtk-print-backends -> gchararray: gtk-print-backends
+      gtk-print-preview-command -> gchararray: gtk-print-preview-command
+      gtk-enable-accels -> gboolean: gtk-enable-accels
+      gtk-im-module -> gchararray: gtk-im-module
+      gtk-recent-files-max-age -> gint: gtk-recent-files-max-age
+      gtk-fontconfig-timestamp -> guint: gtk-fontconfig-timestamp
+      gtk-sound-theme-name -> gchararray: gtk-sound-theme-name
+      gtk-enable-input-feedback-sounds -> gboolean: gtk-enable-input-feedback-sounds
+      gtk-enable-event-sounds -> gboolean: gtk-enable-event-sounds
+      gtk-primary-button-warps-slider -> gboolean: gtk-primary-button-warps-slider
+      gtk-application-prefer-dark-theme -> gboolean: gtk-application-prefer-dark-theme
+      gtk-entry-select-on-focus -> gboolean: gtk-entry-select-on-focus
+      gtk-entry-password-hint-timeout -> guint: gtk-entry-password-hint-timeout
+      gtk-label-select-on-focus -> gboolean: gtk-label-select-on-focus
+      gtk-shell-shows-app-menu -> gboolean: gtk-shell-shows-app-menu
+      gtk-shell-shows-menubar -> gboolean: gtk-shell-shows-menubar
+      gtk-shell-shows-desktop -> gboolean: gtk-shell-shows-desktop
+      gtk-decoration-layout -> gchararray: gtk-decoration-layout
+      gtk-titlebar-double-click -> gchararray: gtk-titlebar-double-click
+      gtk-titlebar-middle-click -> gchararray: gtk-titlebar-middle-click
+      gtk-titlebar-right-click -> gchararray: gtk-titlebar-right-click
+      gtk-dialogs-use-header -> gboolean: gtk-dialogs-use-header
+      gtk-enable-primary-paste -> gboolean: gtk-enable-primary-paste
+      gtk-recent-files-enabled -> gboolean: gtk-recent-files-enabled
+      gtk-long-press-time -> guint: gtk-long-press-time
+      gtk-keynav-use-caret -> gboolean: gtk-keynav-use-caret
+      gtk-overlay-scrolling -> gboolean: gtk-overlay-scrolling
     
-        Settings(**properties)
+    Signals from GtkStyleProvider:
+      gtk-private-changed ()
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -21546,13 +50133,16 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Shortcut</summary>
 
-
-    :Constructors:
+Object GtkShortcut
     
-    ::
+    Properties from GtkShortcut:
+      action -> GtkShortcutAction: action
+      arguments -> GVariant: arguments
+      trigger -> GtkShortcutTrigger: trigger
     
-        Shortcut(**properties)
-        new(trigger:Gtk.ShortcutTrigger=None, action:Gtk.ShortcutAction=None) -> Gtk.Shortcut
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -21666,13 +50256,11 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ShortcutAction</summary>
 
-
-    :Constructors:
+Object GtkShortcutAction
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        ShortcutAction(**properties)
-        parse_string(string:str) -> Gtk.ShortcutAction or None
     
 
 ---
@@ -21783,14 +50371,27 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ShortcutController</summary>
 
-
-    :Constructors:
+Object GtkShortcutController
     
-    ::
+    Properties from GtkShortcutController:
+      item-type -> GType: item-type
+      mnemonic-modifiers -> GdkModifierType: mnemonic-modifiers
+      model -> GListModel: model
+      n-items -> guint: n-items
+      scope -> GtkShortcutScope: scope
     
-        ShortcutController(**properties)
-        new() -> Gtk.EventController
-        new_for_model(model:Gio.ListModel) -> Gtk.EventController
+    Signals from GListModel:
+      items-changed (guint, guint, guint)
+    
+    Properties from GtkEventController:
+      widget -> GtkWidget: widget
+      propagation-phase -> GtkPropagationPhase: propagation-phase
+      propagation-limit -> GtkPropagationLimit: propagation-limit
+      name -> gchararray: name
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -21928,28 +50529,398 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ShortcutLabel</summary>
 
-
-    :Constructors:
+Object GtkShortcutLabel
     
-    ::
+    Properties from GtkShortcutLabel:
+      accelerator -> gchararray: accelerator
+      disabled-text -> gchararray: disabled-text
     
-        ShortcutLabel(**properties)
-        new(accelerator:str) -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
 - get_accelerator
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
 - get_disabled_text
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
 - set_accelerator
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_disabled_text
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.ShortcutManager</summary>
 
-
+Interface GtkShortcutManager
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -21988,13 +50959,11 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ShortcutTrigger</summary>
 
-
-    :Constructors:
+Object GtkShortcutTrigger
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        ShortcutTrigger(**properties)
-        parse_string(string:str) -> Gtk.ShortcutTrigger or None
     
 
 ---
@@ -22110,12 +51079,74 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ShortcutsGroup</summary>
 
-
-    :Constructors:
+Object GtkShortcutsGroup
     
-    ::
+    Properties from GtkShortcutsGroup:
+      title -> gchararray: title
+      view -> gchararray: view
+      accel-size-group -> GtkSizeGroup: accel-size-group
+      title-size-group -> GtkSizeGroup: title-size-group
+      height -> guint: height
     
-        ShortcutsGroup(**properties)
+    Properties from GtkBox:
+      spacing -> gint: spacing
+      homogeneous -> gboolean: homogeneous
+      baseline-position -> GtkBaselinePosition: baseline-position
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -22451,12 +51482,76 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ShortcutsSection</summary>
 
-
-    :Constructors:
+Object GtkShortcutsSection
     
-    ::
+    Signals from GtkShortcutsSection:
+      change-current-page (gint) -> gboolean
     
-        ShortcutsSection(**properties)
+    Properties from GtkShortcutsSection:
+      title -> gchararray: title
+      section-name -> gchararray: section-name
+      view-name -> gchararray: view-name
+      max-height -> guint: max-height
+    
+    Properties from GtkBox:
+      spacing -> gint: spacing
+      homogeneous -> gboolean: homogeneous
+      baseline-position -> GtkBaselinePosition: baseline-position
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -22792,12 +51887,75 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ShortcutsShortcut</summary>
 
-
-    :Constructors:
+Object GtkShortcutsShortcut
     
-    ::
+    Properties from GtkShortcutsShortcut:
+      accelerator -> gchararray: accelerator
+      icon -> GIcon: icon
+      icon-set -> gboolean: icon-set
+      title -> gchararray: title
+      subtitle -> gchararray: subtitle
+      subtitle-set -> gboolean: subtitle-set
+      accel-size-group -> GtkSizeGroup: accel-size-group
+      title-size-group -> GtkSizeGroup: title-size-group
+      direction -> GtkTextDirection: direction
+      shortcut-type -> GtkShortcutType: shortcut-type
+      action-name -> gchararray: action-name
     
-        ShortcutsShortcut(**properties)
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -23119,12 +52277,103 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.ShortcutsWindow</summary>
 
-
-    :Constructors:
+Object GtkShortcutsWindow
     
-    ::
+    Signals from GtkShortcutsWindow:
+      close ()
+      search ()
     
-        ShortcutsWindow(**properties)
+    Properties from GtkShortcutsWindow:
+      section-name -> gchararray: section-name
+      view-name -> gchararray: view-name
+    
+    Signals from GtkWindow:
+      activate-focus ()
+      activate-default ()
+      keys-changed ()
+      enable-debugging (gboolean) -> gboolean
+      close-request () -> gboolean
+    
+    Properties from GtkWindow:
+      title -> gchararray: title
+      resizable -> gboolean: resizable
+      modal -> gboolean: modal
+      default-width -> gint: default-width
+      default-height -> gint: default-height
+      destroy-with-parent -> gboolean: destroy-with-parent
+      hide-on-close -> gboolean: hide-on-close
+      icon-name -> gchararray: icon-name
+      display -> GdkDisplay: display
+      decorated -> gboolean: decorated
+      deletable -> gboolean: deletable
+      transient-for -> GtkWindow: transient-for
+      application -> GtkApplication: application
+      default-widget -> GtkWidget: default-widget
+      focus-widget -> GtkWidget: focus-widget
+      child -> GtkWidget: child
+      titlebar -> GtkWidget: titlebar
+      handle-menubar-accel -> gboolean: handle-menubar-accel
+      is-active -> gboolean: is-active
+      startup-id -> gchararray: startup-id
+      mnemonics-visible -> gboolean: mnemonics-visible
+      focus-visible -> gboolean: focus-visible
+      maximized -> gboolean: maximized
+      fullscreened -> gboolean: fullscreened
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -23516,13 +52765,14 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.SignalAction</summary>
 
-
-    :Constructors:
+Object GtkSignalAction
     
-    ::
+    Properties from GtkSignalAction:
+      signal-name -> gchararray: signal-name
     
-        SignalAction(**properties)
-        new(signal_name:str) -> Gtk.SignalAction
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -23635,13 +52885,17 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.SignalListItemFactory</summary>
 
-
-    :Constructors:
+Object GtkSignalListItemFactory
     
-    ::
+    Signals from GtkSignalListItemFactory:
+      setup (GObject)
+      bind (GObject)
+      unbind (GObject)
+      teardown (GObject)
     
-        SignalListItemFactory(**properties)
-        new() -> Gtk.ListItemFactory
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -23749,13 +53003,26 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.SingleSelection</summary>
 
-
-    :Constructors:
+Object GtkSingleSelection
     
-    ::
+    Properties from GtkSingleSelection:
+      autoselect -> gboolean: autoselect
+      can-unselect -> gboolean: can-unselect
+      item-type -> GType: item-type
+      model -> GListModel: model
+      n-items -> guint: n-items
+      selected -> guint: selected
+      selected-item -> GObject: selected-item
     
-        SingleSelection(**properties)
-        new(model:Gio.ListModel=None) -> Gtk.SingleSelection
+    Signals from GListModel:
+      items-changed (guint, guint, guint)
+    
+    Signals from GtkSelectionModel:
+      selection-changed (guint, guint)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -23892,13 +53159,14 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.SizeGroup</summary>
 
-
-    :Constructors:
+Object GtkSizeGroup
     
-    ::
+    Properties from GtkSizeGroup:
+      mode -> GtkSizeGroupMode: mode
     
-        SizeGroup(**properties)
-        new(mode:Gtk.SizeGroupMode) -> Gtk.SizeGroup
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -24014,13 +53282,21 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.SliceListModel</summary>
 
-
-    :Constructors:
+Object GtkSliceListModel
     
-    ::
+    Properties from GtkSliceListModel:
+      item-type -> GType: item-type
+      model -> GListModel: model
+      n-items -> guint: n-items
+      offset -> guint: offset
+      size -> guint: size
     
-        SliceListModel(**properties)
-        new(model:Gio.ListModel=None, offset:int, size:int) -> Gtk.SliceListModel
+    Signals from GListModel:
+      items-changed (guint, guint, guint)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -24143,13 +53419,11 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Snapshot</summary>
 
-
-    :Constructors:
+Object GtkSnapshot
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        Snapshot(**properties)
-        new() -> Gtk.Snapshot
     
 
 ---
@@ -24300,13 +53574,22 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.SortListModel</summary>
 
-
-    :Constructors:
+Object GtkSortListModel
     
-    ::
+    Properties from GtkSortListModel:
+      incremental -> gboolean: incremental
+      item-type -> GType: item-type
+      model -> GListModel: model
+      n-items -> guint: n-items
+      pending -> guint: pending
+      sorter -> GtkSorter: sorter
     
-        SortListModel(**properties)
-        new(model:Gio.ListModel=None, sorter:Gtk.Sorter=None) -> Gtk.SortListModel
+    Signals from GListModel:
+      items-changed (guint, guint, guint)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -24430,12 +53713,14 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Sorter</summary>
 
-
-    :Constructors:
+Object GtkSorter
     
-    ::
+    Signals from GtkSorter:
+      changed (GtkSorterChange)
     
-        Sorter(**properties)
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -24548,146 +53833,1276 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.SpinButton</summary>
 
-
-    :Constructors:
+Object GtkSpinButton
     
-    ::
+    Signals from GtkSpinButton:
+      value-changed ()
+      change-value (GtkScrollType)
+      input (gpointer) -> gint
+      output () -> gboolean
+      wrapped ()
     
-        SpinButton(**properties)
-        new(adjustment:Gtk.Adjustment=None, climb_rate:float, digits:int) -> Gtk.Widget
-        new_with_range(min:float, max:float, step:float) -> Gtk.Widget
+    Properties from GtkSpinButton:
+      adjustment -> GtkAdjustment: adjustment
+      climb-rate -> gdouble: climb-rate
+      digits -> guint: digits
+      snap-to-ticks -> gboolean: snap-to-ticks
+      numeric -> gboolean: numeric
+      wrap -> gboolean: wrap
+      update-policy -> GtkSpinButtonUpdatePolicy: update-policy
+      value -> gdouble: value
+    
+    Signals from GtkEditable:
+      changed ()
+      insert-text (gchararray, gint, gpointer)
+      delete-text (gint, gint)
+    
+    Signals from GtkCellEditable:
+      editing-done ()
+      remove-widget ()
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
 - configure
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
 - delegate_get_property
 - delegate_set_property
 - delete_selection
 - delete_text
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
 - editing_done
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
 - finish_delegate
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
 - get_adjustment
 - get_alignment
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_chars
+- get_child_visible
 - get_climb_rate
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
 - get_delegate
 - get_digits
+- get_direction
+- get_display
 - get_editable
 - get_enable_undo
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_increments
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_max_width_chars
+- get_name
+- get_native
+- get_next_sibling
 - get_numeric
+- get_opacity
 - get_orientation
+- get_overflow
+- get_pango_context
+- get_parent
 - get_position
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
 - get_range
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
 - get_selection_bounds
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
 - get_snap_to_ticks
+- get_state_flags
+- get_style_context
+- get_template_child
 - get_text
+- get_tooltip_markup
+- get_tooltip_text
 - get_update_policy
+- get_valign
 - get_value
 - get_value_as_int
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
 - get_width_chars
 - get_wrap
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
 - init_delegate
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
 - insert_text
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_with_range
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
 - remove_widget
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
 - select_region
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_adjustment
 - set_alignment
+- set_can_focus
+- set_can_target
+- set_child_visible
 - set_climb_rate
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
 - set_digits
+- set_direction
 - set_editable
 - set_enable_undo
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_increments
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_max_width_chars
+- set_name
 - set_numeric
+- set_opacity
 - set_orientation
+- set_overflow
+- set_parent
 - set_position
+- set_properties
+- set_property
 - set_range
+- set_receives_default
+- set_sensitive
+- set_size_request
 - set_snap_to_ticks
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_text
+- set_tooltip_markup
+- set_tooltip_text
 - set_update_policy
+- set_valign
 - set_value
+- set_vexpand
+- set_vexpand_set
+- set_visible
 - set_width_chars
 - set_wrap
+- should_layout
+- show
+- size_allocate
+- snapshot_child
 - spin
 - start_editing
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
 - update
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Spinner</summary>
 
-
-    :Constructors:
+Object GtkSpinner
     
-    ::
+    Properties from GtkSpinner:
+      spinning -> gboolean: spinning
     
-        Spinner(**properties)
-        new() -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
 - get_spinning
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
 - set_spinning
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
 - start
+- steal_data
+- steal_qdata
 - stop
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Stack</summary>
 
-
-    :Constructors:
+Object GtkStack
     
-    ::
+    Properties from GtkStack:
+      hhomogeneous -> gboolean: hhomogeneous
+      vhomogeneous -> gboolean: vhomogeneous
+      visible-child -> GtkWidget: visible-child
+      visible-child-name -> gchararray: visible-child-name
+      transition-duration -> guint: transition-duration
+      transition-type -> GtkStackTransitionType: transition-type
+      transition-running -> gboolean: transition-running
+      interpolate-size -> gboolean: interpolate-size
+      pages -> GtkSelectionModel: pages
     
-        Stack(**properties)
-        new() -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
 - add_child
+- add_controller
+- add_css_class
+- add_mnemonic_label
 - add_named
+- add_shortcut
+- add_tick_callback
 - add_titled
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child_by_name
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_hhomogeneous
 - get_interpolate_size
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
 - get_page
 - get_pages
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
 - get_transition_duration
 - get_transition_running
 - get_transition_type
+- get_valign
+- get_vexpand
+- get_vexpand_set
 - get_vhomogeneous
+- get_visible
 - get_visible_child
 - get_visible_child_name
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - remove
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_hhomogeneous
 - set_interpolate_size
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
 - set_transition_duration
 - set_transition_type
+- set_valign
+- set_vexpand
+- set_vexpand_set
 - set_vhomogeneous
+- set_visible
 - set_visible_child
 - set_visible_child_full
 - set_visible_child_name
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.StackPage</summary>
 
-
-    :Constructors:
+Object GtkStackPage
     
-    ::
+    Properties from GtkStackPage:
+      child -> GtkWidget: child
+      name -> gchararray: name
+      title -> gchararray: title
+      icon-name -> gchararray: icon-name
+      needs-attention -> gboolean: needs-attention
+      visible -> gboolean: visible
+      use-underline -> gboolean: use-underline
     
-        StackPage(**properties)
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -24815,75 +55230,1175 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.StackSidebar</summary>
 
-
-    :Constructors:
+Object GtkStackSidebar
     
-    ::
+    Properties from GtkStackSidebar:
+      stack -> GtkStack: stack
     
-        StackSidebar(**properties)
-        new() -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
 - get_stack
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
 - set_stack
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.StackSwitcher</summary>
 
-
-    :Constructors:
+Object GtkStackSwitcher
     
-    ::
+    Properties from GtkStackSwitcher:
+      stack -> GtkStack: stack
     
-        StackSwitcher(**properties)
-        new() -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
 - get_orientation
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
 - get_stack
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
 - set_orientation
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
 - set_stack
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Statusbar</summary>
 
-
-    :Constructors:
+Object GtkStatusbar
     
-    ::
+    Signals from GtkStatusbar:
+      text-pushed (guint, gchararray)
+      text-popped (guint, gchararray)
     
-        Statusbar(**properties)
-        new() -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
 - get_context_id
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
 - pop
+- priv
+- props
 - push
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - remove
 - remove_all
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.StringFilter</summary>
 
-
-    :Constructors:
+Object GtkStringFilter
     
-    ::
+    Properties from GtkStringFilter:
+      expression -> GtkExpression: expression
+      ignore-case -> gboolean: ignore-case
+      match-mode -> GtkStringFilterMatchMode: match-mode
+      search -> gchararray: search
     
-        StringFilter(**properties)
-        new(expression:Gtk.Expression=None) -> Gtk.StringFilter
+    Signals from GtkFilter:
+      changed (GtkFilterChange)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -25005,13 +56520,14 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.StringList</summary>
 
-
-    :Constructors:
+Object GtkStringList
     
-    ::
+    Signals from GListModel:
+      items-changed (guint, guint, guint)
     
-        StringList(**properties)
-        new(strings:list=None) -> Gtk.StringList
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -25134,13 +56650,14 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.StringObject</summary>
 
-
-    :Constructors:
+Object GtkStringObject
     
-    ::
+    Properties from GtkStringObject:
+      string -> gchararray: string
     
-        StringObject(**properties)
-        new(string:str) -> Gtk.StringObject
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -25249,13 +56766,18 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.StringSorter</summary>
 
-
-    :Constructors:
+Object GtkStringSorter
     
-    ::
+    Properties from GtkStringSorter:
+      expression -> GtkExpression: expression
+      ignore-case -> gboolean: ignore-case
     
-        StringSorter(**properties)
-        new(expression:Gtk.Expression=None) -> Gtk.StringSorter
+    Signals from GtkSorter:
+      changed (GtkSorterChange)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -25373,12 +56895,14 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.StyleContext</summary>
 
-
-    :Constructors:
+Object GtkStyleContext
     
-    ::
+    Properties from GtkStyleContext:
+      display -> GdkDisplay: display
     
-        StyleContext(**properties)
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -25508,7 +57032,12 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.StyleProvider</summary>
 
-
+Interface GtkStyleProvider
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -25547,33 +57076,407 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Switch</summary>
 
-
-    :Constructors:
+Object GtkSwitch
     
-    ::
+    Signals from GtkSwitch:
+      activate ()
+      state-set (gboolean) -> gboolean
     
-        Switch(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkSwitch:
+      active -> gboolean: active
+      state -> gboolean: state
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
 - get_action_name
 - get_action_target_value
+- get_activate_signal
 - get_active
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
 - get_state
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
 - set_action_name
 - set_action_target_value
+- set_activate_signal
+- set_activate_signal_from_name
 - set_active
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
 - set_detailed_action_name
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
 - set_state
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.SymbolicPaintable</summary>
 
-
+Interface GtkSymbolicPaintable
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -25613,91 +57516,513 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Text</summary>
 
-
-    :Constructors:
+Object GtkText
     
-    ::
+    Signals from GtkText:
+      activate ()
+      move-cursor (GtkMovementStep, gint, gboolean)
+      preedit-changed (gchararray)
+      copy-clipboard ()
+      insert-at-cursor (gchararray)
+      delete-from-cursor (GtkDeleteType, gint)
+      backspace ()
+      cut-clipboard ()
+      paste-clipboard ()
+      toggle-overwrite ()
+      insert-emoji ()
     
-        Text(**properties)
-        new() -> Gtk.Widget
-        new_with_buffer(buffer:Gtk.EntryBuffer) -> Gtk.Widget
+    Properties from GtkText:
+      buffer -> GtkEntryBuffer: buffer
+      max-length -> gint: max-length
+      visibility -> gboolean: visibility
+      invisible-char -> guint: invisible-char
+      invisible-char-set -> gboolean: invisible-char-set
+      activates-default -> gboolean: activates-default
+      scroll-offset -> gint: scroll-offset
+      truncate-multiline -> gboolean: truncate-multiline
+      overwrite-mode -> gboolean: overwrite-mode
+      im-module -> gchararray: im-module
+      placeholder-text -> gchararray: placeholder-text
+      input-purpose -> GtkInputPurpose: input-purpose
+      input-hints -> GtkInputHints: input-hints
+      attributes -> PangoAttrList: attributes
+      tabs -> PangoTabArray: tabs
+      enable-emoji-completion -> gboolean: enable-emoji-completion
+      propagate-text-width -> gboolean: propagate-text-width
+      extra-menu -> GMenuModel: extra-menu
+    
+    Signals from GtkEditable:
+      changed ()
+      insert-text (gchararray, gint, gpointer)
+      delete-text (gint, gint)
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
 - compute_cursor_extents
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
 - delegate_get_property
 - delegate_set_property
 - delete_selection
 - delete_text
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
 - finish_delegate
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
 - get_activates_default
 - get_alignment
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_attributes
 - get_buffer
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_chars
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
 - get_delegate
+- get_direction
+- get_display
 - get_editable
 - get_enable_emoji_completion
 - get_enable_undo
 - get_extra_menu
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_input_hints
 - get_input_purpose
 - get_invisible_char
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_max_length
 - get_max_width_chars
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
 - get_overwrite_mode
+- get_pango_context
+- get_parent
 - get_placeholder_text
 - get_position
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
 - get_propagate_text_width
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
 - get_selection_bounds
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
 - get_tabs
+- get_template_child
 - get_text
 - get_text_length
+- get_tooltip_markup
+- get_tooltip_text
 - get_truncate_multiline
+- get_valign
+- get_vexpand
+- get_vexpand_set
 - get_visibility
+- get_visible
+- get_width
 - get_width_chars
+- getv
+- grab_focus
 - grab_focus_without_selecting
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
 - init_delegate
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
 - insert_text
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_with_buffer
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
 - select_region
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_activates_default
 - set_alignment
 - set_attributes
 - set_buffer
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_editable
 - set_enable_emoji_completion
 - set_enable_undo
 - set_extra_menu
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_input_hints
 - set_input_purpose
 - set_invisible_char
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_max_length
 - set_max_width_chars
+- set_name
+- set_opacity
+- set_overflow
 - set_overwrite_mode
+- set_parent
 - set_placeholder_text
 - set_position
 - set_propagate_text_width
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
 - set_tabs
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_text
+- set_tooltip_markup
+- set_tooltip_text
 - set_truncate_multiline
+- set_valign
+- set_vexpand
+- set_vexpand_set
 - set_visibility
+- set_visible
 - set_width_chars
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
 - unset_invisible_char
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.TextBuffer</summary>
 
-
-    :Constructors:
+Object GtkTextBuffer
     
-    ::
+    Signals from GtkTextBuffer:
+      changed ()
+      insert-text (GtkTextIter, gchararray, gint)
+      insert-paintable (GtkTextIter, GdkPaintable)
+      insert-child-anchor (GtkTextIter, GtkTextChildAnchor)
+      delete-range (GtkTextIter, GtkTextIter)
+      modified-changed ()
+      mark-set (GtkTextIter, GtkTextMark)
+      mark-deleted (GtkTextMark)
+      apply-tag (GtkTextTag, GtkTextIter, GtkTextIter)
+      remove-tag (GtkTextTag, GtkTextIter, GtkTextIter)
+      begin-user-action ()
+      end-user-action ()
+      paste-done (GdkClipboard)
+      redo ()
+      undo ()
     
-        TextBuffer(**properties)
-        new(table:Gtk.TextTagTable=None) -> Gtk.TextBuffer
+    Properties from GtkTextBuffer:
+      tag-table -> GtkTextTagTable: tag-table
+      text -> gchararray: text
+      has-selection -> gboolean: has-selection
+      cursor-position -> gint: cursor-position
+      can-undo -> gboolean: can-undo
+      can-redo -> gboolean: can-redo
+      enable-undo -> gboolean: enable-undo
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -25892,14 +58217,11 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.TextChildAnchor</summary>
 
-
-    :Constructors:
+Object GtkTextChildAnchor
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        TextChildAnchor(**properties)
-        new() -> Gtk.TextChildAnchor
-        new_with_replacement(character:str) -> Gtk.TextChildAnchor
     
 
 ---
@@ -26012,13 +58334,15 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.TextMark</summary>
 
-
-    :Constructors:
+Object GtkTextMark
     
-    ::
+    Properties from GtkTextMark:
+      name -> gchararray: name
+      left-gravity -> gboolean: left-gravity
     
-        TextMark(**properties)
-        new(name:str=None, left_gravity:bool) -> Gtk.TextMark
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -26134,13 +58458,102 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.TextTag</summary>
 
-
-    :Constructors:
+Object GtkTextTag
     
-    ::
+    Properties from GtkTextTag:
+      name -> gchararray: name
+      background -> gchararray: background
+      foreground -> gchararray: foreground
+      background-rgba -> GdkRGBA: background-rgba
+      foreground-rgba -> GdkRGBA: foreground-rgba
+      font -> gchararray: font
+      font-desc -> PangoFontDescription: font-desc
+      family -> gchararray: family
+      style -> PangoStyle: style
+      variant -> PangoVariant: variant
+      weight -> gint: weight
+      stretch -> PangoStretch: stretch
+      size -> gint: size
+      size-points -> gdouble: size-points
+      scale -> gdouble: scale
+      pixels-above-lines -> gint: pixels-above-lines
+      pixels-below-lines -> gint: pixels-below-lines
+      pixels-inside-wrap -> gint: pixels-inside-wrap
+      line-height -> gfloat: line-height
+      editable -> gboolean: editable
+      wrap-mode -> GtkWrapMode: wrap-mode
+      justification -> GtkJustification: justification
+      direction -> GtkTextDirection: direction
+      left-margin -> gint: left-margin
+      indent -> gint: indent
+      strikethrough -> gboolean: strikethrough
+      strikethrough-rgba -> GdkRGBA: strikethrough-rgba
+      right-margin -> gint: right-margin
+      underline -> PangoUnderline: underline
+      underline-rgba -> GdkRGBA: underline-rgba
+      overline -> PangoOverline: overline
+      overline-rgba -> GdkRGBA: overline-rgba
+      rise -> gint: rise
+      background-full-height -> gboolean: background-full-height
+      language -> gchararray: language
+      tabs -> PangoTabArray: tabs
+      invisible -> gboolean: invisible
+      paragraph-background -> gchararray: paragraph-background
+      paragraph-background-rgba -> GdkRGBA: paragraph-background-rgba
+      fallback -> gboolean: fallback
+      letter-spacing -> gint: letter-spacing
+      font-features -> gchararray: font-features
+      allow-breaks -> gboolean: allow-breaks
+      show-spaces -> PangoShowFlags: show-spaces
+      insert-hyphens -> gboolean: insert-hyphens
+      text-transform -> PangoTextTransform: text-transform
+      word -> gboolean: word
+      sentence -> gboolean: sentence
+      accumulative-margin -> gboolean: accumulative-margin
+      background-set -> gboolean: background-set
+      foreground-set -> gboolean: foreground-set
+      family-set -> gboolean: family-set
+      style-set -> gboolean: style-set
+      variant-set -> gboolean: variant-set
+      weight-set -> gboolean: weight-set
+      stretch-set -> gboolean: stretch-set
+      size-set -> gboolean: size-set
+      scale-set -> gboolean: scale-set
+      pixels-above-lines-set -> gboolean: pixels-above-lines-set
+      pixels-below-lines-set -> gboolean: pixels-below-lines-set
+      pixels-inside-wrap-set -> gboolean: pixels-inside-wrap-set
+      line-height-set -> gboolean: line-height-set
+      editable-set -> gboolean: editable-set
+      wrap-mode-set -> gboolean: wrap-mode-set
+      justification-set -> gboolean: justification-set
+      left-margin-set -> gboolean: left-margin-set
+      indent-set -> gboolean: indent-set
+      strikethrough-set -> gboolean: strikethrough-set
+      strikethrough-rgba-set -> gboolean: strikethrough-rgba-set
+      right-margin-set -> gboolean: right-margin-set
+      underline-set -> gboolean: underline-set
+      underline-rgba-set -> gboolean: underline-rgba-set
+      overline-set -> gboolean: overline-set
+      overline-rgba-set -> gboolean: overline-rgba-set
+      rise-set -> gboolean: rise-set
+      background-full-height-set -> gboolean: background-full-height-set
+      language-set -> gboolean: language-set
+      tabs-set -> gboolean: tabs-set
+      invisible-set -> gboolean: invisible-set
+      paragraph-background-set -> gboolean: paragraph-background-set
+      fallback-set -> gboolean: fallback-set
+      letter-spacing-set -> gboolean: letter-spacing-set
+      font-features-set -> gboolean: font-features-set
+      allow-breaks-set -> gboolean: allow-breaks-set
+      show-spaces-set -> gboolean: show-spaces-set
+      insert-hyphens-set -> gboolean: insert-hyphens-set
+      text-transform-set -> gboolean: text-transform-set
+      sentence-set -> gboolean: sentence-set
+      word-set -> gboolean: word-set
     
-        TextTag(**properties)
-        new(name:str=None) -> Gtk.TextTag
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -26253,13 +58666,16 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.TextTagTable</summary>
 
-
-    :Constructors:
+Object GtkTextTagTable
     
-    ::
+    Signals from GtkTextTagTable:
+      tag-changed (GtkTextTag, gboolean)
+      tag-added (GtkTextTag)
+      tag-removed (GtkTextTag)
     
-        TextTagTable(**properties)
-        new() -> Gtk.TextTagTable
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -26374,47 +58790,273 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.TextView</summary>
 
-
-    :Constructors:
+Object GtkTextView
     
-    ::
+    Signals from GtkTextView:
+      move-cursor (GtkMovementStep, gint, gboolean)
+      select-all (gboolean)
+      preedit-changed (gchararray)
+      copy-clipboard ()
+      insert-at-cursor (gchararray)
+      delete-from-cursor (GtkDeleteType, gint)
+      backspace ()
+      cut-clipboard ()
+      paste-clipboard ()
+      toggle-overwrite ()
+      insert-emoji ()
+      move-viewport (GtkScrollStep, gint)
+      set-anchor ()
+      toggle-cursor-visible ()
+      extend-selection (GtkTextExtendSelection, GtkTextIter, GtkTextIter, GtkTextIter) -> gboolean
     
-        TextView(**properties)
-        new() -> Gtk.Widget
-        new_with_buffer(buffer:Gtk.TextBuffer) -> Gtk.Widget
+    Properties from GtkTextView:
+      pixels-above-lines -> gint: pixels-above-lines
+      pixels-below-lines -> gint: pixels-below-lines
+      pixels-inside-wrap -> gint: pixels-inside-wrap
+      editable -> gboolean: editable
+      wrap-mode -> GtkWrapMode: wrap-mode
+      justification -> GtkJustification: justification
+      left-margin -> gint: left-margin
+      right-margin -> gint: right-margin
+      top-margin -> gint: top-margin
+      bottom-margin -> gint: bottom-margin
+      indent -> gint: indent
+      tabs -> PangoTabArray: tabs
+      cursor-visible -> gboolean: cursor-visible
+      buffer -> GtkTextBuffer: buffer
+      overwrite -> gboolean: overwrite
+      accepts-tab -> gboolean: accepts-tab
+      im-module -> gchararray: im-module
+      input-purpose -> GtkInputPurpose: input-purpose
+      input-hints -> GtkInputHints: input-hints
+      monospace -> gboolean: monospace
+      extra-menu -> GMenuModel: extra-menu
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
 - add_child_at_anchor
+- add_controller
+- add_css_class
+- add_mnemonic_label
 - add_overlay
+- add_shortcut
+- add_tick_callback
+- allocate
 - backward_display_line
 - backward_display_line_start
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
 - buffer_to_window_coords
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_backspace
+- do_compute_expand
+- do_contains
 - do_copy_clipboard
+- do_css_changed
 - do_cut_clipboard
 - do_delete_from_cursor
+- do_direction_changed
 - do_extend_selection
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
 - do_insert_at_cursor
 - do_insert_emoji
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
 - do_move_cursor
+- do_move_focus
 - do_paste_clipboard
+- do_query_tooltip
+- do_realize
+- do_root
 - do_set_anchor
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
 - do_snapshot_layer
+- do_state_flags_changed
+- do_system_setting_changed
 - do_toggle_overwrite
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
 - forward_display_line
 - forward_display_line_end
+- freeze_notify
+- g_type_instance
 - get_accepts_tab
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_border
 - get_bottom_margin
 - get_buffer
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
 - get_cursor_locations
 - get_cursor_visible
+- get_data
+- get_default_direction
+- get_direction
+- get_display
 - get_editable
 - get_extra_menu
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
 - get_gutter
 - get_hadjustment
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_hscroll_policy
 - get_indent
 - get_input_hints
@@ -26423,119 +59065,669 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 - get_iter_at_position
 - get_iter_location
 - get_justification
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
 - get_left_margin
 - get_line_at_y
 - get_line_yrange
 - get_ltr_context
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_monospace
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
 - get_overwrite
+- get_pango_context
+- get_parent
 - get_pixels_above_lines
 - get_pixels_below_lines
 - get_pixels_inside_wrap
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
 - get_right_margin
+- get_root
 - get_rtl_context
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
 - get_tabs
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
 - get_top_margin
 - get_vadjustment
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
 - get_visible_rect
 - get_vscroll_policy
+- get_width
 - get_wrap_mode
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
 - im_context_filter_keypress
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - move_mark_onscreen
 - move_overlay
 - move_visually
 - new
 - new_with_buffer
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
 - place_cursor_onscreen
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - remove
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
 - reset_cursor_blink
 - reset_im_context
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
 - scroll_mark_onscreen
 - scroll_to_iter
 - scroll_to_mark
 - set_accepts_tab
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_bottom_margin
 - set_buffer
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
 - set_cursor_visible
+- set_data
+- set_default_direction
+- set_direction
 - set_editable
 - set_extra_menu
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
 - set_gutter
 - set_hadjustment
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_hscroll_policy
 - set_indent
 - set_input_hints
 - set_input_purpose
 - set_justification
+- set_layout_manager
+- set_layout_manager_type
 - set_left_margin
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_monospace
+- set_name
+- set_opacity
+- set_overflow
 - set_overwrite
+- set_parent
 - set_pixels_above_lines
 - set_pixels_below_lines
 - set_pixels_inside_wrap
+- set_properties
+- set_property
+- set_receives_default
 - set_right_margin
+- set_sensitive
+- set_size_request
+- set_state_flags
 - set_tabs
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
 - set_top_margin
 - set_vadjustment
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
 - set_vscroll_policy
 - set_wrap_mode
+- should_layout
+- show
+- size_allocate
+- snapshot_child
 - starts_display_line
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 - window_to_buffer_coords
 
 </details>
 
 <details><summary>Gtk.ToggleButton</summary>
 
-
-    :Constructors:
+Object GtkToggleButton
     
-    ::
+    Signals from GtkToggleButton:
+      toggled ()
     
-        ToggleButton(**properties)
-        new() -> Gtk.Widget
-        new_with_label(label:str) -> Gtk.Widget
-        new_with_mnemonic(label:str) -> Gtk.Widget
+    Properties from GtkToggleButton:
+      active -> gboolean: active
+      group -> GtkToggleButton: group
+    
+    Signals from GtkButton:
+      activate ()
+      clicked ()
+    
+    Properties from GtkButton:
+      label -> gchararray: label
+      has-frame -> gboolean: has-frame
+      use-underline -> gboolean: use-underline
+      icon-name -> gchararray: icon-name
+      child -> GtkWidget: child
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
 - button
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate
 - do_clicked
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
 - do_toggled
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
 - get_action_name
 - get_action_target_value
+- get_activate_signal
 - get_active
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
 - get_has_frame
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_icon_name
 - get_label
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
 - get_use_underline
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_from_icon_name
 - new_with_label
 - new_with_mnemonic
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
 - set_action_name
 - set_action_target_value
+- set_activate_signal
+- set_activate_signal_from_name
 - set_active
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
 - set_detailed_action_name
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
 - set_group
+- set_halign
 - set_has_frame
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_icon_name
 - set_label
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
 - set_use_underline
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
 - toggled
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Tooltip</summary>
 
-
-    :Constructors:
+Object GtkTooltip
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        Tooltip(**properties)
     
 
 ---
@@ -26649,7 +59841,9 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.TreeDragDest</summary>
 
-
+Interface GtkTreeDragDest
+    
+    
 
 ---
 
@@ -26690,7 +59884,9 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.TreeDragSource</summary>
 
-
+Interface GtkTreeDragSource
+    
+    
 
 ---
 
@@ -26732,37 +59928,412 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.TreeExpander</summary>
 
-
-    :Constructors:
+Object GtkTreeExpander
     
-    ::
+    Properties from GtkTreeExpander:
+      child -> GtkWidget: child
+      item -> GObject: item
+      list-row -> GtkTreeListRow: list-row
+      indent-for-icon -> gboolean: indent-for-icon
     
-        TreeExpander(**properties)
-        new() -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_indent_for_icon
 - get_item
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
 - get_list_row
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_indent_for_icon
+- set_layout_manager
+- set_layout_manager_type
 - set_list_row
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.TreeListModel</summary>
 
-
-    :Constructors:
+Object GtkTreeListModel
     
-    ::
+    Properties from GtkTreeListModel:
+      autoexpand -> gboolean: autoexpand
+      item-type -> GType: item-type
+      model -> GListModel: model
+      n-items -> guint: n-items
+      passthrough -> gboolean: passthrough
     
-        TreeListModel(**properties)
-        new(root:Gio.ListModel, passthrough:bool, autoexpand:bool, create_func:Gtk.TreeListModelCreateModelFunc, user_data=None) -> Gtk.TreeListModel
+    Signals from GListModel:
+      items-changed (guint, guint, guint)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -26885,12 +60456,18 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.TreeListRow</summary>
 
-
-    :Constructors:
+Object GtkTreeListRow
     
-    ::
+    Properties from GtkTreeListRow:
+      children -> GListModel: children
+      depth -> guint: depth
+      expandable -> gboolean: expandable
+      expanded -> gboolean: expanded
+      item -> GObject: item
     
-        TreeListRow(**properties)
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -27006,13 +60583,17 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.TreeListRowSorter</summary>
 
-
-    :Constructors:
+Object GtkTreeListRowSorter
     
-    ::
+    Properties from GtkTreeListRowSorter:
+      sorter -> GtkSorter: sorter
     
-        TreeListRowSorter(**properties)
-        new(sorter:Gtk.Sorter=None) -> Gtk.TreeListRowSorter
+    Signals from GtkSorter:
+      changed (GtkSorterChange)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -27128,7 +60709,12 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.TreeModel</summary>
 
-
+Interface GtkTreeModel
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -27205,12 +60791,22 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.TreeModelFilter</summary>
 
-
-    :Constructors:
+Object GtkTreeModelFilter
     
-    ::
+    Properties from GtkTreeModelFilter:
+      child-model -> GtkTreeModel: child-model
+      virtual-root -> GtkTreePath: virtual-root
     
-        TreeModelFilter(**properties)
+    Signals from GtkTreeModel:
+      row-changed (GtkTreePath, GtkTreeIter)
+      row-inserted (GtkTreePath, GtkTreeIter)
+      row-has-child-toggled (GtkTreePath, GtkTreeIter)
+      row-deleted (GtkTreePath)
+      rows-reordered (GtkTreePath, GtkTreeIter, gpointer)
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -27374,13 +60970,24 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.TreeModelSort</summary>
 
-
-    :Constructors:
+Object GtkTreeModelSort
     
-    ::
+    Properties from GtkTreeModelSort:
+      model -> GtkTreeModel: model
     
-        TreeModelSort(**properties)
-        new_with_model(child_model:Gtk.TreeModel) -> Gtk.TreeModelSort
+    Signals from GtkTreeModel:
+      row-changed (GtkTreePath, GtkTreeIter)
+      row-inserted (GtkTreePath, GtkTreeIter)
+      row-has-child-toggled (GtkTreePath, GtkTreeIter)
+      row-deleted (GtkTreePath)
+      rows-reordered (GtkTreePath, GtkTreeIter, gpointer)
+    
+    Signals from GtkTreeSortable:
+      sort-column-changed ()
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -27546,12 +61153,17 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.TreeSelection</summary>
 
-
-    :Constructors:
+Object GtkTreeSelection
     
-    ::
+    Signals from GtkTreeSelection:
+      changed ()
     
-        TreeSelection(**properties)
+    Properties from GtkTreeSelection:
+      mode -> GtkSelectionMode: mode
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -27676,7 +61288,12 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.TreeSortable</summary>
 
-
+Interface GtkTreeSortable
+    
+    Signals from GObject:
+      notify (GParam)
+    
+    
 
 ---
 
@@ -27721,13 +61338,21 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.TreeStore</summary>
 
-
-    :Constructors:
+Object GtkTreeStore
     
-    ::
+    Signals from GtkTreeModel:
+      row-changed (GtkTreePath, GtkTreeIter)
+      row-inserted (GtkTreePath, GtkTreeIter)
+      row-has-child-toggled (GtkTreePath, GtkTreeIter)
+      row-deleted (GtkTreePath)
+      rows-reordered (GtkTreePath, GtkTreeIter, gpointer)
     
-        TreeStore(**properties)
-        new(types:list) -> Gtk.TreeStore
+    Signals from GtkTreeSortable:
+      sort-column-changed ()
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -27906,142 +61531,559 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.TreeView</summary>
 
-
-    :Constructors:
+Object GtkTreeView
     
-    ::
+    Signals from GtkTreeView:
+      move-cursor (GtkMovementStep, gint, gboolean, gboolean) -> gboolean
+      select-all () -> gboolean
+      unselect-all () -> gboolean
+      row-activated (GtkTreePath, GtkTreeViewColumn)
+      toggle-cursor-row () -> gboolean
+      test-expand-row (GtkTreeIter, GtkTreePath) -> gboolean
+      test-collapse-row (GtkTreeIter, GtkTreePath) -> gboolean
+      row-expanded (GtkTreeIter, GtkTreePath)
+      row-collapsed (GtkTreeIter, GtkTreePath)
+      columns-changed ()
+      cursor-changed ()
+      select-cursor-row (gboolean) -> gboolean
+      expand-collapse-cursor-row (gboolean, gboolean, gboolean) -> gboolean
+      select-cursor-parent () -> gboolean
+      start-interactive-search () -> gboolean
     
-        TreeView(**properties)
-        new() -> Gtk.Widget
-        new_with_model(model:Gtk.TreeModel) -> Gtk.Widget
+    Properties from GtkTreeView:
+      model -> GtkTreeModel: model
+      headers-visible -> gboolean: headers-visible
+      headers-clickable -> gboolean: headers-clickable
+      expander-column -> GtkTreeViewColumn: expander-column
+      reorderable -> gboolean: reorderable
+      enable-search -> gboolean: enable-search
+      search-column -> gint: search-column
+      fixed-height-mode -> gboolean: fixed-height-mode
+      hover-selection -> gboolean: hover-selection
+      hover-expand -> gboolean: hover-expand
+      show-expanders -> gboolean: show-expanders
+      level-indentation -> gint: level-indentation
+      rubber-banding -> gboolean: rubber-banding
+      enable-grid-lines -> GtkTreeViewGridLines: enable-grid-lines
+      enable-tree-lines -> gboolean: enable-tree-lines
+      tooltip-column -> gint: tooltip-column
+      activate-on-single-click -> gboolean: activate-on-single-click
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
 - append_column
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
 - collapse_all
 - collapse_row
 - columns_autosize
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
 - convert_bin_window_to_tree_coords
 - convert_bin_window_to_widget_coords
 - convert_tree_to_bin_window_coords
 - convert_tree_to_widget_coords
 - convert_widget_to_bin_window_coords
 - convert_widget_to_tree_coords
+- create_pango_context
+- create_pango_layout
 - create_row_drag_icon
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_columns_changed
+- do_compute_expand
+- do_contains
+- do_css_changed
 - do_cursor_changed
+- do_direction_changed
 - do_expand_collapse_cursor_row
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
 - do_move_cursor
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
 - do_row_activated
 - do_row_collapsed
 - do_row_expanded
 - do_select_all
 - do_select_cursor_parent
 - do_select_cursor_row
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
 - do_start_interactive_search
+- do_state_flags_changed
+- do_system_setting_changed
 - do_test_collapse_row
 - do_test_expand_row
 - do_toggle_cursor_row
+- do_unmap
+- do_unrealize
+- do_unroot
 - do_unselect_all
+- drag_check_threshold
+- emit
+- emit_stop_by_name
 - enable_model_drag_dest
 - enable_model_drag_source
+- error_bell
 - expand_all
 - expand_row
 - expand_to_path
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
 - get_activate_on_single_click
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_background_area
 - get_border
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_cell_area
+- get_child_visible
+- get_clipboard
 - get_column
 - get_columns
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
 - get_dest_row_at_pos
+- get_direction
+- get_display
 - get_drag_dest_row
 - get_enable_search
 - get_enable_tree_lines
 - get_expander_column
+- get_first_child
 - get_fixed_height_mode
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
 - get_grid_lines
 - get_hadjustment
+- get_halign
+- get_has_tooltip
 - get_headers_clickable
 - get_headers_visible
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_hover_expand
 - get_hover_selection
 - get_hscroll_policy
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
 - get_level_indentation
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_model
 - get_n_columns
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
 - get_path_at_pos
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
 - get_reorderable
+- get_request_mode
+- get_root
 - get_rubber_banding
+- get_scale_factor
 - get_search_column
 - get_search_entry
 - get_selection
+- get_sensitive
+- get_settings
 - get_show_expanders
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
 - get_tooltip_column
 - get_tooltip_context
+- get_tooltip_markup
+- get_tooltip_text
 - get_vadjustment
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
 - get_visible_range
 - get_visible_rect
 - get_vscroll_policy
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
 - insert_column
 - insert_column_with_attributes
 - insert_column_with_data_func
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
 - is_blank_at_pos
+- is_drawable
+- is_floating
+- is_focus
 - is_rubber_banding_active
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
 - map_expanded_rows
+- measure
+- mnemonic_activate
 - move_column_after
 - new
 - new_with_model
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
 - remove_column
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
 - row_activated
 - row_expanded
+- run_dispose
 - scroll_to_cell
 - scroll_to_point
+- set_accessible_role
 - set_activate_on_single_click
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
 - set_column_drag_function
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
 - set_cursor_on_cell
+- set_data
+- set_default_direction
+- set_direction
 - set_drag_dest_row
 - set_enable_search
 - set_enable_tree_lines
 - set_expander_column
 - set_fixed_height_mode
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
 - set_grid_lines
 - set_hadjustment
+- set_halign
+- set_has_tooltip
 - set_headers_clickable
 - set_headers_visible
+- set_hexpand
+- set_hexpand_set
 - set_hover_expand
 - set_hover_selection
 - set_hscroll_policy
+- set_layout_manager
+- set_layout_manager_type
 - set_level_indentation
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_model
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_reorderable
 - set_row_separator_func
 - set_rubber_banding
 - set_search_column
 - set_search_entry
 - set_search_equal_func
+- set_sensitive
 - set_show_expanders
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_tooltip_cell
 - set_tooltip_column
+- set_tooltip_markup
 - set_tooltip_row
+- set_tooltip_text
 - set_vadjustment
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
 - set_vscroll_policy
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
 - unset_rows_drag_dest
 - unset_rows_drag_source
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.TreeViewColumn</summary>
 
-
-    :Constructors:
+Object GtkTreeViewColumn
     
-    ::
+    Signals from GtkTreeViewColumn:
+      clicked ()
     
-        TreeViewColumn(**properties)
-        new() -> Gtk.TreeViewColumn
-        new_with_area(area:Gtk.CellArea) -> Gtk.TreeViewColumn
+    Properties from GtkTreeViewColumn:
+      visible -> gboolean: visible
+      resizable -> gboolean: resizable
+      x-offset -> gint: x-offset
+      width -> gint: width
+      spacing -> gint: spacing
+      sizing -> GtkTreeViewColumnSizing: sizing
+      fixed-width -> gint: fixed-width
+      min-width -> gint: min-width
+      max-width -> gint: max-width
+      title -> gchararray: title
+      expand -> gboolean: expand
+      clickable -> gboolean: clickable
+      widget -> GtkWidget: widget
+      alignment -> gfloat: alignment
+      reorderable -> gboolean: reorderable
+      sort-indicator -> gboolean: sort-indicator
+      sort-order -> GtkSortType: sort-order
+      sort-column-id -> gint: sort-column-id
+      cell-area -> GtkCellArea: cell-area
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -28205,106 +62247,1258 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.Video</summary>
 
-
-    :Constructors:
+Object GtkVideo
     
-    ::
+    Properties from GtkVideo:
+      autoplay -> gboolean: autoplay
+      file -> GFile: file
+      loop -> gboolean: loop
+      media-stream -> GtkMediaStream: media-stream
     
-        Video(**properties)
-        new() -> Gtk.Widget
-        new_for_file(file:Gio.File=None) -> Gtk.Widget
-        new_for_filename(filename:str=None) -> Gtk.Widget
-        new_for_media_stream(stream:Gtk.MediaStream=None) -> Gtk.Widget
-        new_for_resource(resource_path:str=None) -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_autoplay
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
 - get_file
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
 - get_loop
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_media_stream
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
 - new_for_file
 - new_for_filename
 - new_for_media_stream
 - new_for_resource
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_autoplay
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
 - set_file
 - set_filename
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
 - set_loop
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_media_stream
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_resource
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Viewport</summary>
 
-
-    :Constructors:
+Object GtkViewport
     
-    ::
+    Properties from GtkViewport:
+      scroll-to-focus -> gboolean: scroll-to-focus
+      child -> GtkWidget: child
     
-        Viewport(**properties)
-        new(hadjustment:Gtk.Adjustment=None, vadjustment:Gtk.Adjustment=None) -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_border
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
 - get_hadjustment
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_hscroll_policy
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
 - get_scroll_to_focus
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
 - get_vadjustment
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
 - get_vscroll_policy
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
 - set_hadjustment
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_hscroll_policy
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_scroll_to_focus
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
 - set_vadjustment
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
 - set_vscroll_policy
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.VolumeButton</summary>
 
-
-    :Constructors:
+Object GtkVolumeButton
     
-    ::
+    Properties from GtkVolumeButton:
+      use-symbolic -> gboolean: use-symbolic
     
-        VolumeButton(**properties)
-        new() -> Gtk.Widget
+    Signals from GtkScaleButton:
+      value-changed (gdouble)
+      popup ()
+      popdown ()
+    
+    Properties from GtkScaleButton:
+      value -> gdouble: value
+      adjustment -> GtkAdjustment: adjustment
+      icons -> GStrv: icons
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
 - do_value_changed
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
 - get_adjustment
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_minus_button
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
 - get_orientation
+- get_overflow
+- get_pango_context
+- get_parent
 - get_plus_button
 - get_popup
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
 - get_value
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
 - parent
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_adjustment
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_icons
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
 - set_orientation
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
 - set_value
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Widget</summary>
 
-
-    :Constructors:
+Object GtkWidget
     
-    ::
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
     
-        Widget(**properties)
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
@@ -28626,150 +63820,1011 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.WidgetPaintable</summary>
 
-
-    :Constructors:
+Object GtkWidgetPaintable
     
-    ::
+    Properties from GtkWidgetPaintable:
+      widget -> GtkWidget: widget
     
-        WidgetPaintable(**properties)
-        new(widget:Gtk.Widget=None) -> Gtk.WidgetPaintable
+    Signals from GdkPaintable:
+      invalidate-contents ()
+      invalidate-size ()
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- bind_property
+- bind_property_full
+- chain
+- compat_control
 - compute_concrete_size
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- disconnect
+- disconnect_by_func
+- emit
+- emit_stop_by_name
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
 - get_current_image
+- get_data
 - get_flags
 - get_intrinsic_aspect_ratio
 - get_intrinsic_height
 - get_intrinsic_width
+- get_properties
+- get_property
+- get_qdata
 - get_widget
+- getv
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- install_properties
+- install_property
+- interface_find_property
+- interface_install_property
+- interface_list_properties
 - invalidate_contents
 - invalidate_size
+- is_floating
+- list_properties
 - new
 - new_empty
+- newv
+- notify
+- notify_by_pspec
+- override_property
+- props
+- qdata
+- ref
+- ref_count
+- ref_sink
+- replace_data
+- replace_qdata
+- run_dispose
+- set_data
+- set_properties
+- set_property
 - set_widget
 - snapshot
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- unref
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.Window</summary>
 
-
-    :Constructors:
+Object GtkWindow
     
-    ::
+    Signals from GtkWindow:
+      activate-focus ()
+      activate-default ()
+      keys-changed ()
+      enable-debugging (gboolean) -> gboolean
+      close-request () -> gboolean
     
-        Window(**properties)
-        new() -> Gtk.Widget
+    Properties from GtkWindow:
+      title -> gchararray: title
+      resizable -> gboolean: resizable
+      modal -> gboolean: modal
+      default-width -> gint: default-width
+      default-height -> gint: default-height
+      destroy-with-parent -> gboolean: destroy-with-parent
+      hide-on-close -> gboolean: hide-on-close
+      icon-name -> gchararray: icon-name
+      display -> GdkDisplay: display
+      decorated -> gboolean: decorated
+      deletable -> gboolean: deletable
+      transient-for -> GtkWindow: transient-for
+      application -> GtkApplication: application
+      default-widget -> GtkWidget: default-widget
+      focus-widget -> GtkWidget: focus-widget
+      child -> GtkWidget: child
+      titlebar -> GtkWidget: titlebar
+      handle-menubar-accel -> gboolean: handle-menubar-accel
+      is-active -> gboolean: is-active
+      startup-id -> gchararray: startup-id
+      mnemonics-visible -> gboolean: mnemonics-visible
+      focus-visible -> gboolean: focus-visible
+      maximized -> gboolean: maximized
+      fullscreened -> gboolean: fullscreened
+    
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
 - close
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
 - destroy
+- disconnect
+- disconnect_by_func
+- dispose_template
 - do_activate_default
 - do_activate_focus
 - do_close_request
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
 - do_enable_debugging
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
 - do_keys_changed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
 - fullscreen
 - fullscreen_on_monitor
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
 - get_application
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
 - get_decorated
+- get_default_direction
 - get_default_icon_name
 - get_default_size
 - get_default_widget
 - get_deletable
 - get_destroy_with_parent
+- get_direction
+- get_display
+- get_first_child
 - get_focus
+- get_focus_child
+- get_focus_on_click
 - get_focus_visible
+- get_focusable
+- get_font_map
+- get_font_options
 - get_for_surface
+- get_frame_clock
 - get_group
+- get_halign
 - get_handle_menubar_accel
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
 - get_hide_on_close
 - get_icon_name
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
 - get_mnemonics_visible
 - get_modal
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
 - get_renderer
+- get_request_mode
 - get_resizable
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
 - get_surface
 - get_surface_transform
+- get_template_child
 - get_title
 - get_titlebar
+- get_tooltip_markup
+- get_tooltip_text
 - get_toplevels
 - get_transient_for
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
 - has_group
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
 - is_active
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
 - is_fullscreen
 - is_maximized
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
 - list_toplevels
+- map
 - maximize
+- measure
 - minimize
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
 - present
 - present_with_time
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
 - set_application
 - set_auto_startup_notification
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
 - set_decorated
+- set_default_direction
 - set_default_icon_name
 - set_default_size
 - set_default_widget
 - set_deletable
 - set_destroy_with_parent
+- set_direction
 - set_display
 - set_focus
+- set_focus_child
+- set_focus_on_click
 - set_focus_visible
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
 - set_handle_menubar_accel
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
 - set_hide_on_close
 - set_icon_name
 - set_interactive_debugging
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
 - set_mnemonics_visible
 - set_modal
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
 - set_resizable
+- set_sensitive
+- set_size_request
 - set_startup_id
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
 - set_title
 - set_titlebar
+- set_tooltip_markup
+- set_tooltip_text
 - set_transient_for
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
 - unfullscreen
+- unmap
 - unmaximize
 - unminimize
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.WindowControls</summary>
 
-
-    :Constructors:
+Object GtkWindowControls
     
-    ::
+    Properties from GtkWindowControls:
+      side -> GtkPackType: side
+      decoration-layout -> gchararray: decoration-layout
+      empty -> gboolean: empty
     
-        WindowControls(**properties)
-        new(side:Gtk.PackType) -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
 - get_decoration_layout
+- get_default_direction
+- get_direction
+- get_display
 - get_empty
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
 - get_side
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
 - set_decoration_layout
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
 - set_side
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
 
 <details><summary>Gtk.WindowGroup</summary>
 
-
-    :Constructors:
+Object GtkWindowGroup
     
-    ::
+    Signals from GObject:
+      notify (GParam)
     
-        WindowGroup(**properties)
-        new() -> Gtk.WindowGroup
     
 
 ---
@@ -28882,19 +64937,383 @@ If class derived from Gtk.Widget, properties from Gtk.Widget are omitted.
 
 <details><summary>Gtk.WindowHandle</summary>
 
-
-    :Constructors:
+Object GtkWindowHandle
     
-    ::
+    Properties from GtkWindowHandle:
+      child -> GtkWidget: child
     
-        WindowHandle(**properties)
-        new() -> Gtk.Widget
+    Signals from GtkWidget:
+      destroy ()
+      show ()
+      hide ()
+      map ()
+      unmap ()
+      realize ()
+      unrealize ()
+      state-flags-changed (GtkStateFlags)
+      direction-changed (GtkTextDirection)
+      mnemonic-activate (gboolean) -> gboolean
+      move-focus (GtkDirectionType)
+      keynav-failed (GtkDirectionType) -> gboolean
+      query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean
+    
+    Properties from GtkWidget:
+      name -> gchararray: name
+      parent -> GtkWidget: parent
+      root -> GtkRoot: root
+      width-request -> gint: width-request
+      height-request -> gint: height-request
+      visible -> gboolean: visible
+      sensitive -> gboolean: sensitive
+      can-focus -> gboolean: can-focus
+      has-focus -> gboolean: has-focus
+      can-target -> gboolean: can-target
+      focus-on-click -> gboolean: focus-on-click
+      focusable -> gboolean: focusable
+      has-default -> gboolean: has-default
+      receives-default -> gboolean: receives-default
+      cursor -> GdkCursor: cursor
+      has-tooltip -> gboolean: has-tooltip
+      tooltip-markup -> gchararray: tooltip-markup
+      tooltip-text -> gchararray: tooltip-text
+      opacity -> gdouble: opacity
+      overflow -> GtkOverflow: overflow
+      halign -> GtkAlign: halign
+      valign -> GtkAlign: valign
+      margin-start -> gint: margin-start
+      margin-end -> gint: margin-end
+      margin-top -> gint: margin-top
+      margin-bottom -> gint: margin-bottom
+      hexpand -> gboolean: hexpand
+      vexpand -> gboolean: vexpand
+      hexpand-set -> gboolean: hexpand-set
+      vexpand-set -> gboolean: vexpand-set
+      scale-factor -> gint: scale-factor
+      css-name -> gchararray: css-name
+      css-classes -> GStrv: css-classes
+      layout-manager -> GtkLayoutManager: layout-manager
+    
+    Signals from GObject:
+      notify (GParam)
+    
     
 
 ---
 
+- __class__
+- __contains__
+- __copy__
+- __deepcopy__
+- __delattr__
+- __dict__
+- __dir__
+- __doc__
+- __eq__
+- __format__
+- __gdoc__
+- __ge__
+- __getattribute__
+- __gpointer__
+- __grefcount__
+- __gsignals__
+- __gt__
+- __gtype__
+- __hash__
+- __info__
+- __init__
+- __init_subclass__
+- __iter__
+- __le__
+- __lt__
+- __module__
+- __ne__
+- __new__
+- __reduce__
+- __reduce_ex__
+- __repr__
+- __setattr__
+- __sizeof__
+- __str__
+- __subclasshook__
+- __weakref__
+- _force_floating
+- _ref
+- _ref_sink
+- _unref
+- _unsupported_data_method
+- _unsupported_method
+- action_set_enabled
+- activate
+- activate_action
+- activate_default
+- add_controller
+- add_css_class
+- add_mnemonic_label
+- add_shortcut
+- add_tick_callback
+- allocate
+- bind_property
+- bind_property_full
+- bind_template_callback_full
+- bind_template_child_full
+- chain
+- child_focus
+- compat_control
+- compute_bounds
+- compute_expand
+- compute_point
+- compute_transform
+- connect
+- connect_after
+- connect_data
+- connect_object
+- connect_object_after
+- contains
+- create_pango_context
+- create_pango_layout
+- disconnect
+- disconnect_by_func
+- dispose_template
+- do_compute_expand
+- do_contains
+- do_css_changed
+- do_direction_changed
+- do_focus
+- do_get_request_mode
+- do_grab_focus
+- do_hide
+- do_keynav_failed
+- do_map
+- do_measure
+- do_mnemonic_activate
+- do_move_focus
+- do_query_tooltip
+- do_realize
+- do_root
+- do_set_focus_child
+- do_show
+- do_size_allocate
+- do_snapshot
+- do_state_flags_changed
+- do_system_setting_changed
+- do_unmap
+- do_unrealize
+- do_unroot
+- drag_check_threshold
+- emit
+- emit_stop_by_name
+- error_bell
+- find_property
+- force_floating
+- freeze_notify
+- g_type_instance
+- get_accessible_role
+- get_activate_signal
+- get_allocated_baseline
+- get_allocated_height
+- get_allocated_width
+- get_allocation
+- get_ancestor
+- get_buildable_id
+- get_can_focus
+- get_can_target
 - get_child
+- get_child_visible
+- get_clipboard
+- get_css_classes
+- get_css_name
+- get_cursor
+- get_data
+- get_default_direction
+- get_direction
+- get_display
+- get_first_child
+- get_focus_child
+- get_focus_on_click
+- get_focusable
+- get_font_map
+- get_font_options
+- get_frame_clock
+- get_halign
+- get_has_tooltip
+- get_height
+- get_hexpand
+- get_hexpand_set
+- get_last_child
+- get_layout_manager
+- get_layout_manager_type
+- get_mapped
+- get_margin_bottom
+- get_margin_end
+- get_margin_start
+- get_margin_top
+- get_name
+- get_native
+- get_next_sibling
+- get_opacity
+- get_overflow
+- get_pango_context
+- get_parent
+- get_preferred_size
+- get_prev_sibling
+- get_primary_clipboard
+- get_properties
+- get_property
+- get_qdata
+- get_realized
+- get_receives_default
+- get_request_mode
+- get_root
+- get_scale_factor
+- get_sensitive
+- get_settings
+- get_size
+- get_size_request
+- get_state_flags
+- get_style_context
+- get_template_child
+- get_tooltip_markup
+- get_tooltip_text
+- get_valign
+- get_vexpand
+- get_vexpand_set
+- get_visible
+- get_width
+- getv
+- grab_focus
+- handler_block
+- handler_block_by_func
+- handler_disconnect
+- handler_is_connected
+- handler_unblock
+- handler_unblock_by_func
+- has_css_class
+- has_default
+- has_focus
+- has_visible_focus
+- hide
+- in_destruction
+- init_template
+- insert_action_group
+- insert_after
+- insert_before
+- install_action
+- install_properties
+- install_property
+- install_property_action
+- interface_find_property
+- interface_install_property
+- interface_list_properties
+- is_ancestor
+- is_drawable
+- is_floating
+- is_focus
+- is_sensitive
+- is_visible
+- keynav_failed
+- list_mnemonic_labels
+- list_properties
+- map
+- measure
+- mnemonic_activate
 - new
+- newv
+- notify
+- notify_by_pspec
+- observe_children
+- observe_controllers
+- override_property
+- parent_instance
+- pick
+- priv
+- props
+- qdata
+- query_action
+- queue_allocate
+- queue_draw
+- queue_resize
+- realize
+- ref
+- ref_count
+- ref_sink
+- remove_controller
+- remove_css_class
+- remove_mnemonic_label
+- remove_tick_callback
+- replace_data
+- replace_qdata
+- reset_property
+- reset_relation
+- reset_state
+- run_dispose
+- set_accessible_role
+- set_activate_signal
+- set_activate_signal_from_name
+- set_can_focus
+- set_can_target
 - set_child
+- set_child_visible
+- set_css_classes
+- set_css_name
+- set_cursor
+- set_cursor_from_name
+- set_data
+- set_default_direction
+- set_direction
+- set_focus_child
+- set_focus_on_click
+- set_focusable
+- set_font_map
+- set_font_options
+- set_halign
+- set_has_tooltip
+- set_hexpand
+- set_hexpand_set
+- set_layout_manager
+- set_layout_manager_type
+- set_margin_bottom
+- set_margin_end
+- set_margin_start
+- set_margin_top
+- set_name
+- set_opacity
+- set_overflow
+- set_parent
+- set_properties
+- set_property
+- set_receives_default
+- set_sensitive
+- set_size_request
+- set_state_flags
+- set_template
+- set_template_from_resource
+- set_template_scope
+- set_tooltip_markup
+- set_tooltip_text
+- set_valign
+- set_vexpand
+- set_vexpand_set
+- set_visible
+- should_layout
+- show
+- size_allocate
+- snapshot_child
+- steal_data
+- steal_qdata
+- stop_emission
+- stop_emission_by_name
+- thaw_notify
+- translate_coordinates
+- trigger_tooltip_query
+- unmap
+- unparent
+- unrealize
+- unref
+- unset_state_flags
+- update_property
+- update_relation
+- update_state
+- watch_closure
+- weak_ref
 
 </details>
