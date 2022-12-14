@@ -36,9 +36,9 @@ with open("proplist.md", "w", encoding="utf-8") as f:
                 f"{thedoc}\r\n\r\n---\r\n",
                 file=f,
             )
-            proplist = dir(gtk_item)
-            derived_from_widget = "Gtk.Widget" in thedoc
-            for propitem in proplist:
-                if propitem not in widget_dir or not derived_from_widget:
-                    print(f"- {propitem}", file=f)
+            # proplist = dir(gtk_item)
+            # derived_from_widget = "Gtk.Widget" in thedoc
+            # for propitem in proplist:
+            #     if propitem not in widget_dir or not derived_from_widget:
+            #         print(f"- {propitem}", file=f)
             print("\r\n</details>", file=f)
