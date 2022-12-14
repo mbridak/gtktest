@@ -3,6 +3,15 @@
 
 <details><summary>Gtk.ATContext</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    ATContext(**properties)
+	    create(accessible_role:Gtk.AccessibleRole, accessible:Gtk.Accessible, display:Gdk.Display) -> Gtk.ATContext or None
+	
+
 ---
 
 - __class__
@@ -109,6 +118,15 @@
 </details>
 
 <details><summary>Gtk.AboutDialog</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    AboutDialog(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -532,6 +550,8 @@
 
 <details><summary>Gtk.Accessible</summary>
 
+
+
 ---
 
 - __class__
@@ -575,6 +595,15 @@
 </details>
 
 <details><summary>Gtk.ActionBar</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    ActionBar(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -903,6 +932,8 @@
 
 <details><summary>Gtk.Actionable</summary>
 
+
+
 ---
 
 - __class__
@@ -944,6 +975,14 @@
 </details>
 
 <details><summary>Gtk.ActivateAction</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    ActivateAction(**properties)
+	
 
 ---
 
@@ -1053,6 +1092,15 @@
 </details>
 
 <details><summary>Gtk.Adjustment</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Adjustment(**properties)
+	    new(value:float, lower:float, upper:float, step_increment:float, page_increment:float, page_size:float) -> Gtk.Adjustment
+	
 
 ---
 
@@ -1177,6 +1225,15 @@
 
 <details><summary>Gtk.AlternativeTrigger</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    AlternativeTrigger(**properties)
+	    new(first:Gtk.ShortcutTrigger, second:Gtk.ShortcutTrigger) -> Gtk.ShortcutTrigger
+	
+
 ---
 
 - __class__
@@ -1292,6 +1349,15 @@
 </details>
 
 <details><summary>Gtk.AnyFilter</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    AnyFilter(**properties)
+	    new() -> Gtk.AnyFilter
+	
 
 ---
 
@@ -1416,6 +1482,8 @@
 
 <details><summary>Gtk.AppChooser</summary>
 
+
+
 ---
 
 - __class__
@@ -1455,6 +1523,15 @@
 </details>
 
 <details><summary>Gtk.AppChooserButton</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    AppChooserButton(**properties)
+	    new(content_type:str) -> Gtk.Widget
+	
 
 ---
 
@@ -1789,6 +1866,16 @@
 </details>
 
 <details><summary>Gtk.AppChooserDialog</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    AppChooserDialog(**properties)
+	    new(parent:Gtk.Window=None, flags:Gtk.DialogFlags, file:Gio.File) -> Gtk.Widget
+	    new_for_content_type(parent:Gtk.Window=None, flags:Gtk.DialogFlags, content_type:str) -> Gtk.Widget
+	
 
 ---
 
@@ -2198,6 +2285,15 @@
 
 <details><summary>Gtk.AppChooserWidget</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    AppChooserWidget(**properties)
+	    new(content_type:str) -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -2533,6 +2629,15 @@
 
 <details><summary>Gtk.Application</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    Application(**properties)
+	    new(application_id:str=None, flags:Gio.ApplicationFlags) -> Gtk.Application
+	
+
 ---
 
 - __class__
@@ -2725,6 +2830,15 @@
 </details>
 
 <details><summary>Gtk.ApplicationWindow</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    ApplicationWindow(**properties)
+	    new(application:Gtk.Application) -> Gtk.Widget
+	
 
 ---
 
@@ -3136,6 +3250,15 @@
 
 <details><summary>Gtk.AspectFrame</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    AspectFrame(**properties)
+	    new(xalign:float, yalign:float, ratio:float, obey_child:bool) -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -3465,6 +3588,15 @@
 </details>
 
 <details><summary>Gtk.Assistant</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Assistant(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -3878,6 +4010,14 @@
 
 <details><summary>Gtk.AssistantPage</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    AssistantPage(**properties)
+	
+
 ---
 
 - __class__
@@ -3982,6 +4122,15 @@
 </details>
 
 <details><summary>Gtk.BinLayout</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    BinLayout(**properties)
+	    new() -> Gtk.LayoutManager
+	
 
 ---
 
@@ -4100,6 +4249,15 @@
 </details>
 
 <details><summary>Gtk.BookmarkList</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    BookmarkList(**properties)
+	    new(filename:str=None, attributes:str=None) -> Gtk.BookmarkList
+	
 
 ---
 
@@ -4221,6 +4379,15 @@
 
 <details><summary>Gtk.BoolFilter</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    BoolFilter(**properties)
+	    new(expression:Gtk.Expression=None) -> Gtk.BoolFilter
+	
+
 ---
 
 - __class__
@@ -4335,6 +4502,15 @@
 </details>
 
 <details><summary>Gtk.Box</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Box(**properties)
+	    new(orientation:Gtk.Orientation, spacing:int) -> Gtk.Widget
+	
 
 ---
 
@@ -4669,6 +4845,15 @@
 
 <details><summary>Gtk.BoxLayout</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    BoxLayout(**properties)
+	    new(orientation:Gtk.Orientation) -> Gtk.LayoutManager
+	
+
 ---
 
 - __class__
@@ -4796,6 +4981,8 @@
 
 <details><summary>Gtk.Buildable</summary>
 
+
+
 ---
 
 - __class__
@@ -4833,6 +5020,18 @@
 </details>
 
 <details><summary>Gtk.Builder</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Builder(**properties)
+	    new() -> Gtk.Builder
+	    new_from_file(filename:str) -> Gtk.Builder
+	    new_from_resource(resource_path:str) -> Gtk.Builder
+	    new_from_string(string:str, length:int) -> Gtk.Builder
+	
 
 ---
 
@@ -4964,6 +5163,15 @@
 
 <details><summary>Gtk.BuilderCScope</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    BuilderCScope(**properties)
+	    new() -> Gtk.BuilderCScope
+	
+
 ---
 
 - __class__
@@ -5071,6 +5279,16 @@
 </details>
 
 <details><summary>Gtk.BuilderListItemFactory</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    BuilderListItemFactory(**properties)
+	    new_from_bytes(scope:Gtk.BuilderScope=None, bytes:GLib.Bytes) -> Gtk.ListItemFactory
+	    new_from_resource(scope:Gtk.BuilderScope=None, resource_path:str) -> Gtk.ListItemFactory
+	
 
 ---
 
@@ -5181,6 +5399,8 @@
 
 <details><summary>Gtk.BuilderScope</summary>
 
+
+
 ---
 
 - __class__
@@ -5217,6 +5437,18 @@
 </details>
 
 <details><summary>Gtk.Button</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Button(**properties)
+	    new() -> Gtk.Widget
+	    new_from_icon_name(icon_name:str=None) -> Gtk.Widget
+	    new_with_label(label:str) -> Gtk.Widget
+	    new_with_mnemonic(label:str) -> Gtk.Widget
+	
 
 ---
 
@@ -5558,6 +5790,15 @@
 
 <details><summary>Gtk.CClosureExpression</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    CClosureExpression(**properties)
+	    new(value_type:GType, marshal:GObject.ClosureMarshal=None, params:list, callback_func:GObject.Callback, user_data=None) -> Gtk.CClosureExpression
+	
+
 ---
 
 - __class__
@@ -5601,6 +5842,15 @@
 </details>
 
 <details><summary>Gtk.Calendar</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Calendar(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -5934,6 +6184,15 @@
 
 <details><summary>Gtk.CallbackAction</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    CallbackAction(**properties)
+	    new(callback:Gtk.ShortcutFunc=None) -> Gtk.CallbackAction
+	
+
 ---
 
 - __class__
@@ -6042,6 +6301,14 @@
 </details>
 
 <details><summary>Gtk.CellArea</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    CellArea(**properties)
+	
 
 ---
 
@@ -6219,6 +6486,15 @@
 </details>
 
 <details><summary>Gtk.CellAreaBox</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    CellAreaBox(**properties)
+	    new() -> Gtk.CellArea
+	
 
 ---
 
@@ -6402,6 +6678,14 @@
 
 <details><summary>Gtk.CellAreaContext</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    CellAreaContext(**properties)
+	
+
 ---
 
 - __class__
@@ -6521,6 +6805,8 @@
 
 <details><summary>Gtk.CellEditable</summary>
 
+
+
 ---
 
 - __class__
@@ -6560,6 +6846,8 @@
 </details>
 
 <details><summary>Gtk.CellLayout</summary>
+
+
 
 ---
 
@@ -6606,6 +6894,14 @@
 </details>
 
 <details><summary>Gtk.CellRenderer</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    CellRenderer(**properties)
+	
 
 ---
 
@@ -6750,6 +7046,15 @@
 </details>
 
 <details><summary>Gtk.CellRendererAccel</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    CellRendererAccel(**properties)
+	    new() -> Gtk.CellRenderer
+	
 
 ---
 
@@ -6899,6 +7204,15 @@
 
 <details><summary>Gtk.CellRendererCombo</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    CellRendererCombo(**properties)
+	    new() -> Gtk.CellRenderer
+	
+
 ---
 
 - __class__
@@ -7047,6 +7361,15 @@
 
 <details><summary>Gtk.CellRendererPixbuf</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    CellRendererPixbuf(**properties)
+	    new() -> Gtk.CellRenderer
+	
+
 ---
 
 - __class__
@@ -7191,6 +7514,15 @@
 </details>
 
 <details><summary>Gtk.CellRendererProgress</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    CellRendererProgress(**properties)
+	    new() -> Gtk.CellRenderer
+	
 
 ---
 
@@ -7340,6 +7672,15 @@
 
 <details><summary>Gtk.CellRendererSpin</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    CellRendererSpin(**properties)
+	    new() -> Gtk.CellRenderer
+	
+
 ---
 
 - __class__
@@ -7488,6 +7829,15 @@
 
 <details><summary>Gtk.CellRendererSpinner</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    CellRendererSpinner(**properties)
+	    new() -> Gtk.CellRenderer
+	
+
 ---
 
 - __class__
@@ -7632,6 +7982,15 @@
 </details>
 
 <details><summary>Gtk.CellRendererText</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    CellRendererText(**properties)
+	    new() -> Gtk.CellRenderer
+	
 
 ---
 
@@ -7780,6 +8139,15 @@
 </details>
 
 <details><summary>Gtk.CellRendererToggle</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    CellRendererToggle(**properties)
+	    new() -> Gtk.CellRenderer
+	
 
 ---
 
@@ -7931,6 +8299,19 @@
 </details>
 
 <details><summary>Gtk.CellView</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    CellView(**properties)
+	    new() -> Gtk.Widget
+	    new_with_context(area:Gtk.CellArea, context:Gtk.CellAreaContext) -> Gtk.Widget
+	    new_with_markup(markup:str) -> Gtk.Widget
+	    new_with_text(text:str) -> Gtk.Widget
+	    new_with_texture(texture:Gdk.Texture) -> Gtk.Widget
+	
 
 ---
 
@@ -8275,6 +8656,15 @@
 
 <details><summary>Gtk.CenterBox</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    CenterBox(**properties)
+	    new() -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -8605,6 +8995,15 @@
 
 <details><summary>Gtk.CenterLayout</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    CenterLayout(**properties)
+	    new() -> Gtk.LayoutManager
+	
+
 ---
 
 - __class__
@@ -8732,6 +9131,17 @@
 </details>
 
 <details><summary>Gtk.CheckButton</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    CheckButton(**properties)
+	    new() -> Gtk.Widget
+	    new_with_label(label:str=None) -> Gtk.Widget
+	    new_with_mnemonic(label:str=None) -> Gtk.Widget
+	
 
 ---
 
@@ -9073,6 +9483,15 @@
 
 <details><summary>Gtk.ClosureExpression</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    ClosureExpression(**properties)
+	    new(value_type:GType, closure:GObject.Closure, params:list=None) -> Gtk.ClosureExpression
+	
+
 ---
 
 - __class__
@@ -9116,6 +9535,16 @@
 </details>
 
 <details><summary>Gtk.ColorButton</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    ColorButton(**properties)
+	    new() -> Gtk.Widget
+	    new_with_rgba(rgba:Gdk.RGBA) -> Gtk.Widget
+	
 
 ---
 
@@ -9447,6 +9876,8 @@
 
 <details><summary>Gtk.ColorChooser</summary>
 
+
+
 ---
 
 - __class__
@@ -9488,6 +9919,15 @@
 </details>
 
 <details><summary>Gtk.ColorChooserDialog</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    ColorChooserDialog(**properties)
+	    new(title:str=None, parent:Gtk.Window=None) -> Gtk.Widget
+	
 
 ---
 
@@ -9895,6 +10335,15 @@
 
 <details><summary>Gtk.ColorChooserWidget</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    ColorChooserWidget(**properties)
+	    new() -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -10219,6 +10668,15 @@
 </details>
 
 <details><summary>Gtk.ColumnView</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    ColumnView(**properties)
+	    new(model:Gtk.SelectionModel=None) -> Gtk.Widget
+	
 
 ---
 
@@ -10567,6 +11025,15 @@
 
 <details><summary>Gtk.ColumnViewColumn</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    ColumnViewColumn(**properties)
+	    new(title:str=None, factory:Gtk.ListItemFactory=None) -> Gtk.ColumnViewColumn
+	
+
 ---
 
 - __class__
@@ -10688,6 +11155,18 @@
 </details>
 
 <details><summary>Gtk.ComboBox</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    ComboBox(**properties)
+	    new() -> Gtk.Widget
+	    new_with_entry() -> Gtk.Widget
+	    new_with_model(model:Gtk.TreeModel) -> Gtk.Widget
+	    new_with_model_and_entry(model:Gtk.TreeModel) -> Gtk.Widget
+	
 
 ---
 
@@ -11049,6 +11528,16 @@
 </details>
 
 <details><summary>Gtk.ComboBoxText</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    ComboBoxText(**properties)
+	    new() -> Gtk.Widget
+	    new_with_entry() -> Gtk.Widget
+	
 
 ---
 
@@ -11420,6 +11909,15 @@
 
 <details><summary>Gtk.ConstantExpression</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    ConstantExpression(**properties)
+	    new_for_value(value:GObject.Value) -> Gtk.ConstantExpression
+	
+
 ---
 
 - __class__
@@ -11464,6 +11962,16 @@
 </details>
 
 <details><summary>Gtk.Constraint</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Constraint(**properties)
+	    new(target:Gtk.ConstraintTarget=None, target_attribute:Gtk.ConstraintAttribute, relation:Gtk.ConstraintRelation, source:Gtk.ConstraintTarget=None, source_attribute:Gtk.ConstraintAttribute, multiplier:float, constant:float, strength:int) -> Gtk.Constraint
+	    new_constant(target:Gtk.ConstraintTarget=None, target_attribute:Gtk.ConstraintAttribute, relation:Gtk.ConstraintRelation, constant:float, strength:int) -> Gtk.Constraint
+	
 
 ---
 
@@ -11582,6 +12090,15 @@
 
 <details><summary>Gtk.ConstraintGuide</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    ConstraintGuide(**properties)
+	    new() -> Gtk.ConstraintGuide
+	
+
 ---
 
 - __class__
@@ -11697,6 +12214,15 @@
 </details>
 
 <details><summary>Gtk.ConstraintLayout</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    ConstraintLayout(**properties)
+	    new() -> Gtk.LayoutManager
+	
 
 ---
 
@@ -11826,6 +12352,14 @@
 
 <details><summary>Gtk.ConstraintLayoutChild</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    ConstraintLayoutChild(**properties)
+	
+
 ---
 
 - __class__
@@ -11933,6 +12467,8 @@
 
 <details><summary>Gtk.ConstraintTarget</summary>
 
+
+
 ---
 
 - __class__
@@ -11969,6 +12505,15 @@
 </details>
 
 <details><summary>Gtk.CssProvider</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    CssProvider(**properties)
+	    new() -> Gtk.CssProvider
+	
 
 ---
 
@@ -12083,6 +12628,15 @@
 
 <details><summary>Gtk.CustomFilter</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    CustomFilter(**properties)
+	    new(match_func:Gtk.CustomFilterFunc=None, user_data=None) -> Gtk.CustomFilter
+	
+
 ---
 
 - __class__
@@ -12194,6 +12748,15 @@
 </details>
 
 <details><summary>Gtk.CustomLayout</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    CustomLayout(**properties)
+	    new(request_mode:Gtk.CustomRequestModeFunc=None, measure:Gtk.CustomMeasureFunc, allocate:Gtk.CustomAllocateFunc) -> Gtk.LayoutManager
+	
 
 ---
 
@@ -12313,6 +12876,15 @@
 
 <details><summary>Gtk.CustomSorter</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    CustomSorter(**properties)
+	    new(sort_func:GLib.CompareDataFunc=None, user_data=None) -> Gtk.CustomSorter
+	
+
 ---
 
 - __class__
@@ -12424,6 +12996,15 @@
 </details>
 
 <details><summary>Gtk.Dialog</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Dialog(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -12826,6 +13407,15 @@
 
 <details><summary>Gtk.DirectoryList</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    DirectoryList(**properties)
+	    new(attributes:str=None, file:Gio.File=None) -> Gtk.DirectoryList
+	
+
 ---
 
 - __class__
@@ -12949,6 +13539,14 @@
 </details>
 
 <details><summary>Gtk.DragIcon</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    DragIcon(**properties)
+	
 
 ---
 
@@ -13280,6 +13878,15 @@
 
 <details><summary>Gtk.DragSource</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    DragSource(**properties)
+	    new() -> Gtk.DragSource
+	
+
 ---
 
 - __class__
@@ -13429,6 +14036,15 @@
 </details>
 
 <details><summary>Gtk.DrawingArea</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    DrawingArea(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -13757,6 +14373,15 @@
 
 <details><summary>Gtk.DropControllerMotion</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    DropControllerMotion(**properties)
+	    new() -> Gtk.EventController
+	
+
 ---
 
 - __class__
@@ -13877,6 +14502,16 @@
 </details>
 
 <details><summary>Gtk.DropDown</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    DropDown(**properties)
+	    new(model:Gio.ListModel=None, expression:Gtk.Expression=None) -> Gtk.Widget
+	    new_from_strings(strings:list) -> Gtk.Widget
+	
 
 ---
 
@@ -14214,6 +14849,15 @@
 
 <details><summary>Gtk.DropTarget</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    DropTarget(**properties)
+	    new(type:GType, actions:Gdk.DragAction) -> Gtk.DropTarget
+	
+
 ---
 
 - __class__
@@ -14343,6 +14987,15 @@
 
 <details><summary>Gtk.DropTargetAsync</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    DropTargetAsync(**properties)
+	    new(formats:Gdk.ContentFormats=None, actions:Gdk.DragAction) -> Gtk.DropTargetAsync
+	
+
 ---
 
 - __class__
@@ -14466,6 +15119,8 @@
 
 <details><summary>Gtk.Editable</summary>
 
+
+
 ---
 
 - __class__
@@ -14528,6 +15183,15 @@
 </details>
 
 <details><summary>Gtk.EditableLabel</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    EditableLabel(**properties)
+	    new(str:str) -> Gtk.Widget
+	
 
 ---
 
@@ -14877,6 +15541,15 @@
 
 <details><summary>Gtk.EmojiChooser</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    EmojiChooser(**properties)
+	    new() -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -15223,6 +15896,16 @@
 </details>
 
 <details><summary>Gtk.Entry</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Entry(**properties)
+	    new() -> Gtk.Widget
+	    new_with_buffer(buffer:Gtk.EntryBuffer) -> Gtk.Widget
+	
 
 ---
 
@@ -15630,6 +16313,15 @@
 
 <details><summary>Gtk.EntryBuffer</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    EntryBuffer(**properties)
+	    new(initial_chars:str=None, n_initial_chars:int) -> Gtk.EntryBuffer
+	
+
 ---
 
 - __class__
@@ -15751,6 +16443,16 @@
 </details>
 
 <details><summary>Gtk.EntryCompletion</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    EntryCompletion(**properties)
+	    new() -> Gtk.EntryCompletion
+	    new_with_area(area:Gtk.CellArea) -> Gtk.EntryCompletion
+	
 
 ---
 
@@ -15891,6 +16593,14 @@
 
 <details><summary>Gtk.EventController</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    EventController(**properties)
+	
+
 ---
 
 - __class__
@@ -16007,6 +16717,15 @@
 </details>
 
 <details><summary>Gtk.EventControllerFocus</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    EventControllerFocus(**properties)
+	    new() -> Gtk.EventController
+	
 
 ---
 
@@ -16127,6 +16846,15 @@
 </details>
 
 <details><summary>Gtk.EventControllerKey</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    EventControllerKey(**properties)
+	    new() -> Gtk.EventController
+	
 
 ---
 
@@ -16250,6 +16978,15 @@
 
 <details><summary>Gtk.EventControllerLegacy</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    EventControllerLegacy(**properties)
+	    new() -> Gtk.EventController
+	
+
 ---
 
 - __class__
@@ -16367,6 +17104,15 @@
 </details>
 
 <details><summary>Gtk.EventControllerMotion</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    EventControllerMotion(**properties)
+	    new() -> Gtk.EventController
+	
 
 ---
 
@@ -16488,6 +17234,15 @@
 
 <details><summary>Gtk.EventControllerScroll</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    EventControllerScroll(**properties)
+	    new(flags:Gtk.EventControllerScrollFlags) -> Gtk.EventController
+	
+
 ---
 
 - __class__
@@ -16608,6 +17363,15 @@
 </details>
 
 <details><summary>Gtk.EveryFilter</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    EveryFilter(**properties)
+	    new() -> Gtk.EveryFilter
+	
 
 ---
 
@@ -16731,6 +17495,16 @@
 </details>
 
 <details><summary>Gtk.Expander</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Expander(**properties)
+	    new(label:str=None) -> Gtk.Widget
+	    new_with_mnemonic(label:str=None) -> Gtk.Widget
+	
 
 ---
 
@@ -17067,6 +17841,14 @@
 
 <details><summary>Gtk.Expression</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    Expression(**properties)
+	
+
 ---
 
 - __class__
@@ -17109,6 +17891,8 @@
 </details>
 
 <details><summary>Gtk.FileChooser</summary>
+
+
 
 ---
 
@@ -17171,6 +17955,14 @@
 </details>
 
 <details><summary>Gtk.FileChooserDialog</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    FileChooserDialog(**properties)
+	
 
 ---
 
@@ -17598,6 +18390,15 @@
 
 <details><summary>Gtk.FileChooserNative</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    FileChooserNative(**properties)
+	    new(title:str=None, parent:Gtk.Window=None, action:Gtk.FileChooserAction, accept_label:str=None, cancel_label:str=None) -> Gtk.FileChooserNative
+	
+
 ---
 
 - __class__
@@ -17746,6 +18547,15 @@
 </details>
 
 <details><summary>Gtk.FileChooserWidget</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    FileChooserWidget(**properties)
+	    new(action:Gtk.FileChooserAction) -> Gtk.Widget
+	
 
 ---
 
@@ -18092,6 +18902,16 @@
 
 <details><summary>Gtk.FileFilter</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    FileFilter(**properties)
+	    new() -> Gtk.FileFilter
+	    new_from_gvariant(variant:GLib.Variant) -> Gtk.FileFilter
+	
+
 ---
 
 - __class__
@@ -18214,6 +19034,14 @@
 
 <details><summary>Gtk.Filter</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    Filter(**properties)
+	
+
 ---
 
 - __class__
@@ -18323,6 +19151,15 @@
 </details>
 
 <details><summary>Gtk.FilterListModel</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    FilterListModel(**properties)
+	    new(model:Gio.ListModel=None, filter:Gtk.Filter=None) -> Gtk.FilterListModel
+	
 
 ---
 
@@ -18444,6 +19281,15 @@
 </details>
 
 <details><summary>Gtk.Fixed</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Fixed(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -18771,6 +19617,15 @@
 
 <details><summary>Gtk.FixedLayout</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    FixedLayout(**properties)
+	    new() -> Gtk.LayoutManager
+	
+
 ---
 
 - __class__
@@ -18889,6 +19744,14 @@
 
 <details><summary>Gtk.FixedLayoutChild</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    FixedLayoutChild(**properties)
+	
+
 ---
 
 - __class__
@@ -18997,6 +19860,15 @@
 </details>
 
 <details><summary>Gtk.FlattenListModel</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    FlattenListModel(**properties)
+	    new(model:Gio.ListModel=None) -> Gtk.FlattenListModel
+	
 
 ---
 
@@ -19114,6 +19986,15 @@
 </details>
 
 <details><summary>Gtk.FlowBox</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    FlowBox(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -19470,6 +20351,15 @@
 
 <details><summary>Gtk.FlowBoxChild</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    FlowBoxChild(**properties)
+	    new() -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -19795,6 +20685,16 @@
 </details>
 
 <details><summary>Gtk.FontButton</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    FontButton(**properties)
+	    new() -> Gtk.Widget
+	    new_with_font(fontname:str) -> Gtk.Widget
+	
 
 ---
 
@@ -20142,6 +21042,8 @@
 
 <details><summary>Gtk.FontChooser</summary>
 
+
+
 ---
 
 - __class__
@@ -20197,6 +21099,15 @@
 </details>
 
 <details><summary>Gtk.FontChooserDialog</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    FontChooserDialog(**properties)
+	    new(title:str=None, parent:Gtk.Window=None) -> Gtk.Widget
+	
 
 ---
 
@@ -20616,6 +21527,15 @@
 
 <details><summary>Gtk.FontChooserWidget</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    FontChooserWidget(**properties)
+	    new() -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -20953,6 +21873,15 @@
 
 <details><summary>Gtk.Frame</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    Frame(**properties)
+	    new(label:str=None) -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -21281,6 +22210,15 @@
 </details>
 
 <details><summary>Gtk.GLArea</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    GLArea(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -21620,6 +22558,14 @@
 
 <details><summary>Gtk.Gesture</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    Gesture(**properties)
+	
+
 ---
 
 - __class__
@@ -21753,6 +22699,15 @@
 </details>
 
 <details><summary>Gtk.GestureClick</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    GestureClick(**properties)
+	    new() -> Gtk.Gesture
+	
 
 ---
 
@@ -21896,6 +22851,15 @@
 </details>
 
 <details><summary>Gtk.GestureDrag</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    GestureDrag(**properties)
+	    new() -> Gtk.Gesture
+	
 
 ---
 
@@ -22042,6 +23006,15 @@
 
 <details><summary>Gtk.GestureLongPress</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    GestureLongPress(**properties)
+	    new() -> Gtk.Gesture
+	
+
 ---
 
 - __class__
@@ -22186,6 +23159,15 @@
 </details>
 
 <details><summary>Gtk.GesturePan</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    GesturePan(**properties)
+	    new(orientation:Gtk.Orientation) -> Gtk.Gesture
+	
 
 ---
 
@@ -22334,6 +23316,15 @@
 
 <details><summary>Gtk.GestureRotate</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    GestureRotate(**properties)
+	    new() -> Gtk.Gesture
+	
+
 ---
 
 - __class__
@@ -22469,6 +23460,14 @@
 </details>
 
 <details><summary>Gtk.GestureSingle</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    GestureSingle(**properties)
+	
 
 ---
 
@@ -22611,6 +23610,15 @@
 </details>
 
 <details><summary>Gtk.GestureStylus</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    GestureStylus(**properties)
+	    new() -> Gtk.Gesture
+	
 
 ---
 
@@ -22759,6 +23767,15 @@
 
 <details><summary>Gtk.GestureSwipe</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    GestureSwipe(**properties)
+	    new() -> Gtk.Gesture
+	
+
 ---
 
 - __class__
@@ -22903,6 +23920,15 @@
 
 <details><summary>Gtk.GestureZoom</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    GestureZoom(**properties)
+	    new() -> Gtk.Gesture
+	
+
 ---
 
 - __class__
@@ -23038,6 +24064,15 @@
 </details>
 
 <details><summary>Gtk.Grid</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Grid(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -23383,6 +24418,15 @@
 
 <details><summary>Gtk.GridLayout</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    GridLayout(**properties)
+	    new() -> Gtk.LayoutManager
+	
+
 ---
 
 - __class__
@@ -23513,6 +24557,14 @@
 
 <details><summary>Gtk.GridLayoutChild</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    GridLayoutChild(**properties)
+	
+
 ---
 
 - __class__
@@ -23627,6 +24679,15 @@
 </details>
 
 <details><summary>Gtk.GridView</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    GridView(**properties)
+	    new(model:Gtk.SelectionModel=None, factory:Gtk.ListItemFactory=None) -> Gtk.Widget
+	
 
 ---
 
@@ -23971,6 +25032,15 @@
 
 <details><summary>Gtk.HeaderBar</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    HeaderBar(**properties)
+	    new() -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -24300,6 +25370,14 @@
 
 <details><summary>Gtk.IMContext</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    IMContext(**properties)
+	
+
 ---
 
 - __class__
@@ -24436,6 +25514,15 @@
 </details>
 
 <details><summary>Gtk.IMContextSimple</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    IMContextSimple(**properties)
+	    new() -> Gtk.IMContext
+	
 
 ---
 
@@ -24577,6 +25664,15 @@
 </details>
 
 <details><summary>Gtk.IMMulticontext</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    IMMulticontext(**properties)
+	    new() -> Gtk.IMContext
+	
 
 ---
 
@@ -24720,6 +25816,15 @@
 
 <details><summary>Gtk.IconPaintable</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    IconPaintable(**properties)
+	    new_for_file(file:Gio.File, size:int, scale:int) -> Gtk.IconPaintable
+	
+
 ---
 
 - __class__
@@ -24839,6 +25944,15 @@
 </details>
 
 <details><summary>Gtk.IconTheme</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    IconTheme(**properties)
+	    new() -> Gtk.IconTheme
+	
 
 ---
 
@@ -24960,6 +26074,17 @@
 </details>
 
 <details><summary>Gtk.IconView</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    IconView(**properties)
+	    new() -> Gtk.Widget
+	    new_with_area(area:Gtk.CellArea) -> Gtk.Widget
+	    new_with_model(model:Gtk.TreeModel) -> Gtk.Widget
+	
 
 ---
 
@@ -25359,6 +26484,21 @@
 
 <details><summary>Gtk.Image</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    Image(**properties)
+	    new() -> Gtk.Widget
+	    new_from_file(filename:str) -> Gtk.Widget
+	    new_from_gicon(icon:Gio.Icon) -> Gtk.Widget
+	    new_from_icon_name(icon_name:str=None) -> Gtk.Widget
+	    new_from_paintable(paintable:Gdk.Paintable=None) -> Gtk.Widget
+	    new_from_pixbuf(pixbuf:GdkPixbuf.Pixbuf=None) -> Gtk.Widget
+	    new_from_resource(resource_path:str) -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -25700,6 +26840,15 @@
 
 <details><summary>Gtk.InfoBar</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    InfoBar(**properties)
+	    new() -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -26033,6 +27182,15 @@
 </details>
 
 <details><summary>Gtk.Inscription</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Inscription(**properties)
+	    new(text:str=None) -> Gtk.Widget
+	
 
 ---
 
@@ -26375,6 +27533,15 @@
 
 <details><summary>Gtk.KeyvalTrigger</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    KeyvalTrigger(**properties)
+	    new(keyval:int, modifiers:Gdk.ModifierType) -> Gtk.ShortcutTrigger
+	
+
 ---
 
 - __class__
@@ -26490,6 +27657,16 @@
 </details>
 
 <details><summary>Gtk.Label</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Label(**properties)
+	    new(str:str=None) -> Gtk.Widget
+	    new_with_mnemonic(str:str=None) -> Gtk.Widget
+	
 
 ---
 
@@ -26861,6 +28038,14 @@
 
 <details><summary>Gtk.LayoutChild</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    LayoutChild(**properties)
+	
+
 ---
 
 - __class__
@@ -26967,6 +28152,14 @@
 </details>
 
 <details><summary>Gtk.LayoutManager</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    LayoutManager(**properties)
+	
 
 ---
 
@@ -27084,6 +28277,16 @@
 </details>
 
 <details><summary>Gtk.LevelBar</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    LevelBar(**properties)
+	    new() -> Gtk.Widget
+	    new_for_interval(min_value:float, max_value:float) -> Gtk.Widget
+	
 
 ---
 
@@ -27420,6 +28623,16 @@
 </details>
 
 <details><summary>Gtk.LinkButton</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    LinkButton(**properties)
+	    new(uri:str) -> Gtk.Widget
+	    new_with_label(uri:str, label:str=None) -> Gtk.Widget
+	
 
 ---
 
@@ -27765,6 +28978,14 @@
 
 <details><summary>Gtk.ListBase</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    ListBase(**properties)
+	
+
 ---
 
 - __class__
@@ -28094,6 +29315,15 @@
 </details>
 
 <details><summary>Gtk.ListBox</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    ListBox(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -28446,6 +29676,15 @@
 
 <details><summary>Gtk.ListBoxRow</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    ListBoxRow(**properties)
+	    new() -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -28783,6 +30022,14 @@
 
 <details><summary>Gtk.ListItem</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    ListItem(**properties)
+	
+
 ---
 
 - __class__
@@ -28896,6 +30143,14 @@
 
 <details><summary>Gtk.ListItemFactory</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    ListItemFactory(**properties)
+	
+
 ---
 
 - __class__
@@ -28999,6 +30254,15 @@
 </details>
 
 <details><summary>Gtk.ListStore</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    ListStore(**properties)
+	    new(types:list) -> Gtk.ListStore
+	
 
 ---
 
@@ -29175,6 +30439,15 @@
 </details>
 
 <details><summary>Gtk.ListView</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    ListView(**properties)
+	    new(model:Gtk.SelectionModel=None, factory:Gtk.ListItemFactory=None) -> Gtk.Widget
+	
 
 ---
 
@@ -29516,6 +30789,15 @@
 </details>
 
 <details><summary>Gtk.LockButton</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    LockButton(**properties)
+	    new(permission:Gio.Permission=None) -> Gtk.Widget
+	
 
 ---
 
@@ -29859,6 +31141,15 @@
 
 <details><summary>Gtk.MapListModel</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    MapListModel(**properties)
+	    new(model:Gio.ListModel=None, map_func:Gtk.MapListModelMapFunc=None, user_data=None) -> Gtk.MapListModel
+	
+
 ---
 
 - __class__
@@ -29976,6 +31267,15 @@
 </details>
 
 <details><summary>Gtk.MediaControls</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    MediaControls(**properties)
+	    new(stream:Gtk.MediaStream=None) -> Gtk.Widget
+	
 
 ---
 
@@ -30299,6 +31599,19 @@
 
 <details><summary>Gtk.MediaFile</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    MediaFile(**properties)
+	    new() -> Gtk.MediaFile
+	    new_for_file(file:Gio.File) -> Gtk.MediaFile
+	    new_for_filename(filename:str) -> Gtk.MediaFile
+	    new_for_input_stream(stream:Gio.InputStream) -> Gtk.MediaFile
+	    new_for_resource(resource_path:str) -> Gtk.MediaFile
+	
+
 ---
 
 - __class__
@@ -30464,6 +31777,14 @@
 
 <details><summary>Gtk.MediaStream</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    MediaStream(**properties)
+	
+
 ---
 
 - __class__
@@ -30614,6 +31935,15 @@
 </details>
 
 <details><summary>Gtk.MenuButton</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    MenuButton(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -30955,6 +32285,14 @@
 </details>
 
 <details><summary>Gtk.MessageDialog</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    MessageDialog(**properties)
+	
 
 ---
 
@@ -31359,6 +32697,14 @@
 
 <details><summary>Gtk.MnemonicAction</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    MnemonicAction(**properties)
+	
+
 ---
 
 - __class__
@@ -31467,6 +32813,15 @@
 </details>
 
 <details><summary>Gtk.MnemonicTrigger</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    MnemonicTrigger(**properties)
+	    new(keyval:int) -> Gtk.MnemonicTrigger
+	
 
 ---
 
@@ -31582,6 +32937,15 @@
 </details>
 
 <details><summary>Gtk.MountOperation</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    MountOperation(**properties)
+	    new(parent:Gtk.Window=None) -> Gio.MountOperation
+	
 
 ---
 
@@ -31720,6 +33084,14 @@
 
 <details><summary>Gtk.MultiFilter</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    MultiFilter(**properties)
+	
+
 ---
 
 - __class__
@@ -31841,6 +33213,15 @@
 </details>
 
 <details><summary>Gtk.MultiSelection</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    MultiSelection(**properties)
+	    new(model:Gio.ListModel=None) -> Gtk.MultiSelection
+	
 
 ---
 
@@ -31969,6 +33350,15 @@
 
 <details><summary>Gtk.MultiSorter</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    MultiSorter(**properties)
+	    new() -> Gtk.MultiSorter
+	
+
 ---
 
 - __class__
@@ -32092,6 +33482,15 @@
 
 <details><summary>Gtk.NamedAction</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    NamedAction(**properties)
+	    new(name:str) -> Gtk.NamedAction
+	
+
 ---
 
 - __class__
@@ -32202,6 +33601,8 @@
 
 <details><summary>Gtk.Native</summary>
 
+
+
 ---
 
 - __class__
@@ -32244,6 +33645,14 @@
 </details>
 
 <details><summary>Gtk.NativeDialog</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    NativeDialog(**properties)
+	
 
 ---
 
@@ -32363,6 +33772,14 @@
 
 <details><summary>Gtk.NeverTrigger</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    NeverTrigger(**properties)
+	
+
 ---
 
 - __class__
@@ -32476,6 +33893,15 @@
 </details>
 
 <details><summary>Gtk.NoSelection</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    NoSelection(**properties)
+	    new(model:Gio.ListModel=None) -> Gtk.NoSelection
+	
 
 ---
 
@@ -32603,6 +34029,15 @@
 </details>
 
 <details><summary>Gtk.Notebook</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Notebook(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -32968,6 +34403,14 @@
 
 <details><summary>Gtk.NotebookPage</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    NotebookPage(**properties)
+	
+
 ---
 
 - __class__
@@ -33072,6 +34515,14 @@
 </details>
 
 <details><summary>Gtk.NothingAction</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    NothingAction(**properties)
+	
 
 ---
 
@@ -33181,6 +34632,15 @@
 </details>
 
 <details><summary>Gtk.NumericSorter</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    NumericSorter(**properties)
+	    new(expression:Gtk.Expression=None) -> Gtk.NumericSorter
+	
 
 ---
 
@@ -33297,6 +34757,15 @@
 
 <details><summary>Gtk.ObjectExpression</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    ObjectExpression(**properties)
+	    new(object:GObject.Object) -> Gtk.ObjectExpression
+	
+
 ---
 
 - __class__
@@ -33342,6 +34811,8 @@
 
 <details><summary>Gtk.Orientable</summary>
 
+
+
 ---
 
 - __class__
@@ -33380,6 +34851,15 @@
 </details>
 
 <details><summary>Gtk.Overlay</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Overlay(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -33709,6 +35189,15 @@
 
 <details><summary>Gtk.OverlayLayout</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    OverlayLayout(**properties)
+	    new() -> Gtk.LayoutManager
+	
+
 ---
 
 - __class__
@@ -33827,6 +35316,14 @@
 
 <details><summary>Gtk.OverlayLayoutChild</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    OverlayLayoutChild(**properties)
+	
+
 ---
 
 - __class__
@@ -33937,6 +35434,15 @@
 </details>
 
 <details><summary>Gtk.PadController</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    PadController(**properties)
+	    new(group:Gio.ActionGroup, pad:Gdk.Device=None) -> Gtk.PadController
+	
 
 ---
 
@@ -34057,6 +35563,18 @@
 </details>
 
 <details><summary>Gtk.PageSetup</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    PageSetup(**properties)
+	    new() -> Gtk.PageSetup
+	    new_from_file(file_name:str) -> Gtk.PageSetup
+	    new_from_gvariant(variant:GLib.Variant) -> Gtk.PageSetup
+	    new_from_key_file(key_file:GLib.KeyFile, group_name:str=None) -> Gtk.PageSetup
+	
 
 ---
 
@@ -34188,6 +35706,15 @@
 </details>
 
 <details><summary>Gtk.PageSetupUnixDialog</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    PageSetupUnixDialog(**properties)
+	    new(title:str=None, parent:Gtk.Window=None) -> Gtk.Widget
+	
 
 ---
 
@@ -34594,6 +36121,15 @@
 
 <details><summary>Gtk.Paned</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    Paned(**properties)
+	    new(orientation:Gtk.Orientation) -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -34932,6 +36468,14 @@
 
 <details><summary>Gtk.ParamSpecExpression</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    ParamSpecExpression(**properties)
+	
+
 ---
 
 - __class__
@@ -34994,6 +36538,15 @@
 </details>
 
 <details><summary>Gtk.PasswordEntry</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    PasswordEntry(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -35344,6 +36897,15 @@
 
 <details><summary>Gtk.PasswordEntryBuffer</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    PasswordEntryBuffer(**properties)
+	    new() -> Gtk.EntryBuffer
+	
+
 ---
 
 - __class__
@@ -35465,6 +37027,20 @@
 </details>
 
 <details><summary>Gtk.Picture</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Picture(**properties)
+	    new() -> Gtk.Widget
+	    new_for_file(file:Gio.File=None) -> Gtk.Widget
+	    new_for_filename(filename:str=None) -> Gtk.Widget
+	    new_for_paintable(paintable:Gdk.Paintable=None) -> Gtk.Widget
+	    new_for_pixbuf(pixbuf:GdkPixbuf.Pixbuf=None) -> Gtk.Widget
+	    new_for_resource(resource_path:str=None) -> Gtk.Widget
+	
 
 ---
 
@@ -35805,6 +37381,15 @@
 </details>
 
 <details><summary>Gtk.Popover</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Popover(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -36152,6 +37737,16 @@
 </details>
 
 <details><summary>Gtk.PopoverMenu</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    PopoverMenu(**properties)
+	    new_from_model(model:Gio.MenuModel=None) -> Gtk.Widget
+	    new_from_model_full(model:Gio.MenuModel, flags:Gtk.PopoverMenuFlags) -> Gtk.Widget
+	
 
 ---
 
@@ -36506,6 +38101,15 @@
 
 <details><summary>Gtk.PopoverMenuBar</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    PopoverMenuBar(**properties)
+	    new_from_model(model:Gio.MenuModel=None) -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -36830,6 +38434,14 @@
 
 <details><summary>Gtk.PrintContext</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    PrintContext(**properties)
+	
+
 ---
 
 - __class__
@@ -36944,6 +38556,15 @@
 </details>
 
 <details><summary>Gtk.PrintJob</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    PrintJob(**properties)
+	    new(title:str, printer:Gtk.Printer, settings:Gtk.PrintSettings, page_setup:Gtk.PageSetup) -> Gtk.PrintJob
+	
 
 ---
 
@@ -37079,6 +38700,15 @@
 </details>
 
 <details><summary>Gtk.PrintOperation</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    PrintOperation(**properties)
+	    new() -> Gtk.PrintOperation
+	
 
 ---
 
@@ -37230,6 +38860,8 @@
 
 <details><summary>Gtk.PrintOperationPreview</summary>
 
+
+
 ---
 
 - __class__
@@ -37269,6 +38901,18 @@
 </details>
 
 <details><summary>Gtk.PrintSettings</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    PrintSettings(**properties)
+	    new() -> Gtk.PrintSettings
+	    new_from_file(file_name:str) -> Gtk.PrintSettings
+	    new_from_gvariant(variant:GLib.Variant) -> Gtk.PrintSettings
+	    new_from_key_file(key_file:GLib.KeyFile, group_name:str=None) -> Gtk.PrintSettings
+	
 
 ---
 
@@ -37449,6 +39093,15 @@
 </details>
 
 <details><summary>Gtk.PrintUnixDialog</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    PrintUnixDialog(**properties)
+	    new(title:str=None, parent:Gtk.Window=None) -> Gtk.Widget
+	
 
 ---
 
@@ -37867,6 +39520,15 @@
 
 <details><summary>Gtk.Printer</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    Printer(**properties)
+	    new(name:str, backend:Gtk.PrintBackend, virtual_:bool) -> Gtk.Printer
+	
+
 ---
 
 - __class__
@@ -37993,6 +39655,15 @@
 </details>
 
 <details><summary>Gtk.ProgressBar</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    ProgressBar(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -38329,6 +40000,16 @@
 
 <details><summary>Gtk.PropertyExpression</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    PropertyExpression(**properties)
+	    new(this_type:GType, expression:Gtk.Expression=None, property_name:str) -> Gtk.PropertyExpression
+	    new_for_pspec(expression:Gtk.Expression=None, pspec:GObject.ParamSpec) -> Gtk.PropertyExpression
+	
+
 ---
 
 - __class__
@@ -38375,6 +40056,14 @@
 </details>
 
 <details><summary>Gtk.Range</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Range(**properties)
+	
 
 ---
 
@@ -38724,6 +40413,15 @@
 
 <details><summary>Gtk.RecentManager</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    RecentManager(**properties)
+	    new() -> Gtk.RecentManager
+	
+
 ---
 
 - __class__
@@ -38840,6 +40538,15 @@
 </details>
 
 <details><summary>Gtk.Revealer</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Revealer(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -39170,6 +40877,8 @@
 
 <details><summary>Gtk.Root</summary>
 
+
+
 ---
 
 - __class__
@@ -39209,6 +40918,16 @@
 </details>
 
 <details><summary>Gtk.Scale</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Scale(**properties)
+	    new(orientation:Gtk.Orientation, adjustment:Gtk.Adjustment=None) -> Gtk.Widget
+	    new_with_range(orientation:Gtk.Orientation, min:float, max:float, step:float) -> Gtk.Widget
+	
 
 ---
 
@@ -39574,6 +41293,15 @@
 
 <details><summary>Gtk.ScaleButton</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    ScaleButton(**properties)
+	    new(min:float, max:float, step:float, icons:list=None) -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -39905,6 +41633,8 @@
 
 <details><summary>Gtk.Scrollable</summary>
 
+
+
 ---
 
 - __class__
@@ -39950,6 +41680,15 @@
 </details>
 
 <details><summary>Gtk.Scrollbar</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Scrollbar(**properties)
+	    new(orientation:Gtk.Orientation, adjustment:Gtk.Adjustment=None) -> Gtk.Widget
+	
 
 ---
 
@@ -40274,6 +42013,15 @@
 </details>
 
 <details><summary>Gtk.ScrolledWindow</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    ScrolledWindow(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -40626,6 +42374,15 @@
 
 <details><summary>Gtk.SearchBar</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    SearchBar(**properties)
+	    new() -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -40954,6 +42711,15 @@
 </details>
 
 <details><summary>Gtk.SearchEntry</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    SearchEntry(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -41304,6 +43070,15 @@
 
 <details><summary>Gtk.SelectionFilterModel</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    SelectionFilterModel(**properties)
+	    new(model:Gtk.SelectionModel=None) -> Gtk.SelectionFilterModel
+	
+
 ---
 
 - __class__
@@ -41420,6 +43195,8 @@
 
 <details><summary>Gtk.SelectionModel</summary>
 
+
+
 ---
 
 - __class__
@@ -41467,6 +43244,15 @@
 </details>
 
 <details><summary>Gtk.Separator</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Separator(**properties)
+	    new(orientation:Gtk.Orientation) -> Gtk.Widget
+	
 
 ---
 
@@ -41790,6 +43576,14 @@
 
 <details><summary>Gtk.Settings</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    Settings(**properties)
+	
+
 ---
 
 - __class__
@@ -41897,6 +43691,15 @@
 </details>
 
 <details><summary>Gtk.Shortcut</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Shortcut(**properties)
+	    new(trigger:Gtk.ShortcutTrigger=None, action:Gtk.ShortcutAction=None) -> Gtk.Shortcut
+	
 
 ---
 
@@ -42009,6 +43812,15 @@
 
 <details><summary>Gtk.ShortcutAction</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    ShortcutAction(**properties)
+	    parse_string(string:str) -> Gtk.ShortcutAction or None
+	
+
 ---
 
 - __class__
@@ -42116,6 +43928,16 @@
 </details>
 
 <details><summary>Gtk.ShortcutController</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    ShortcutController(**properties)
+	    new() -> Gtk.EventController
+	    new_for_model(model:Gio.ListModel) -> Gtk.EventController
+	
 
 ---
 
@@ -42251,6 +44073,15 @@
 </details>
 
 <details><summary>Gtk.ShortcutLabel</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    ShortcutLabel(**properties)
+	    new(accelerator:str) -> Gtk.Widget
+	
 
 ---
 
@@ -42576,6 +44407,8 @@
 
 <details><summary>Gtk.ShortcutManager</summary>
 
+
+
 ---
 
 - __class__
@@ -42612,6 +44445,15 @@
 </details>
 
 <details><summary>Gtk.ShortcutTrigger</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    ShortcutTrigger(**properties)
+	    parse_string(string:str) -> Gtk.ShortcutTrigger or None
+	
 
 ---
 
@@ -42725,6 +44567,14 @@
 </details>
 
 <details><summary>Gtk.ShortcutsGroup</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    ShortcutsGroup(**properties)
+	
 
 ---
 
@@ -43059,6 +44909,14 @@
 
 <details><summary>Gtk.ShortcutsSection</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    ShortcutsSection(**properties)
+	
+
 ---
 
 - __class__
@@ -43392,6 +45250,14 @@
 
 <details><summary>Gtk.ShortcutsShortcut</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    ShortcutsShortcut(**properties)
+	
+
 ---
 
 - __class__
@@ -43710,6 +45576,14 @@
 </details>
 
 <details><summary>Gtk.ShortcutsWindow</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    ShortcutsWindow(**properties)
+	
 
 ---
 
@@ -44100,6 +45974,15 @@
 
 <details><summary>Gtk.SignalAction</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    SignalAction(**properties)
+	    new(signal_name:str) -> Gtk.SignalAction
+	
+
 ---
 
 - __class__
@@ -44210,6 +46093,15 @@
 
 <details><summary>Gtk.SignalListItemFactory</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    SignalListItemFactory(**properties)
+	    new() -> Gtk.ListItemFactory
+	
+
 ---
 
 - __class__
@@ -44314,6 +46206,15 @@
 </details>
 
 <details><summary>Gtk.SingleSelection</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    SingleSelection(**properties)
+	    new(model:Gio.ListModel=None) -> Gtk.SingleSelection
+	
 
 ---
 
@@ -44449,6 +46350,15 @@
 
 <details><summary>Gtk.SizeGroup</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    SizeGroup(**properties)
+	    new(mode:Gtk.SizeGroupMode) -> Gtk.SizeGroup
+	
+
 ---
 
 - __class__
@@ -44561,6 +46471,15 @@
 </details>
 
 <details><summary>Gtk.SliceListModel</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    SliceListModel(**properties)
+	    new(model:Gio.ListModel=None, offset:int, size:int) -> Gtk.SliceListModel
+	
 
 ---
 
@@ -44681,6 +46600,15 @@
 </details>
 
 <details><summary>Gtk.Snapshot</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Snapshot(**properties)
+	    new() -> Gtk.Snapshot
+	
 
 ---
 
@@ -44830,6 +46758,15 @@
 
 <details><summary>Gtk.SortListModel</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    SortListModel(**properties)
+	    new(model:Gio.ListModel=None, sorter:Gtk.Sorter=None) -> Gtk.SortListModel
+	
+
 ---
 
 - __class__
@@ -44951,6 +46888,14 @@
 
 <details><summary>Gtk.Sorter</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    Sorter(**properties)
+	
+
 ---
 
 - __class__
@@ -45060,6 +47005,16 @@
 </details>
 
 <details><summary>Gtk.SpinButton</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    SpinButton(**properties)
+	    new(adjustment:Gtk.Adjustment=None, climb_rate:float, digits:int) -> Gtk.Widget
+	    new_with_range(min:float, max:float, step:float) -> Gtk.Widget
+	
 
 ---
 
@@ -45436,6 +47391,15 @@
 
 <details><summary>Gtk.Spinner</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    Spinner(**properties)
+	    new() -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -45759,6 +47723,15 @@
 </details>
 
 <details><summary>Gtk.Stack</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Stack(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -46103,6 +48076,14 @@
 
 <details><summary>Gtk.StackPage</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    StackPage(**properties)
+	
+
 ---
 
 - __class__
@@ -46227,6 +48208,15 @@
 </details>
 
 <details><summary>Gtk.StackSidebar</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    StackSidebar(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -46549,6 +48539,15 @@
 </details>
 
 <details><summary>Gtk.StackSwitcher</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    StackSwitcher(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -46873,6 +48872,15 @@
 </details>
 
 <details><summary>Gtk.Statusbar</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Statusbar(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -47199,6 +49207,15 @@
 
 <details><summary>Gtk.StringFilter</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    StringFilter(**properties)
+	    new(expression:Gtk.Expression=None) -> Gtk.StringFilter
+	
+
 ---
 
 - __class__
@@ -47317,6 +49334,15 @@
 </details>
 
 <details><summary>Gtk.StringList</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    StringList(**properties)
+	    new(strings:list=None) -> Gtk.StringList
+	
 
 ---
 
@@ -47438,6 +49464,15 @@
 
 <details><summary>Gtk.StringObject</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    StringObject(**properties)
+	    new(string:str) -> Gtk.StringObject
+	
+
 ---
 
 - __class__
@@ -47543,6 +49578,15 @@
 </details>
 
 <details><summary>Gtk.StringSorter</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    StringSorter(**properties)
+	    new(expression:Gtk.Expression=None) -> Gtk.StringSorter
+	
 
 ---
 
@@ -47658,6 +49702,14 @@
 </details>
 
 <details><summary>Gtk.StyleContext</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    StyleContext(**properties)
+	
 
 ---
 
@@ -47786,6 +49838,8 @@
 
 <details><summary>Gtk.StyleProvider</summary>
 
+
+
 ---
 
 - __class__
@@ -47822,6 +49876,15 @@
 </details>
 
 <details><summary>Gtk.Switch</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Switch(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -48152,6 +50215,8 @@
 
 <details><summary>Gtk.SymbolicPaintable</summary>
 
+
+
 ---
 
 - __class__
@@ -48189,6 +50254,16 @@
 </details>
 
 <details><summary>Gtk.Text</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Text(**properties)
+	    new() -> Gtk.Widget
+	    new_with_buffer(buffer:Gtk.EntryBuffer) -> Gtk.Widget
+	
 
 ---
 
@@ -48570,6 +50645,15 @@
 
 <details><summary>Gtk.TextBuffer</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    TextBuffer(**properties)
+	    new(table:Gtk.TextTagTable=None) -> Gtk.TextBuffer
+	
+
 ---
 
 - __class__
@@ -48762,6 +50846,16 @@
 
 <details><summary>Gtk.TextChildAnchor</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    TextChildAnchor(**properties)
+	    new() -> Gtk.TextChildAnchor
+	    new_with_replacement(character:str) -> Gtk.TextChildAnchor
+	
+
 ---
 
 - __class__
@@ -48871,6 +50965,15 @@
 </details>
 
 <details><summary>Gtk.TextMark</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    TextMark(**properties)
+	    new(name:str=None, left_gravity:bool) -> Gtk.TextMark
+	
 
 ---
 
@@ -48985,6 +51088,15 @@
 
 <details><summary>Gtk.TextTag</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    TextTag(**properties)
+	    new(name:str=None) -> Gtk.TextTag
+	
+
 ---
 
 - __class__
@@ -49094,6 +51206,15 @@
 </details>
 
 <details><summary>Gtk.TextTagTable</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    TextTagTable(**properties)
+	    new() -> Gtk.TextTagTable
+	
 
 ---
 
@@ -49206,6 +51327,16 @@
 </details>
 
 <details><summary>Gtk.TextView</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    TextView(**properties)
+	    new() -> Gtk.Widget
+	    new_with_buffer(buffer:Gtk.TextBuffer) -> Gtk.Widget
+	
 
 ---
 
@@ -49620,6 +51751,17 @@
 
 <details><summary>Gtk.ToggleButton</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    ToggleButton(**properties)
+	    new() -> Gtk.Widget
+	    new_with_label(label:str) -> Gtk.Widget
+	    new_with_mnemonic(label:str) -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -49966,6 +52108,14 @@
 
 <details><summary>Gtk.Tooltip</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    Tooltip(**properties)
+	
+
 ---
 
 - __class__
@@ -50077,6 +52227,8 @@
 
 <details><summary>Gtk.TreeDragDest</summary>
 
+
+
 ---
 
 - __class__
@@ -50115,6 +52267,8 @@
 </details>
 
 <details><summary>Gtk.TreeDragSource</summary>
+
+
 
 ---
 
@@ -50155,6 +52309,15 @@
 </details>
 
 <details><summary>Gtk.TreeExpander</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    TreeExpander(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -50483,6 +52646,15 @@
 
 <details><summary>Gtk.TreeListModel</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    TreeListModel(**properties)
+	    new(root:Gio.ListModel, passthrough:bool, autoexpand:bool, create_func:Gtk.TreeListModelCreateModelFunc, user_data=None) -> Gtk.TreeListModel
+	
+
 ---
 
 - __class__
@@ -50603,6 +52775,14 @@
 
 <details><summary>Gtk.TreeListRow</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    TreeListRow(**properties)
+	
+
 ---
 
 - __class__
@@ -50715,6 +52895,15 @@
 </details>
 
 <details><summary>Gtk.TreeListRowSorter</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    TreeListRowSorter(**properties)
+	    new(sorter:Gtk.Sorter=None) -> Gtk.TreeListRowSorter
+	
 
 ---
 
@@ -50829,6 +53018,8 @@
 
 <details><summary>Gtk.TreeModel</summary>
 
+
+
 ---
 
 - __bool__
@@ -50903,6 +53094,14 @@
 </details>
 
 <details><summary>Gtk.TreeModelFilter</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    TreeModelFilter(**properties)
+	
 
 ---
 
@@ -51064,6 +53263,15 @@
 </details>
 
 <details><summary>Gtk.TreeModelSort</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    TreeModelSort(**properties)
+	    new_with_model(child_model:Gtk.TreeModel) -> Gtk.TreeModelSort
+	
 
 ---
 
@@ -51228,6 +53436,14 @@
 
 <details><summary>Gtk.TreeSelection</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    TreeSelection(**properties)
+	
+
 ---
 
 - __class__
@@ -51350,6 +53566,8 @@
 
 <details><summary>Gtk.TreeSortable</summary>
 
+
+
 ---
 
 - __class__
@@ -51392,6 +53610,15 @@
 </details>
 
 <details><summary>Gtk.TreeStore</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    TreeStore(**properties)
+	    new(types:list) -> Gtk.TreeStore
+	
 
 ---
 
@@ -51568,6 +53795,16 @@
 </details>
 
 <details><summary>Gtk.TreeView</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    TreeView(**properties)
+	    new() -> Gtk.Widget
+	    new_with_model(model:Gtk.TreeModel) -> Gtk.Widget
+	
 
 ---
 
@@ -51999,6 +54236,16 @@
 
 <details><summary>Gtk.TreeViewColumn</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    TreeViewColumn(**properties)
+	    new() -> Gtk.TreeViewColumn
+	    new_with_area(area:Gtk.CellArea) -> Gtk.TreeViewColumn
+	
+
 ---
 
 - __class__
@@ -52159,6 +54406,19 @@
 </details>
 
 <details><summary>Gtk.Video</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Video(**properties)
+	    new() -> Gtk.Widget
+	    new_for_file(file:Gio.File=None) -> Gtk.Widget
+	    new_for_filename(filename:str=None) -> Gtk.Widget
+	    new_for_media_stream(stream:Gtk.MediaStream=None) -> Gtk.Widget
+	    new_for_resource(resource_path:str=None) -> Gtk.Widget
+	
 
 ---
 
@@ -52494,6 +54754,15 @@
 
 <details><summary>Gtk.Viewport</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    Viewport(**properties)
+	    new(hadjustment:Gtk.Adjustment=None, vadjustment:Gtk.Adjustment=None) -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -52827,6 +55096,15 @@
 
 <details><summary>Gtk.VolumeButton</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    VolumeButton(**properties)
+	    new() -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -53159,6 +55437,14 @@
 
 <details><summary>Gtk.Widget</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    Widget(**properties)
+	
+
 ---
 
 - __class__
@@ -53478,6 +55764,15 @@
 
 <details><summary>Gtk.WidgetPaintable</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    WidgetPaintable(**properties)
+	    new(widget:Gtk.Widget=None) -> Gtk.WidgetPaintable
+	
+
 ---
 
 - __class__
@@ -53595,6 +55890,15 @@
 </details>
 
 <details><summary>Gtk.Window</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    Window(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
@@ -53985,6 +56289,15 @@
 
 <details><summary>Gtk.WindowControls</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    WindowControls(**properties)
+	    new(side:Gtk.PackType) -> Gtk.Widget
+	
+
 ---
 
 - __class__
@@ -54310,6 +56623,15 @@
 
 <details><summary>Gtk.WindowGroup</summary>
 
+
+	:Constructors:
+	
+	::
+	
+	    WindowGroup(**properties)
+	    new() -> Gtk.WindowGroup
+	
+
 ---
 
 - __class__
@@ -54419,6 +56741,15 @@
 </details>
 
 <details><summary>Gtk.WindowHandle</summary>
+
+
+	:Constructors:
+	
+	::
+	
+	    WindowHandle(**properties)
+	    new() -> Gtk.Widget
+	
 
 ---
 
