@@ -11,15 +11,15 @@ from gi.repository import Gtk
 
 widget_dir = dir(Gtk.Widget)
 
-with open("proplist.md", "w", encoding="utf-8") as f:
+with open("gtk_proplist.md", "w", encoding="utf-8") as f:
     print("<!-- markdownlint-disable no-inline-html -->", file=f)
     print("<!-- markdownlint-disable no-multiple-blanks -->", file=f)
     print("<!-- markdownlint-disable no-trailing-spaces -->", file=f)
-    print("# Gtk Class List", file=f)
-    print(
-        "\r\nIf class derived from Gtk.Widget, properties from Gtk.Widget are omitted.\r\n\r\n---",
-        file=f,
-    )
+    print("# Gtk Class Signals and Properties List", file=f)
+    # print(
+    #     "\r\nIf class derived from Gtk.Widget, properties from Gtk.Widget are omitted.\r\n\r\n---",
+    #     file=f,
+    # )
     gtk_items = dir(Gtk)
     for item in gtk_items:
         gtk_item = eval(f"Gtk.{item}")
